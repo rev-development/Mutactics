@@ -1,0 +1,147 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="zfzChECb0Ke-HKntgA37">
+    <mxGraphModel dx="2351" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4ro_wR79__NGghHWfH-T-52" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-55" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Player sees Campaign Map" tags="" id="4ro_wR79__NGghHWfH-T-10">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;fontStyle=0;startSize=30;horizontal=1;fillColor=#003366;fontColor=default;" vertex="1">
+            <mxGeometry height="60" width="120" x="120" y="10" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="The Campaign Map is a Hexagonal Grid.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This is to offer a wide variety of &#39;route&#39; choices and because Hexagonal Grids are effective for showing scale.&lt;/div&gt;" tags="Note" id="4ro_wR79__NGghHWfH-T-41">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="160" width="120" x="120" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="4ro_wR79__NGghHWfH-T-56" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-58" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillStyle=solid;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#006600;gradientDirection=north;fontStyle=0;startSize=30;horizontal=1;" value="Player gets 1 Starting World" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="10" as="geometry" />
+        </mxCell>
+        <UserObject label="A World is 1 Tile on the Hexagonal Grid and represents 1 Battle." tags="Note" id="4ro_wR79__NGghHWfH-T-53">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1">
+            <mxGeometry height="160" width="120" x="280" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="4ro_wR79__NGghHWfH-T-63" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-66" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillStyle=solid;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;gradientDirection=north;" value="Player can select an adjacent World to Invade" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="10" as="geometry" />
+        </mxCell>
+        <UserObject label="Invading is to attack another World, thereby starting a Battle." tags="Note" id="4ro_wR79__NGghHWfH-T-62">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1">
+            <mxGeometry height="160" width="120" x="440" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="4ro_wR79__NGghHWfH-T-92" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillStyle=solid;pointerEvents=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;gradientDirection=north;fillColor=#CC6600;" value="Player Invades a World" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-90" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-88" parent="1" style="html=1;outlineConnect=0;whiteSpace=wrap;shape=mxgraph.archimate3.process;shadow=0;fillStyle=solid;pointerEvents=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="Game Start" vertex="1">
+          <mxGeometry height="60" width="120" x="-40" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-104" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-103" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-91" parent="1" style="html=1;outlineConnect=0;whiteSpace=wrap;shape=mxgraph.archimate3.process;shadow=0;fillStyle=solid;pointerEvents=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" value="Combat Start" vertex="1">
+          <mxGeometry height="60" width="120" x="760" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-107" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-103" parent="1" style="whiteSpace=wrap;html=1;shadow=0;fillStyle=solid;pointerEvents=1;fontStyle=0;startSize=30;horizontal=1;fillColor=#003366;" value="Player sees the Battle Map" vertex="1">
+          <mxGeometry height="60" width="120" x="920" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4ro_wR79__NGghHWfH-T-110" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="4ro_wR79__NGghHWfH-T-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-2" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="I don&#39;t know what type of grid to use for the Battle Map." tags="Note" id="4ro_wR79__NGghHWfH-T-105">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#660000;" vertex="1">
+            <mxGeometry height="100" width="120" x="920" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-4" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-7" edge="1" parent="1" source="4ro_wR79__NGghHWfH-T-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="A 2.5D Isometric Tilemap would ensure the game stays 2D while also allowing tiles to have height." tags="Note" id="4ro_wR79__NGghHWfH-T-109">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1">
+            <mxGeometry height="160" width="120" x="800" y="280" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-10" edge="1" parent="1" source="Kwr6Vr3XKyqgRCPqiWpy-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-11" edge="1" parent="1" source="Kwr6Vr3XKyqgRCPqiWpy-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="A 2.5D Hexagonal Tilemap would match the Campaign Map and allows tiles to have height and match the Campaign Map." tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-1">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1">
+            <mxGeometry height="160" width="120" x="1040" y="280" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="But it may cause confusion if the Battle Map doesn&#39;t match the Hexagonal Campaign Map" tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-3">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#660000;" vertex="1">
+            <mxGeometry height="120" width="120" x="640" y="480" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="This requires writing code to handle an Isometric Map in addition to the code for the Campaign Map&#39;s Hexagonal Map&amp;nbsp;" tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-5">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#660000;" vertex="1">
+            <mxGeometry height="120" width="120" x="800" y="480" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-16" edge="1" parent="1" source="Kwr6Vr3XKyqgRCPqiWpy-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="But it may cause confusion if the Battle Map doesn&#39;t match the Hexagonal Campaign Map" tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-6">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#660000;" vertex="1">
+            <mxGeometry height="120" width="120" x="1040" y="480" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Kwr6Vr3XKyqgRCPqiWpy-17" edge="1" parent="1" source="Kwr6Vr3XKyqgRCPqiWpy-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Kwr6Vr3XKyqgRCPqiWpy-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="I think it would be more technically and artistically demanding to use a Hexagonal Map with tile heights." tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-8">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#660000;" vertex="1">
+            <mxGeometry height="120" width="120" x="1200" y="480" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="This can be solved by just using 3D Objects bound to a 2D Hexagonal Map.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In a traditional 2D Tilemap system, you select a tile and get information about the terrain and unit occupying it.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;With this appr&lt;/div&gt;" tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-14">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#660000;" vertex="1">
+            <mxGeometry height="230" width="120" x="920" y="640" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="This can be solved by just using 3D Objects bound to a 2D Hexagonal Map." tags="Note" id="Kwr6Vr3XKyqgRCPqiWpy-15">
+          <mxCell parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1">
+            <mxGeometry height="110" width="120" x="1120" y="640" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
