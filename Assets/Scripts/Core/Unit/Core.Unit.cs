@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Core.Mutation;
+using Core.UnitProgression;
 
 namespace Core.Unit
 {
@@ -9,16 +9,25 @@ namespace Core.Unit
 
         /// <summary>
         ///     This is a list of everything contributing to the unit's evolution (mutation selection weighting).
-        ///     IMPORTANT: Items only need to implement the interface IEvolPressure, meaning this can be a heterogenous list.
+        ///     IMPORTANT: Items only need to implement the interface IEvolPressure, meaning this can be a heterogeneous list.
         /// </summary>
         public List<IEvolPressure> EvolPressures = new();
 
         public string Id;
 
-        public List<Mutation.Mutation> Mutations = new();
+        public List<Mutation> Mutations = new();
 
         public Unit(string id) {
             Id = id;
+        }
+
+        public Dictionary<string, IAbility> Abilities
+        {
+            get
+            {
+                return Mutations.Aggregate
+                    (new Dictionary<string, IAbility>(), (prev, next) => Helpers.Dict.Collate(prev, next.Abilities));
+            }
         }
 
         public Dictionary<string, float> TagBonuses

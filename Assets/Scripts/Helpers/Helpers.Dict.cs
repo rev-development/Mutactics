@@ -26,5 +26,17 @@ namespace Helpers
             return baseDict;
         }
 
+        public static Dictionary<string, T> Collate<T>(
+            Dictionary<string, T> baseDict,
+            Dictionary<string, T> dictToAppend
+        ) {
+            foreach (var keyValuePair in dictToAppend)
+            {
+                baseDict.TryAdd(keyValuePair.Key, keyValuePair.Value);
+            }
+
+            return baseDict;
+        }
+
     }
 }

@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using Core.UnitProgression;
 
 namespace Core.Combat
 {
-    public class UnitKilledEnemy : ICombatEvent
+    public class UnitKilledEnemy : ICombatEvent, IEvolPressure
     {
 
         public UnitKilledEnemy(Unit.Unit targetUnit, Unit.Unit sourceUnit) {
@@ -13,9 +14,9 @@ namespace Core.Combat
             Core.Combat.Manager.Instance.Units.Find(unit => unit.Id == TargetId).EvolPressures.Add(this);
         }
 
-        public Dictionary<string, float> TagBonuses { get; }
-
         public string TargetId { get; set; }
+
+        public Dictionary<string, float> TagBonuses { get; }
 
     }
 }
