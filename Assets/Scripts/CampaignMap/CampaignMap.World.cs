@@ -1,26 +1,32 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
+using UnityEngine.Events;
 
 namespace CampaignMap
 {
-    public class World : MonoBehaviour
+    public class World : MapItem
     {
 
-        public Vector3Int HexCords;
+        public bool IsPlayerControlled = false;
 
-        public Tilemap Tilemap;
-
-        private Vector3Int _cachedHexCords;
+        public UnityEvent<bool> PlayerControlChanged;
 
         public void Start() {
-            Tilemap = GetComponentInParent<Tilemap>();
-            HexCords = Tilemap.WorldToCell(transform.position);
-            gameObject.name = HexCords.ToString();
+            PlayerControlChanged.Invoke(IsPlayerControlled);
         }
 
-        public void ChangeColor(Color color) {
-            // ReSharper disable once Unity.PreferAddressByIdToGraphicsParams
-            gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", color);
+        public override void OnEnable() {
+            base.OnEnable();
+            PlayerControlChanged.AddListener(OnPlayerControlChanged);
+        }
+
+        public override void OnDisable() {
+            base.OnDisable();
+            PlayerControlChanged.RemoveAllListeners();
+        }
+
+        public void OnPlayerControlChanged(bool isPlayerControlled) {
+            IsPlayerControlled = isPlayerControlled;
+            Helpers.Shaders.ChangeSimpleColor(IsPlayerControlled ? Color.blue : Color.red, gameObject);
         }
 
     }

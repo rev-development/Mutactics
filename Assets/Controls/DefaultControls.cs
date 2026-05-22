@@ -150,7 +150,7 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
                     ""name"": ""Previous"",
                     ""type"": ""Button"",
                     ""id"": ""2776c80d-3c14-4091-8c56-d04ced07a2b0"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -1090,6 +1090,51 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""264f7504-1e9d-4e3a-962f-5a5c550f7f8d"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""451eae33-f5b9-4a69-975b-4116cd7b5273"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse Delta"",
+                    ""type"": ""Value"",
+                    ""id"": ""2e3673ba-40c4-4ded-ac6a-af39863646bc"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Mouse Position"",
+                    ""type"": ""Value"",
+                    ""id"": ""7439d174-0603-43c4-82d6-7de5b63d1d8f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Left Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a586c8b-58af-4041-bdb4-9b06bfe2e87e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1147,6 +1192,94 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
                     ""action"": ""Pan"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f3cefd6-5e6c-4957-ab59-3f5bddcb16f2"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""4efb3071-2c58-405f-8165-7a8cc81ce580"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=0.25)"",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""cc31720d-0038-4f4b-bc8f-e8f516513079"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""655955d9-ed10-4957-be56-6489874b60c1"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0a48bd6-ec7a-4751-98d5-28e438bfc9d0"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0af24f1a-afd6-4351-a62b-7c6d0c9f6eed"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Delta"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b43544be-6286-4c3e-ace8-97dfd0f25941"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Position"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""648ec84b-587b-4733-a699-5df4bac64fcf"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1240,6 +1373,11 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
         // CampaignMap
         m_CampaignMap = asset.FindActionMap("CampaignMap", throwIfNotFound: true);
         m_CampaignMap_Pan = m_CampaignMap.FindAction("Pan", throwIfNotFound: true);
+        m_CampaignMap_Zoom = m_CampaignMap.FindAction("Zoom", throwIfNotFound: true);
+        m_CampaignMap_RightClick = m_CampaignMap.FindAction("Right Click", throwIfNotFound: true);
+        m_CampaignMap_MouseDelta = m_CampaignMap.FindAction("Mouse Delta", throwIfNotFound: true);
+        m_CampaignMap_MousePosition = m_CampaignMap.FindAction("Mouse Position", throwIfNotFound: true);
+        m_CampaignMap_LeftClick = m_CampaignMap.FindAction("Left Click", throwIfNotFound: true);
     }
 
     ~@DefaultControls()
@@ -1702,6 +1840,11 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_CampaignMap;
     private List<ICampaignMapActions> m_CampaignMapActionsCallbackInterfaces = new List<ICampaignMapActions>();
     private readonly InputAction m_CampaignMap_Pan;
+    private readonly InputAction m_CampaignMap_Zoom;
+    private readonly InputAction m_CampaignMap_RightClick;
+    private readonly InputAction m_CampaignMap_MouseDelta;
+    private readonly InputAction m_CampaignMap_MousePosition;
+    private readonly InputAction m_CampaignMap_LeftClick;
     /// <summary>
     /// Provides access to input actions defined in input action map "CampaignMap".
     /// </summary>
@@ -1717,6 +1860,26 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "CampaignMap/Pan".
         /// </summary>
         public InputAction @Pan => m_Wrapper.m_CampaignMap_Pan;
+        /// <summary>
+        /// Provides access to the underlying input action "CampaignMap/Zoom".
+        /// </summary>
+        public InputAction @Zoom => m_Wrapper.m_CampaignMap_Zoom;
+        /// <summary>
+        /// Provides access to the underlying input action "CampaignMap/RightClick".
+        /// </summary>
+        public InputAction @RightClick => m_Wrapper.m_CampaignMap_RightClick;
+        /// <summary>
+        /// Provides access to the underlying input action "CampaignMap/MouseDelta".
+        /// </summary>
+        public InputAction @MouseDelta => m_Wrapper.m_CampaignMap_MouseDelta;
+        /// <summary>
+        /// Provides access to the underlying input action "CampaignMap/MousePosition".
+        /// </summary>
+        public InputAction @MousePosition => m_Wrapper.m_CampaignMap_MousePosition;
+        /// <summary>
+        /// Provides access to the underlying input action "CampaignMap/LeftClick".
+        /// </summary>
+        public InputAction @LeftClick => m_Wrapper.m_CampaignMap_LeftClick;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1746,6 +1909,21 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
             @Pan.started += instance.OnPan;
             @Pan.performed += instance.OnPan;
             @Pan.canceled += instance.OnPan;
+            @Zoom.started += instance.OnZoom;
+            @Zoom.performed += instance.OnZoom;
+            @Zoom.canceled += instance.OnZoom;
+            @RightClick.started += instance.OnRightClick;
+            @RightClick.performed += instance.OnRightClick;
+            @RightClick.canceled += instance.OnRightClick;
+            @MouseDelta.started += instance.OnMouseDelta;
+            @MouseDelta.performed += instance.OnMouseDelta;
+            @MouseDelta.canceled += instance.OnMouseDelta;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
+            @LeftClick.started += instance.OnLeftClick;
+            @LeftClick.performed += instance.OnLeftClick;
+            @LeftClick.canceled += instance.OnLeftClick;
         }
 
         /// <summary>
@@ -1760,6 +1938,21 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
             @Pan.started -= instance.OnPan;
             @Pan.performed -= instance.OnPan;
             @Pan.canceled -= instance.OnPan;
+            @Zoom.started -= instance.OnZoom;
+            @Zoom.performed -= instance.OnZoom;
+            @Zoom.canceled -= instance.OnZoom;
+            @RightClick.started -= instance.OnRightClick;
+            @RightClick.performed -= instance.OnRightClick;
+            @RightClick.canceled -= instance.OnRightClick;
+            @MouseDelta.started -= instance.OnMouseDelta;
+            @MouseDelta.performed -= instance.OnMouseDelta;
+            @MouseDelta.canceled -= instance.OnMouseDelta;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
+            @LeftClick.started -= instance.OnLeftClick;
+            @LeftClick.performed -= instance.OnLeftClick;
+            @LeftClick.canceled -= instance.OnLeftClick;
         }
 
         /// <summary>
@@ -2021,5 +2214,40 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPan(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Zoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnZoom(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Right Click" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRightClick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Mouse Delta" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMouseDelta(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Mouse Position" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMousePosition(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Left Click" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeftClick(InputAction.CallbackContext context);
     }
 }
