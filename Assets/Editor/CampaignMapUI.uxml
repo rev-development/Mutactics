@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/CampaignMapUI.uss?fileID=7433441132597879392&amp;guid=bb016858348e5f84ea43e27dbda42aeb&amp;type=3#CampaignMapUI"/>
+    <ui:VisualElement name="VisualElement" data-source-type="" data-source-path="" style="flex-grow: 1; flex-direction: column-reverse; align-self: flex-end; align-items: stretch; justify-content: flex-start; width: auto; transform-origin: center;">
+        <ui:Button text="Invade" name="InvadeButton" style="white-space: nowrap; width: auto;"/>
+        <ui:Label text="" data-source-path="" data-source-type="" name="HexCords" style="white-space: pre-wrap; -unity-text-align: upper-left; text-overflow: clip;"/>
+        <ui:Label text="" data-source-path="" data-source-type="" name="WorldName" style="white-space: pre-wrap; -unity-text-align: upper-left; text-overflow: clip;"/>
+    </ui:VisualElement>
+</ui:UXML>

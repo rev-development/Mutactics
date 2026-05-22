@@ -10,16 +10,6 @@ namespace CampaignMap
     public class Manager : MonoBehaviour
     {
 
-        public static List<Vector3Int> AdjacencyMatrix = new()
-        {
-            new Vector3Int(-1, 0, 0),
-            new Vector3Int(1, 0, 0),
-            new Vector3Int(0, 1, 0),
-            new Vector3Int(-1, 1, 0),
-            new Vector3Int(0, -1, 0),
-            new Vector3Int(-1, -1, 0)
-        };
-
         public Tilemap Tilemap;
 
         public GameObject WorldPrefab;
@@ -28,7 +18,7 @@ namespace CampaignMap
 
         public UnityEvent<MapItem> MapItemSelect = new();
 
-        public MapItem MapItemSelected { get; private set; }
+        public MapItem MapItemSelected;
 
         public static Manager Instance { get; private set; }
 
@@ -92,8 +82,8 @@ namespace CampaignMap
             return !OccupiedCells.TryGetValue(hexCords, out _);
         }
 
-        public void PlaceObject(Vector3Int hexCords, GameObject objectPrefab) {
-            if (!IsCellAvailable(hexCords)) return;
+        public GameObject PlaceObject(Vector3Int hexCords, GameObject objectPrefab, string itemName = "MapItem") {
+            if (!IsCellAvailable(hexCords)) return null;
 
             var objectToPlace = Instantiate
                 (
@@ -106,12 +96,14 @@ namespace CampaignMap
             if (objectToPlace.TryGetComponent(out MapItem mapItem))
             {
                 OccupiedCells.Add(hexCords, mapItem);
-                mapItem.AssignCords(hexCords, this);
+                mapItem.AssignCords(hexCords, this, itemName);
             }
             else
             {
                 Destroy(objectToPlace);
             }
+
+            return objectToPlace;
         }
 
         public List<Vector3Int> GetEmptyNeighbors() {
@@ -119,9 +111,8 @@ namespace CampaignMap
 
             foreach (var occupiedCell in OccupiedCells.Keys)
             {
-                AdjacencyMatrix.ForEach(adjVec => emptyNeighbors.Add(occupiedCell + adjVec));
+                emptyNeighbors.AddRange(Helpers.HexMap.GetAdjacentCells(occupiedCell));
             }
-
 
             emptyNeighbors = emptyNeighbors.Distinct().Where(cell => !OccupiedCells.Keys.Contains(cell)).ToList();
 
@@ -129,7 +120,14 @@ namespace CampaignMap
         }
 
         public void GenerateAdjacentWorlds() {
-            GetEmptyNeighbors().ForEach(cell => PlaceObject(cell, WorldPrefab));
+            var adjacentWorlds = GetEmptyNeighbors();
+            var worldNames = Helpers.PlanetNameGen.GenerateNames(adjacentWorlds.Count);
+
+            for (var index = 0; index < adjacentWorlds.Count; index++)
+            {
+                var cell = adjacentWorlds[index];
+                var world = PlaceObject(cell, WorldPrefab, worldNames[index]);
+            }
         }
 
     }
