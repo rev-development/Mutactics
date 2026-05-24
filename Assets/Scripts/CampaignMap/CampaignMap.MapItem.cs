@@ -40,6 +40,7 @@ namespace CampaignMap
         public void AssignCords(Vector3Int hexCords, Manager campaignMapManager, string itemName = "MapItem") {
             CampaignMapManager = campaignMapManager;
             HexCords = hexCords;
+            ItemName = itemName;
             gameObject.name = itemName;
         }
 

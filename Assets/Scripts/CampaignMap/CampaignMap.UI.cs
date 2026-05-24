@@ -1,92 +1,70 @@
-using System;
-using System.Runtime.CompilerServices;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.UIElements;
+#if UNITY_EDITOR
+#endif
 
 namespace CampaignMap
 {
-    public class UI : MonoBehaviour, INotifyBindablePropertyChanged
+    public class UI : MonoBehaviour
     {
 
-        private Manager _campaignMapManager;
+        // TODO: Implement transition to battle scene on Invade button click
 
-        private string _hexCords;
+        public Manager CampaignMapManager;
 
-        private TextField _hexCordsTextField;
+        public UIDocument UIDocument;
 
-        private UIDocument _uiDocument;
+        [SerializeField] [DontCreateProperty] private string _worldName = "";
 
-        private string _worldName;
-
-        private TextField _worldNameTextField;
+        [SerializeField] [DontCreateProperty] private string _hexCords = "";
 
         [CreateProperty]
-        public string WorldName
-        {
-            get => _campaignMapManager.MapItemSelected.ItemName;
-
-            set
-            {
-                _worldName = value;
-                Notify();
-            }
-        }
+        public string WorldName { get => _worldName; set => _worldName = value; }
 
         [CreateProperty]
-        public string HexCords
-        {
-            get => _campaignMapManager.MapItemSelected.ItemName;
-
-            set
-            {
-                _worldName = value;
-                Notify();
-            }
-        }
+        public string HexCords { get => _hexCords; set => _hexCords = value; }
 
         public void OnEnable() {
-            _uiDocument = GetComponent<UIDocument>();
-            _campaignMapManager = Manager.Instance;
+            CampaignMapManager.MapItemSelect.AddListener(OnMapItemSelect);
 
-            if (!_uiDocument
-                || !_campaignMapManager)
-                return;
+            var worldNameLabel = UIDocument.rootVisualElement.Q<Label>("WorldName");
+            worldNameLabel.dataSource = this;
 
-            _campaignMapManager.MapItemSelect.AddListener(OnMapItemSelect);
-
-            _worldNameTextField = _uiDocument.rootVisualElement.Q("WorldName") as TextField;
-            _hexCordsTextField = _uiDocument.rootVisualElement.Q("HexCords") as TextField;
-
-            _worldNameTextField.SetBinding
+            worldNameLabel.SetBinding
                 (
-                    "value",
+                    "text",
                     new DataBinding
                     {
-                        dataSourcePath = new PropertyPath(nameof(WorldName))
+                        dataSourcePath = new PropertyPath(nameof(WorldName)),
+                        bindingMode = BindingMode.ToTarget
                     }
                 );
 
-            _hexCordsTextField.SetBinding
+            var hexCordsLabel = UIDocument.rootVisualElement.Q<Label>("HexCords");
+            hexCordsLabel.dataSource = this;
+
+            hexCordsLabel.SetBinding
                 (
-                    "value",
+                    "text",
                     new DataBinding
                     {
-                        dataSourcePath = new PropertyPath(nameof(HexCords))
+                        dataSourcePath = new PropertyPath(nameof(HexCords)),
+                        bindingMode = BindingMode.ToTarget
                     }
                 );
+
+            UIDocument.rootVisualElement.style.display = DisplayStyle.None;
         }
-
-        public event EventHandler<BindablePropertyChangedEventArgs> propertyChanged;
 
         public void OnMapItemSelect(MapItem mapItem) {
             WorldName = mapItem.ItemName;
             HexCords = mapItem.HexCords.ToString();
-        }
 
-        private void Notify([CallerMemberName] string property = "") {
-            propertyChanged.Invoke(this, new BindablePropertyChangedEventArgs(property));
-            Debug.Log("Run");
+            UIDocument.rootVisualElement.style.display
+                = !string.IsNullOrEmpty(WorldName) && !string.IsNullOrEmpty(HexCords)
+                    ? DisplayStyle.Flex
+                    : DisplayStyle.None;
         }
 
     }
