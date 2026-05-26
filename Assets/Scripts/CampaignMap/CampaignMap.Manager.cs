@@ -12,6 +12,8 @@ namespace CampaignMap
 
         public Tilemap Tilemap;
 
+        public Tile SimpleColorHex;
+
         public GameObject WorldPrefab;
 
         [SerializeField] public SerializedDictionary<Vector3Int, MapItem> OccupiedCells = new();
@@ -23,7 +25,7 @@ namespace CampaignMap
         public static Manager Instance { get; private set; }
 
         public void Awake() {
-            Tilemap = gameObject.GetComponentInChildren<Tilemap>();
+            SingletonAwake();
         }
 
         public void Start() {
@@ -33,16 +35,21 @@ namespace CampaignMap
         }
 
         public void OnEnable() {
-            if (!Instance)
-            {
-                Instance = this;
-            }
-
             MapItemSelect.AddListener(OnMapItemSelected);
         }
 
         public void OnDisable() {
             MapItemSelect.RemoveAllListeners();
+        }
+
+        private void SingletonAwake() {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+            }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         public void OnMapItemSelected(MapItem mapItem) {
@@ -69,7 +76,7 @@ namespace CampaignMap
         public void GetExistingMapItems() {
             OccupiedCells.Clear();
 
-            foreach (var mapItem in GetComponentsInChildren<MapItem>())
+            foreach (var mapItem in Tilemap.GetComponentsInChildren<MapItem>())
             {
                 if (IsCellAvailable(mapItem.HexCords))
                 {
@@ -93,10 +100,19 @@ namespace CampaignMap
                     Tilemap.gameObject.transform
                 );
 
+            objectToPlace.transform.Translate(new Vector3(0, 0.125f, 0));
+
             if (objectToPlace.TryGetComponent(out MapItem mapItem))
             {
                 OccupiedCells.Add(hexCords, mapItem);
-                mapItem.AssignCords(hexCords, this, itemName);
+
+                mapItem.AssignCords
+                    (
+                        hexCords,
+                        this,
+                        Tilemap.GetTile(hexCords),
+                        itemName
+                    );
             }
             else
             {
@@ -127,6 +143,19 @@ namespace CampaignMap
             {
                 var cell = adjacentWorlds[index];
                 var world = PlaceObject(cell, WorldPrefab, worldNames[index]);
+                Tilemap.SetTile(cell, SimpleColorHex);
+
+                Tilemap.SetColor
+                    (
+                        cell,
+                        new Color
+                            (
+                                1f,
+                                0f,
+                                0f,
+                                0.25f
+                            )
+                    );
             }
         }
 

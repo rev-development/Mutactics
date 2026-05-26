@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Tilemaps;
 
 namespace CampaignMap
 {
     public abstract class MapItem : MonoBehaviour
     {
+
+        public TileBase Tile;
 
         public string ItemName;
 
@@ -37,9 +40,15 @@ namespace CampaignMap
             Outline.enabled = IsSelected;
         }
 
-        public void AssignCords(Vector3Int hexCords, Manager campaignMapManager, string itemName = "MapItem") {
+        public void AssignCords(
+            Vector3Int hexCords,
+            Manager campaignMapManager,
+            TileBase tile,
+            string itemName = "MapItem"
+        ) {
             CampaignMapManager = campaignMapManager;
             HexCords = hexCords;
+            Tile = tile;
             ItemName = itemName;
             gameObject.name = itemName;
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WorldBrush
   m_EditorClassIdentifier: Unity.2D.Tilemap.Extras.Editor::UnityEditor.Tilemaps.GameObjectBrush
   m_Cells:
-  - m_GameObject: {fileID: 3742428629398855171, guid: 8794d2c1a5106d848a329431c5f85199, type: 3}
+  - m_GameObject: {fileID: 4761042072867985336, guid: 8794d2c1a5106d848a329431c5f85199, type: 3}
     m_Offset: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     m_Orientation: {x: 0, y: 0, z: 0, w: 1}
