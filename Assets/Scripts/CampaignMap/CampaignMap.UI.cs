@@ -42,7 +42,7 @@ namespace CampaignMap
 
         public void OnEnable() {
 // Attach listeners to Unity Events (separate from UI binding)
-            CampaignMapManager.MapItemSelect.AddListener(OnMapItemSelect);
+            CampaignMapManager.MapItemSelected.AddListener(OnMapItemSelect);
 
             // Bind labels
             var root = UIDocument.rootVisualElement;
@@ -125,10 +125,7 @@ namespace CampaignMap
             WorldName = mapItem.ItemName;
             HexCords = mapItem.HexCords.ToString();
 
-            UIDocument.rootVisualElement.style.display
-                = !string.IsNullOrEmpty(WorldName) && !string.IsNullOrEmpty(HexCords)
-                    ? DisplayStyle.Flex
-                    : DisplayStyle.None;
+            UIDocument.rootVisualElement.style.display = !string.IsNullOrEmpty(WorldName) && !string.IsNullOrEmpty(HexCords) ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
     }

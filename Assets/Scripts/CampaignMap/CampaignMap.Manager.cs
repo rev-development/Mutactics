@@ -18,9 +18,9 @@ namespace CampaignMap
 
         [SerializeField] public SerializedDictionary<Vector3Int, MapItem> OccupiedCells = new();
 
-        public UnityEvent<MapItem> MapItemSelect = new();
+        public UnityEvent<MapItem> MapItemSelected = new();
 
-        public MapItem MapItemSelected;
+        public MapItem ActiveSelection;
 
         public static Manager Instance { get; private set; }
 
@@ -35,11 +35,11 @@ namespace CampaignMap
         }
 
         public void OnEnable() {
-            MapItemSelect.AddListener(OnMapItemSelected);
+            MapItemSelected.AddListener(OnMapItemSelected);
         }
 
         public void OnDisable() {
-            MapItemSelect.RemoveAllListeners();
+            MapItemSelected.RemoveAllListeners();
         }
 
         private void SingletonAwake() {
@@ -53,9 +53,9 @@ namespace CampaignMap
         }
 
         public void OnMapItemSelected(MapItem mapItem) {
-            if (MapItemSelected)
+            if (ActiveSelection)
             {
-                MapItemSelected.Select.Invoke(false);
+                ActiveSelection.Select.Invoke(false);
             }
 
             // Deselect When Clicked Again
@@ -69,8 +69,8 @@ namespace CampaignMap
             //     MapItemSelected.Select.Invoke(true);
             // }
 
-            MapItemSelected = mapItem;
-            MapItemSelected.Select.Invoke(true);
+            ActiveSelection = mapItem;
+            ActiveSelection.Select.Invoke(true);
         }
 
         public void GetExistingMapItems() {

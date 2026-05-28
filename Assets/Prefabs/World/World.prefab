@@ -992,6 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd21e7b3a344690824c89f141caa5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Core::Core.World.Location
+  Tile: {fileID: 0}
   ItemName: Start
   Outline: {fileID: 4076813566634220566}
   HexCords: {x: 0, y: 0, z: 0}
