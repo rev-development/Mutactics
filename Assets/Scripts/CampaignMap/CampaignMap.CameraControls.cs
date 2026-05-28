@@ -1,20 +1,25 @@
+using Core.Map;
 using UnityEngine;
 
 namespace CampaignMap
 {
-    [AddComponentMenu("Campaign Map Camera Controls")]
-    public class CameraControls : global::CameraControls
+    public class CampaignMapCameraControlsAddon : MonoBehaviour
     {
 
-        public override void OnEnable() {
-            base.OnEnable();
-            MouseRaycasted.AddListener(OnMouseRaycasted);
+        private CameraControls _cameraControls;
+
+        public void Awake() {
+            _cameraControls = gameObject.GetComponent<CameraControls>();
+        }
+
+        public void OnEnable() {
+            _cameraControls?.MouseRaycasted.AddListener(OnMouseRaycasted);
         }
 
         public void OnMouseRaycasted(RaycastHit hit) {
-            if (hit.collider.gameObject.TryGetComponent(out MapItem mapItem))
+            if (hit.collider.gameObject.TryGetComponent(out World gridItem))
             {
-                Manager.Instance.MapItemSelected.Invoke(mapItem);
+                Manager.Instance.GridItemSelected.Invoke(gridItem);
             }
         }
 

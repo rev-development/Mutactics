@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Core.UnitProgression
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(fileName = "Mutation", menuName = "Mutactics/Mutation")]
     public sealed class Mutation : ScriptableObject, IStats
     {
 

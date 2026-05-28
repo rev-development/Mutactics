@@ -1,12 +1,8 @@
 {
-    "name": "Core",
+    "name": "Controls",
     "rootNamespace": "",
     "references": [
-        "GUID:14419b843879f554b8cb49758771286e",
-        "GUID:d525ad6bd40672747bde77962f1c401e",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:e3c382d94a2bd774681f390ada1136dd",
-        "GUID:0b7fa28439a7eb2488bd8e5f9855317c"
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Core.Map;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,8 +11,6 @@ namespace CampaignMap
 {
     public class UI : MonoBehaviour
     {
-
-        // TODO: Implement transition to battle scene on Invade button click
 
         public Manager CampaignMapManager;
 
@@ -42,7 +41,7 @@ namespace CampaignMap
 
         public void OnEnable() {
 // Attach listeners to Unity Events (separate from UI binding)
-            CampaignMapManager.MapItemSelected.AddListener(OnMapItemSelect);
+            CampaignMapManager.GridItemSelected.AddListener(OnGridItemSelect);
 
             // Bind labels
             var root = UIDocument.rootVisualElement;
@@ -109,7 +108,7 @@ namespace CampaignMap
             UIDocument.rootVisualElement.style.display = DisplayStyle.None;
         }
 
-        public void OnInvadeButtonClick() {
+        private void OnInvadeButtonClick() {
             if (!_isInvadeButtonInConfirmState)
             {
                 _isInvadeButtonInConfirmState = true;
@@ -121,11 +120,16 @@ namespace CampaignMap
             // TODO: Scene Transition w/ Persistent Data Save
         }
 
-        public void OnMapItemSelect(MapItem mapItem) {
-            WorldName = mapItem.ItemName;
-            HexCords = mapItem.HexCords.ToString();
+        private void OnGridItemSelect(GridItem gridItem) {
+            if (!gridItem.gameObject.TryGetComponent<World>(out var world)) return;
 
-            UIDocument.rootVisualElement.style.display = !string.IsNullOrEmpty(WorldName) && !string.IsNullOrEmpty(HexCords) ? DisplayStyle.Flex : DisplayStyle.None;
+            WorldName = world.WorldData.ItemName;
+            HexCords = world.Cell.ToString();
+
+            UIDocument.rootVisualElement.style.display
+                = !string.IsNullOrEmpty(WorldName) && !string.IsNullOrEmpty(HexCords)
+                    ? DisplayStyle.Flex
+                    : DisplayStyle.None;
         }
 
     }
