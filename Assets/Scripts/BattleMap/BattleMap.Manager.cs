@@ -1,24 +1,19 @@
+using System.Linq;
 using CampaignMap;
+using Core.Map;
 using UnityEngine;
 
 namespace BattleMap
 {
     [AddComponentMenu("Battle Map Manager")]
-    public class Manager : Core.Map.Manager<Manager, Hex>
+    public class Manager : Manager<Manager, Hex>
     {
 
         public WorldData WorldData;
         public CampaignMap.Manager CampaignMapManager;
+        public MapData MapData = new();
 
-        [ContextMenu("Init")]
-        public void Init() {
-            if (WorldData)
-            {
-                GenerateBattleMap(WorldData.MapSize);
-
-                return;
-            }
-
+        private bool PreMapGenCheck() {
             if (!CampaignMapManager)
             {
                 CampaignMapManager = CampaignMap.Manager.Instance as CampaignMap.Manager;
@@ -29,16 +24,63 @@ namespace BattleMap
                 && CampaignMapManager.ActiveSelection.TryGetComponent<WorldData>(out var worldData))
             {
                 WorldData = worldData;
-                GenerateBattleMap(WorldData.MapSize);
             }
+
+            return WorldData && Tilemap;
         }
 
-        public void GenerateBattleMap(Vector2Int mapSize) {
-            for (var x = 0; x < mapSize.x; x++)
+        public void ResetMap() {
+            foreach (var gridItem in MapData.Values.Where(gridItem => gridItem.HexSpacer))
             {
-                for (var y = 0; y < mapSize.y; y++)
+            #if UNITY_EDITOR
+                DestroyImmediate(gridItem.HexSpacer);
+            #else
+                Destroy(gridItem.HexSpacer);
+            #endif
+            }
+
+            MapData.Clear();
+
+            Tilemap.ClearAllTiles();
+
+            OccupiedCells.Clear();
+        }
+
+        public void GenerateMap() {
+            if (!PreMapGenCheck()) return;
+
+            ResetMap();
+
+            MapData = MapGen.GenerateMapData(WorldData, SimpleColorHex, HexSpacer);
+
+            foreach (var cellData in MapData)
+            {
+                Tilemap.SetTile(cellData.Value.Cell, cellData.Value.Tile);
+                var randomColor = Random.ColorHSV();
+                Tilemap.SetColor(cellData.Value.Cell, randomColor);
+
+                var hex = PlaceObject(cellData.Value.Cell, HexSpacer);
+                cellData.Value.HexSpacer = hex;
+
+                if (hex)
                 {
-                    Tilemap.SetTile(new Vector3Int(x, y, 0), SimpleColorHex);
+                    var hexScale = hex.transform.localScale;
+                    hexScale.y = cellData.Value.Cell.z;
+                    hex.transform.localScale = hexScale;
+
+                    // Offset for Tilemap Alignment
+                    if (hex.TryGetComponent<MeshFilter>(out var proBuilderMesh))
+                    {
+                        var hexPos = hex.transform.position;
+
+                        hexPos.y -= proBuilderMesh.sharedMesh.bounds.size.y * hex.transform.localScale.y / 2;
+
+                        hex.transform.position = hexPos;
+                    }
+
+                    // TODO: Set Material
+                    // Don't modify renderer.material from editor (the random color requires new material generated)
+                    // Helpers.Shaders.ChangeSimpleColor(randomColor, hex);
                 }
             }
         }

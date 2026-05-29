@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dev
   m_EditorClassIdentifier: Assembly-CSharp::CampaignMap.WorldData
   <ItemName>k__BackingField: Dev
-  <MapSize>k__BackingField: {x: 20, y: 20}
+  <MapSize>k__BackingField: {x: 5, y: 5}
   <Cell>k__BackingField: {x: 0, y: 0, z: 0}
   <IsPlayerControlled>k__BackingField: 1
+  <Altitude>k__BackingField: 2

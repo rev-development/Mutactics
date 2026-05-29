@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map
 {
-    public abstract class GridItem : MonoBehaviour
+    public abstract class GridItem : MonoBehaviour, IGridItem
     {
 
         #region Events
@@ -22,9 +22,10 @@ namespace Core.Map
 
         #endregion
 
-        public virtual void AssignCords(Vector3Int hexCords, TileBase tile) {
+        public virtual void AssignCords(Vector3Int hexCords, TileBase tile, GameObject hexSpacer) {
             Cell = hexCords;
             Tile = tile;
+            HexSpacer = hexSpacer;
         }
 
         protected void CenterSelf(Tilemap tilemap) {
@@ -49,8 +50,9 @@ namespace Core.Map
         #region Runtime Values
 
         [Header("Grid Item Runtime Values")]
-        public Vector3Int Cell;
-        public TileBase Tile;
+        public Vector3Int Cell { get; set; }
+        public TileBase Tile { get; set; }
+        public GameObject HexSpacer { get; set; }
         public bool IsSelected { get; protected set; } = false;
 
         #endregion

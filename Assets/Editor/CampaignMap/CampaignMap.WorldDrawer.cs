@@ -3,9 +3,9 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Editor.CampaignMapDrawers
+namespace Editor.CampaignMap
 {
-    [CustomEditor(typeof(CampaignMap.World))]
+    [CustomEditor(typeof(global::CampaignMap.World))]
     public class WorldDrawer : UnityEditor.Editor
     {
 

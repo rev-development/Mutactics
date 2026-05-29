@@ -9,6 +9,7 @@ namespace CampaignMap
         public Vector2Int MapSize { get; set; }
         public Vector3Int Cell { get; set; }
         public bool IsPlayerControlled { get; set; }
+        public int Altitude { get; set; }
 
     }
 }

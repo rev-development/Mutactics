@@ -57,10 +57,9 @@ namespace Core.Map
         public virtual GameObject PlaceObject(Vector3Int hexCords, GameObject objectPrefab) {
             if (!IsCellAvailable(hexCords)) return null;
 
-            var objectToPlace = Instantiate
-                (
+            var objectToPlace = Instantiate(
                     objectPrefab,
-                    Tilemap.CellToWorld(hexCords),
+                    Tilemap.GetCellCenterWorld(hexCords),
                     Quaternion.identity,
                     Tilemap.gameObject.transform
                 );
@@ -69,11 +68,15 @@ namespace Core.Map
             {
                 OccupiedCells.Add(hexCords, gridItem);
 
-                gridItem.AssignCords(hexCords, Tilemap.GetTile(hexCords));
+                gridItem.AssignCords(hexCords, Tilemap.GetTile(hexCords), objectToPlace);
             }
             else
             {
+            #if UNITY_EDITOR
+                DestroyImmediate(objectToPlace);
+            #else
                 Destroy(objectToPlace);
+            #endif
             }
 
             return objectToPlace;
@@ -126,9 +129,9 @@ namespace Core.Map
 
         #region References
 
-        [Header("References")]
         public Tilemap Tilemap;
         public Tile SimpleColorHex;
+        public GameObject HexSpacer;
         public static Manager<T0, T1> Instance { get; private set; }
 
         #endregion
