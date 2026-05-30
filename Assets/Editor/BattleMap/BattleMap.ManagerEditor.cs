@@ -4,14 +4,14 @@ using UnityEngine.UIElements;
 
 namespace Editor.BattleMap
 {
-    [CustomEditor(typeof(global::BattleMap.Manager))]
+    [CustomEditor(typeof(global::BattleMap.ManagerBase))]
     public class ManagerEditor : UnityEditor.Editor
     {
 
         public override VisualElement CreateInspectorGUI() {
             var root = new VisualElement();
 
-            var battleMapManager = (global::BattleMap.Manager)target;
+            var battleMapManager = (global::BattleMap.ManagerBase)target;
 
             var property = serializedObject.GetIterator();
 
@@ -19,7 +19,7 @@ namespace Editor.BattleMap
             {
                 do
                 {
-                    if (property.name == "MapData")
+                    if (property.name == "OccupiedCells")
                     {
                         var row = new VisualElement();
                         row.style.flexDirection = FlexDirection.Row;

@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Core.Map
+namespace Core.Map.GridItem
 {
-    public interface IGridItem
+    public interface IGridItemData
     {
 
         public Vector3Int Cell { get; set; }
         public TileBase Tile { get; set; }
-        public GameObject HexSpacer { get; set; }
 
     }
 }

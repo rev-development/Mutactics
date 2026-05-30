@@ -1,6 +1,7 @@
 using System.Linq;
-using CampaignMap;
-using Core.Map;
+using AYellowpaper.SerializedCollections;
+using BattleMap.Hex;
+using CampaignMap.World;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -9,19 +10,29 @@ namespace BattleMap
     public static class MapGen
     {
 
-        public static void InitMapSize(Vector2Int mapSize, MapData mapData) {
+        public static void InitMapSize(Vector2Int mapSize, SerializedDictionary<Vector2Int, HexData> mapData) {
             for (var x = 0; x < mapSize.x; x++)
             {
                 for (var y = 0; y < mapSize.y; y++)
                 {
-                    mapData.Add(new Vector2Int(x, y), new GridItemData(new Vector3Int(x, y, 0)));
+                    mapData.Add(
+                            new Vector2Int(x, y),
+                            new HexData
+                            {
+                                Cell = new Vector3Int(x, y, 0)
+                            }
+                        );
                 }
             }
         }
 
-        public static MapData GenerateBaseMapData(IWorldData worldData, TileBase defaultTile, GameObject hexSpacer) {
-            var mapData = new MapData();
-            InitMapSize(worldData.MapSize, mapData);
+        public static SerializedDictionary<Vector2Int, HexData> GenerateBaseMapData(
+            WorldSO worldSO,
+            TileBase defaultTile,
+            GameObject hexSpacer
+        ) {
+            var mapData = new SerializedDictionary<Vector2Int, HexData>();
+            InitMapSize(worldSO.MapSize, mapData);
 
             foreach (var cell in mapData.Values)
             {
@@ -31,26 +42,35 @@ namespace BattleMap
             return mapData;
         }
 
-        public static MapData GenerateMapData(IWorldData worldData, TileBase defaultTile, GameObject hexSpacer) {
-            var mapData = GenerateBaseMapData(worldData, defaultTile, hexSpacer);
+        public static SerializedDictionary<Vector2Int, HexData> GenerateMapData(
+            WorldSO worldSO,
+            TileBase defaultTile,
+            GameObject hexSpacer
+        ) {
+            var mapData = GenerateBaseMapData(worldSO, defaultTile, hexSpacer);
 
-            foreach (var cellData in mapData)
+            foreach (var hexData in mapData)
             {
-                var adjacentCellCords = Helpers.HexMap.GetAdjacentCells(cellData.Value.Cell)
-                                               .Select(cell => new Vector2Int(cell.x, cell.y));
-
-                var adjacentCells = mapData.Where(cell => adjacentCellCords.Contains(cell.Key)).ToList();
-
-                var altitudeRangeMin = Mathf.Min(adjacentCells.Select(cell => cell.Value.Cell.z).ToArray()) - 1f;
-                var altitudeRangeMax = Mathf.Max(adjacentCells.Select(cell => cell.Value.Cell.z).ToArray()) + 1f;
-
-                var randomAltitude = Random.Range(altitudeRangeMin, altitudeRangeMax);
-                var generatedAltitude = Mathf.CeilToInt(Mathf.Clamp(randomAltitude, 0, worldData.Altitude));
-
-                cellData.Value.Cell = new Vector3Int(cellData.Value.Cell.x, cellData.Value.Cell.y, generatedAltitude);
+                ApplyAltitude(hexData.Value, mapData, worldSO);
             }
 
             return mapData;
+        }
+
+        public static void ApplyAltitude(
+            HexData hexData,
+            SerializedDictionary<Vector2Int, HexData> mapData,
+            WorldSO worldSO
+        ) {
+            var adjacentCellCords = Helpers.HexMap.GetAdjacentCells(hexData.Cell)
+                                           .Select(cell => new Vector2Int(cell.x, cell.y));
+
+            var adjacentCells = mapData.Where(cell => adjacentCellCords.Contains(cell.Key)).ToList();
+            var altitudeRangeMin = Mathf.Min(adjacentCells.Select(cell => cell.Value.Cell.z).ToArray()) - 1f;
+            var altitudeRangeMax = Mathf.Max(adjacentCells.Select(cell => cell.Value.Cell.z).ToArray()) + 1f;
+            var randomAltitude = Random.Range(altitudeRangeMin, altitudeRangeMax);
+            var generatedAltitude = Mathf.CeilToInt(Mathf.Clamp(randomAltitude, 0, worldSO.Altitude));
+            hexData.Cell = new Vector3Int(hexData.Cell.x, hexData.Cell.y, generatedAltitude);
         }
 
     }

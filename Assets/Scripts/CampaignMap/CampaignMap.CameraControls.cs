@@ -17,7 +17,7 @@ namespace CampaignMap
         }
 
         public void OnMouseRaycasted(RaycastHit hit) {
-            if (hit.collider.gameObject.TryGetComponent(out World gridItem))
+            if (hit.collider.gameObject.TryGetComponent(out World.World gridItem))
             {
                 Manager.Instance.GridItemSelected.Invoke(gridItem);
             }

@@ -2,19 +2,18 @@ using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Core.Map
+namespace Core.Map.GridItem
 {
     [Serializable]
-    public class GridItemData : IGridItem
+    public class GridItemData : IGridItemData
     {
-
-        public GridItemData(Vector3Int cell) {
-            Cell = cell;
-        }
 
         [field: SerializeField] public Vector3Int Cell { get; set; }
         [field: SerializeField] public TileBase Tile { get; set; }
-        [field: SerializeField] public GameObject HexSpacer { get; set; }
+
+        public Vector2Int GetKey() {
+            return new Vector2Int(Cell.x, Cell.y);
+        }
 
     }
 }

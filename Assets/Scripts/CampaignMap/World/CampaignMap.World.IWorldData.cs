@@ -1,13 +1,13 @@
+using Core.Map.GridItem;
 using UnityEngine;
 
-namespace CampaignMap
+namespace CampaignMap.World
 {
-    public struct WorldDataStruct : IWorldData
+    public interface IWorldData : IGridItemData
     {
 
-        public string ItemName { get; set; }
+        public string Name { get; set; }
         public Vector2Int MapSize { get; set; }
-        public Vector3Int Cell { get; set; }
         public bool IsPlayerControlled { get; set; }
         public int Altitude { get; set; }
 

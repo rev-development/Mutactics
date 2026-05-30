@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Core.Map;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,29 +12,18 @@ namespace CampaignMap
     {
 
         public Manager CampaignMapManager;
-
         public UIDocument UIDocument;
-
         [SerializeField] [DontCreateProperty] private string _worldName = "";
-
         [SerializeField] [DontCreateProperty] private string _hexCords = "";
-
         [SerializeField] [DontCreateProperty] private bool _isInvadeButtonInConfirmState = false;
-
         public Button ConfirmInvadeButton;
-
         public Label HexCordsLabel;
-
         public Button InvadeButton;
-
         public Label WorldNameLabel;
-
         [CreateProperty]
         public string WorldName { get => _worldName; set => _worldName = value; }
-
         [CreateProperty]
         public string HexCords { get => _hexCords; set => _hexCords = value; }
-
         [CreateProperty]
         public string InvadeButtonText => _isInvadeButtonInConfirmState ? "Confirm" : "Invade";
 
@@ -54,8 +42,7 @@ namespace CampaignMap
                 WorldNameLabel,
                 HexCordsLabel,
                 InvadeButton
-            }.ForEach
-                (visualElement =>
+            }.ForEach(visualElement =>
                     {
                         if (visualElement != null)
                         {
@@ -65,8 +52,7 @@ namespace CampaignMap
                 );
 
 
-            WorldNameLabel?.SetBinding
-                (
+            WorldNameLabel?.SetBinding(
                     "text",
                     new DataBinding
                     {
@@ -75,8 +61,7 @@ namespace CampaignMap
                     }
                 );
 
-            HexCordsLabel?.SetBinding
-                (
+            HexCordsLabel?.SetBinding(
                     "text",
                     new DataBinding
                     {
@@ -85,8 +70,7 @@ namespace CampaignMap
                     }
                 );
 
-            InvadeButton?.SetBinding
-                (
+            InvadeButton?.SetBinding(
                     "text",
                     new DataBinding
                     {
@@ -120,11 +104,11 @@ namespace CampaignMap
             // TODO: Scene Transition w/ Persistent Data Save
         }
 
-        private void OnGridItemSelect(GridItem gridItem) {
-            if (!gridItem.gameObject.TryGetComponent<World>(out var world)) return;
+        private void OnGridItemSelect(World.World worldItem) {
+            if (!worldItem.gameObject.TryGetComponent<World.World>(out var world)) return;
 
-            WorldName = world.WorldData.ItemName;
-            HexCords = world.Cell.ToString();
+            WorldName = world.WorldSO.Name;
+            HexCords = world.DataSO.Cell.ToString();
 
             UIDocument.rootVisualElement.style.display
                 = !string.IsNullOrEmpty(WorldName) && !string.IsNullOrEmpty(HexCords)

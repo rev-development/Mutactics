@@ -1,29 +1,33 @@
+using CampaignMap.World;
 using Core.Map;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace CampaignMap
 {
     [AddComponentMenu("Campaign Map Manager")]
-    public class Manager : Manager<Manager, World>
+    public class Manager : ManagerBase<Manager, IWorldData, WorldSO, World.World, WorldData>
     {
 
+        public Tile SimpleColorHex;
         public GameObject WorldPrefab;
+
+        // public GameObject PlaceWorld(GameObject objectPrefab, WorldData worldData) {
+        //     var placedObject = base.PlaceObject(worldData.Cell, SimpleColorHex, objectPrefab);
+        //     // placedObject.gameObject.transform.Translate(0, 0.125f, 0);
+        //
+        //     if (placedObject.gameObject.TryGetComponent(out World.World world))
+        //     {
+        //         world.AssignData(worldData);
+        //     }
+        //
+        //     return placedObject;
+        // }
+        public Vector2Int DefaultMapSize = new(40, 40);
 
         public void Start() {
             GetExistingGridItems();
             GenerateAdjacentWorlds();
-        }
-
-        public GameObject PlaceWorld(GameObject objectPrefab, WorldDataStruct worldDataStruct) {
-            var placedObject = base.PlaceObject(worldDataStruct.Cell, objectPrefab);
-            // placedObject.gameObject.transform.Translate(0, 0.125f, 0);
-
-            if (placedObject.gameObject.TryGetComponent(out World world))
-            {
-                world.AssignData(worldDataStruct);
-            }
-
-            return placedObject;
         }
 
         public void GenerateAdjacentWorlds() {
@@ -32,23 +36,31 @@ namespace CampaignMap
 
             for (var index = 0; index < adjacentWorlds.Count; index++)
             {
-                var worldDataStruct = new WorldDataStruct
+                var worldDataStruct = new WorldData
                 {
-                    ItemName = worldNames[index],
-                    MapSize = new Vector2Int(20, 20),
+                    Name = worldNames[index],
                     Cell = adjacentWorlds[index]
                 };
 
                 // TODO: Randomize Map Size
 
-                var world = PlaceWorld(WorldPrefab, worldDataStruct);
-                Tilemap.SetTile(worldDataStruct.Cell, SimpleColorHex);
+                var world = PlaceObject(
+                        new WorldData
+                        {
+                            Cell = adjacentWorlds[index],
+                            Tile = SimpleColorHex,
+                            Name = worldNames[index],
+                            MapSize = DefaultMapSize,
+                            IsPlayerControlled = false,
+                            Altitude = 0
+                        },
+                        WorldPrefab
+                    );
 
-                Tilemap.SetColor
-                    (
+
+                Tilemap.SetColor(
                         worldDataStruct.Cell,
-                        new Color
-                            (
+                        new Color(
                                 1f,
                                 0f,
                                 0f,
