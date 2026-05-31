@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2067992800373936483}
-  - component: {fileID: 2100283902440723780}
+  - component: {fileID: 6476073504092302564}
   - component: {fileID: 6316601634623603111}
   m_Layer: 0
   m_Name: CampaignMapManager
@@ -33,7 +33,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2100283902440723780
+--- !u!114 &6476073504092302564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,15 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec1185c5f9e5554d84805e9becbded1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CampaignMap.Manager
+  GridItemSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  DefaultGridItemOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 0
+  OccupiedCells:
+    _serializedList: []
+  ActiveSelection: {fileID: 0}
   Tilemap: {fileID: 0}
   SimpleColorHex: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
   WorldPrefab: {fileID: 4761042072867985336, guid: 8794d2c1a5106d848a329431c5f85199, type: 3}
-  OccupiedCells:
-    _serializedList: []
-  MapItemSelected:
-    m_PersistentCalls:
-      m_Calls: []
-  ActiveSelection: {fileID: 0}
+  DefaultMapSize: {x: 40, y: 40}
 --- !u!114 &6316601634623603111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d0bc9c645f4a7a94368c9750c008fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CampaignMap.UI
-  CampaignMapManager: {fileID: 2100283902440723780}
+  CampaignMapManager: {fileID: 6476073504092302564}
   UIDocument: {fileID: 0}
   _worldName: 
   _hexCords: 

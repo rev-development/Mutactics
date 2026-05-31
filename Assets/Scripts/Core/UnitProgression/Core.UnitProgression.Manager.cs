@@ -11,10 +11,8 @@ namespace Core.UnitProgression
 
         private static float GetMutationWeight(Mutation mutation, IEvolPressure contextTags) {
             // Apply multipliers based on how many tags match
-            return contextTags.TagBonuses.Keys.Where
-                                   (contextTag => mutation.Tags.Contains(contextTag))
-                              .Aggregate
-                                   (
+            return contextTags.TagBonuses.Keys.Where(contextTag => mutation.Tags.Contains(contextTag))
+                              .Aggregate(
                                        mutation.BaseWeight,
                                        (current, contextTag) => current * contextTags.TagBonuses[contextTag]
                                    );
@@ -24,8 +22,10 @@ namespace Core.UnitProgression
             // This uses the "Roulette Wheel" Selection Method
 
             // Step 1: Calculate dynamic weights based on tags and context
-            var activePool = GlobalMutationPool.ToDictionary
-                (mutation => mutation, mutation => GetMutationWeight(mutation, contextTags));
+            var activePool = GlobalMutationPool.ToDictionary(
+                    mutation => mutation,
+                    mutation => GetMutationWeight(mutation, contextTags)
+                );
 
             // Step 2: Roll the weighted random
             var randRoll = Random.Range(0f, activePool.Sum(item => item.Value));

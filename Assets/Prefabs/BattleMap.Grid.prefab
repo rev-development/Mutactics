@@ -1,0 +1,582 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &122731024576031750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273546437020016468}
+  - component: {fileID: 479344383192417251}
+  - component: {fileID: 3478979706215647423}
+  m_Layer: 0
+  m_Name: BattleMap.Pawn.Tilemap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273546437020016468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122731024576031750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4886953430091284219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1839735485 &479344383192417251
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122731024576031750}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileOrientation: 1
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!483693784 &3478979706215647423
+TilemapRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122731024576031750}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 1
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+--- !u!1 &1331826947157862679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4587650539991202046}
+  - component: {fileID: 7990000952367490529}
+  - component: {fileID: 6209382967513370089}
+  m_Layer: 0
+  m_Name: BattleMap.Hex.Tilemap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4587650539991202046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331826947157862679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4886953430091284219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1839735485 &7990000952367490529
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331826947157862679}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileOrientation: 1
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+--- !u!483693784 &6209382967513370089
+TilemapRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331826947157862679}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 1
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+--- !u!1 &2435794001680589982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4886953430091284219}
+  - component: {fileID: 5236753495229352794}
+  - component: {fileID: 6493604439539395410}
+  - component: {fileID: 6615186412714469438}
+  - component: {fileID: 2670354914687983274}
+  m_Layer: 0
+  m_Name: BattleMap.Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4886953430091284219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 4587650539991202046}
+  - {fileID: 1273546437020016468}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &5236753495229352794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8303c33397c740e4b92816cd851ebb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleMap.Manager
+  GridItemSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  DefaultGridItemOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 1
+    <ClearTilemapOnReset>k__BackingField: 1
+  OccupiedCells:
+    _serializedList:
+    - Key: {x: 0, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 0, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 1, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 2, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 3, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 4, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 5, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 6, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 7, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 8, y: 9}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 0}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 1}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 2}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 3}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 4}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 5}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 6}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 7}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 8}
+      Value: {fileID: 0}
+    - Key: {x: 9, y: 9}
+      Value: {fileID: 0}
+  ActiveSelection: {fileID: 0}
+  Tilemap: {fileID: 7990000952367490529}
+  CampaignMapManager: {fileID: 0}
+  HexSpacer: {fileID: 5802018790808144106, guid: cf69de5af67ac0549ac1ca36cf88064d, type: 3}
+  SimpleColorHex: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
+  WorldData: {fileID: 11400000, guid: 592dbbafcba4ccb40a9ab38b39b8c0f6, type: 2}
+--- !u!114 &6493604439539395410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6bbeecb186c496d84d85b1561794601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BattleMap::BattleMap.Pawn.Manager
+  GridItemSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  DefaultGridItemOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+  OccupiedCells:
+    _serializedList: []
+  ActiveSelection: {fileID: 0}
+  Tilemap: {fileID: 7990000952367490529}
+  PawnPrefab: {fileID: 5802018790808144106, guid: f44f80f77738d13498f2b94cd294a38b, type: 3}
+  HexManager: {fileID: 5236753495229352794}
+--- !u!156049354 &6615186412714469438
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  m_Enabled: 1
+  m_CellSize: {x: 0.866, y: 1, z: 0.25}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 1
+  m_CellSwizzle: 1
+--- !u!114 &2670354914687983274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: f4c1ffa26ba791442a6df37a22ca0558, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: aa42f6209b2df354e8612f489a8c259c, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}

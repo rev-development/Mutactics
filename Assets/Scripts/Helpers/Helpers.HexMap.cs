@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Helpers
@@ -22,6 +23,16 @@ namespace Helpers
             AdjacencyMatrix.ForEach(adjVec => adjacentCells.Add(adjVec + hexCords));
 
             return adjacentCells;
+        }
+
+        public static List<Vector2Int> GetEdgeCells(List<Vector2Int> cells, Vector2Int mapSize) {
+            return cells.Where(cell => cell.x == 0 || cell.x == mapSize.x - 1 || cell.y == 0 || cell.y == mapSize.y - 1)
+                        .ToList();
+        }
+
+        public static List<Vector2Int> GetInteriorCells(List<Vector2Int> cells, Vector2Int mapSize) {
+            return cells.Where(cell => cell.x != 0 && cell.x != mapSize.x - 1 && cell.y != 0 && cell.y != mapSize.y - 1)
+                        .ToList();
         }
 
     }

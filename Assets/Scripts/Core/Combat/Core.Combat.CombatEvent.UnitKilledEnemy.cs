@@ -15,7 +15,6 @@ namespace Core.Combat
         }
 
         public string TargetId { get; set; }
-
         public Dictionary<string, float> TagBonuses { get; }
 
     }

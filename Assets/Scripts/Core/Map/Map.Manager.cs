@@ -43,6 +43,10 @@ namespace Core.Map
             DontDestroyOnLoad(gameObject);
         }
 
+        public virtual void Start() {
+            GetExistingGridItems();
+        }
+
         public virtual void OnEnable() {
             GridItemSelected.AddListener(OnGridItemSelected);
         }
@@ -57,19 +61,38 @@ namespace Core.Map
                 ActiveSelection.Select.Invoke(false);
             }
 
-            // Deselect When Clicked Again
-            // if (MapItemSelected == mapItem)
-            // {
-            //     MapItemSelected = null;
-            // }
-            // else
-            // {
-            //     MapItemSelected = mapItem;
-            //     MapItemSelected.Select.Invoke(true);
-            // }
+            if (DefaultGridItemOptions.DeselectOnDoubleClick
+                && ActiveSelection == gridItem)
+            {
+                ActiveSelection = null;
+            }
+            else
+            {
+                ActiveSelection = gridItem;
+                ActiveSelection.Select.Invoke(true);
+            }
+        }
 
-            ActiveSelection = gridItem;
-            ActiveSelection.Select.Invoke(true);
+        public virtual void ResetMap() {
+            foreach (var gridItem in gameObject.GetComponentsInChildren<TItem>())
+            {
+            #if UNITY_EDITOR
+                DestroyImmediate(gridItem.DataSO);
+                gridItem.DataSO = null;
+                DestroyImmediate(gridItem.gameObject);
+            #else
+                Destroy(gridItem.DataSO);
+                gridItem.DataSO = null;
+                Destroy(gridItem.gameObject);
+            #endif
+            }
+
+            if (DefaultGridItemOptions.ClearTilemapOnReset)
+            {
+                Tilemap.ClearAllTiles();
+            }
+
+            OccupiedCells.Clear();
         }
 
         public void GetExistingGridItems() {
@@ -77,7 +100,14 @@ namespace Core.Map
 
             foreach (var gridItem in Tilemap.GetComponentsInChildren<TItem>())
             {
-                if (IsCellAvailable(gridItem.DataSO.GetKey()))
+                if (OccupiedCells.ContainsKey(gridItem.DataSO.GetKey()))
+                {
+                    if (OccupiedCells[gridItem.DataSO.GetKey()] == null)
+                    {
+                        OccupiedCells[gridItem.DataSO.GetKey()] = gridItem;
+                    }
+                }
+                else
                 {
                     OccupiedCells.Add(gridItem.DataSO.GetKey(), gridItem);
                 }
@@ -85,7 +115,7 @@ namespace Core.Map
         }
 
         public bool IsCellAvailable(Vector2Int cell) {
-            return Tilemap && !OccupiedCells.TryGetValue(cell, out _);
+            return Tilemap && !OccupiedCells.ContainsKey(cell);
         }
 
         public virtual GameObject PlaceObject(TItemData itemData, GameObject objectPrefab) {
@@ -132,6 +162,24 @@ namespace Core.Map
                                            .ToList();
 
             return emptyNeighbors;
+        }
+
+        public Vector2Int GetNextAvailableKey() {
+            var nextKey = new Vector2Int();
+
+            while (OccupiedCells.ContainsKey(nextKey))
+            {
+                if (nextKey.x > nextKey.y)
+                {
+                    nextKey.y += 1;
+                }
+                else
+                {
+                    nextKey.x += 1;
+                }
+            }
+
+            return nextKey;
         }
 
     }

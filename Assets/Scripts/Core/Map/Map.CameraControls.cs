@@ -3,9 +3,9 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 // ReSharper disable MemberCanBePrivate.Global
-
 namespace Core.Map
 {
+    [AddComponentMenu("Base Camera Controls")]
     public class CameraControls : MonoBehaviour
     {
 
@@ -23,10 +23,8 @@ namespace Core.Map
         }
 
         public void Rotate() {
-            _mainCamera.transform.localEulerAngles = new Vector3
-                (
-                    Mathf.Clamp
-                        (
+            _mainCamera.transform.localEulerAngles = new Vector3(
+                    Mathf.Clamp(
                             _mainCamera.transform.localEulerAngles.x - RotateInput.y * RotateSpeed * Time.deltaTime,
                             CameraRotateXBoundsMin,
                             CameraRotateXBoundsMax
@@ -161,7 +159,6 @@ namespace Core.Map
         public bool IsRotating;
         public Vector2 RotateInput;
         public GameObject LastRaycastTarget;
-
         public UnityEvent<RaycastHit> MouseRaycasted = new();
 
         #endregion
@@ -172,13 +169,10 @@ namespace Core.Map
         public float PanSpeed = 4f;
         public float ZoomSpeed = 4f;
         public float RotateSpeed = 40f;
-
         public float CameraPanYBoundsMin = 1f;
         public float CameraPanYBoundsMax = 5f;
-
         public float CameraRotateXBoundsMin = 0f;
         public float CameraRotateXBoundsMax = 90f;
-
         public float ScrollZoomMultiplier = 0.0625f;
 
         #endregion

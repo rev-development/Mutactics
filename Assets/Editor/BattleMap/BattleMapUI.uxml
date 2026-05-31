@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/CampaignMap/CampaignMapUI.uss?fileID=7433441132597879392&amp;guid=bb016858348e5f84ea43e27dbda42aeb&amp;type=3#CampaignMapUI"/>
+    <ui:VisualElement name="VisualElement" data-source-type="" data-source-path="" style="flex-grow: 1; flex-direction: row-reverse; align-self: flex-end; align-items: flex-end; justify-content: flex-end; width: auto; transform-origin: center; flex-shrink: 1; align-content: auto;">
+        <ui:GroupBox name="Hex" style="background-color: rgb(77, 77, 77); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
+            <ui:Label text="" data-source-path="" data-source-type="" name="Hex_CellLabel" data-source="project://database/Assets/Scripts/CampaignMap/CampaignMap.UI.asset?fileID=11400000&amp;guid=44703b518efb5ae40a30a81f14c585d2&amp;type=2#CampaignMap.UI" style="white-space: pre-wrap; -unity-text-align: upper-left; text-overflow: clip; margin-top: 2px; margin-left: 4px; padding-top: 10px; padding-right: 12px; padding-bottom: 10px; padding-left: 12px; color: rgb(255, 255, 255);"/>
+        </ui:GroupBox>
+        <ui:GroupBox name="Pawn" style="background-color: rgb(77, 77, 77); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
+            <ui:Label text="" data-source-path="" data-source-type="" name="Pawn_CellLabel" data-source="project://database/Assets/Scripts/CampaignMap/CampaignMap.UI.asset?fileID=11400000&amp;guid=44703b518efb5ae40a30a81f14c585d2&amp;type=2#CampaignMap.UI" style="white-space: pre-wrap; -unity-text-align: upper-left; text-overflow: clip; margin-top: 2px; margin-left: 4px; padding-top: 10px; padding-right: 12px; padding-bottom: 10px; padding-left: 12px; color: rgb(255, 255, 255);"/>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

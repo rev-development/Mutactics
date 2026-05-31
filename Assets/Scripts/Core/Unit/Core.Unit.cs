@@ -4,7 +4,7 @@ using Core.UnitProgression;
 
 namespace Core.Unit
 {
-    public sealed class Unit : IEvolPressure, IStats
+    public class Unit : IEvolPressure, IStats
     {
 
         /// <summary>
@@ -12,9 +12,7 @@ namespace Core.Unit
         ///     IMPORTANT: Items only need to implement the interface IEvolPressure, meaning this can be a heterogeneous list.
         /// </summary>
         public List<IEvolPressure> EvolPressures = new();
-
         public string Id;
-
         public List<Mutation> Mutations = new();
 
         public Unit(string id) {
@@ -25,26 +23,30 @@ namespace Core.Unit
         {
             get
             {
-                return Mutations.Aggregate
-                    (new Dictionary<string, IAbility>(), (prev, next) => Helpers.Dict.Collate(prev, next.Abilities));
+                return Mutations.Aggregate(
+                        new Dictionary<string, IAbility>(),
+                        (prev, next) => Helpers.Dict.Collate(prev, next.Abilities)
+                    );
             }
         }
-
-        public Dictionary<string, float> TagBonuses
-        {
-            get
-            {
-                return EvolPressures.Aggregate
-                    (new Dictionary<string, float>(), (prev, next) => Helpers.Dict.Collate(prev, next.TagBonuses));
-            }
-        }
-
         public Dictionary<string, float> Stats
         {
             get
             {
-                return Mutations.Aggregate
-                    (new Dictionary<string, float>(), (prev, next) => Helpers.Dict.Collate(prev, next.Stats));
+                return Mutations.Aggregate(
+                        new Dictionary<string, float>(),
+                        (prev, next) => Helpers.Dict.Collate(prev, next.Stats)
+                    );
+            }
+        }
+        public Dictionary<string, float> TagBonuses
+        {
+            get
+            {
+                return EvolPressures.Aggregate(
+                        new Dictionary<string, float>(),
+                        (prev, next) => Helpers.Dict.Collate(prev, next.TagBonuses)
+                    );
             }
         }
 

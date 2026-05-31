@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9117346095965661140}
-  - component: {fileID: 4533582307014919708}
+  - component: {fileID: 209369661557616033}
   m_Layer: 0
   m_Name: BattleMapManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4533582307014919708
+--- !u!114 &209369661557616033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,9 +47,13 @@ MonoBehaviour:
   GridItemSelected:
     m_PersistentCalls:
       m_Calls: []
+  DefaultGridItemOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 1
   OccupiedCells:
     _serializedList: []
   ActiveSelection: {fileID: 0}
   Tilemap: {fileID: 0}
+  CampaignMapManager: {fileID: 0}
+  HexSpacer: {fileID: 5802018790808144106, guid: cf69de5af67ac0549ac1ca36cf88064d, type: 3}
   SimpleColorHex: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
-  World: {fileID: 0}
+  WorldData: {fileID: 11400000, guid: 592dbbafcba4ccb40a9ab38b39b8c0f6, type: 2}

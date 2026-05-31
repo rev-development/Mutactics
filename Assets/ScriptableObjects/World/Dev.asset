@@ -16,6 +16,6 @@ MonoBehaviour:
   <Cell>k__BackingField: {x: 0, y: 0, z: 0}
   <Tile>k__BackingField: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
   <Name>k__BackingField: Dev
-  <MapSize>k__BackingField: {x: 5, y: 5}
+  <MapSize>k__BackingField: {x: 10, y: 10}
   <IsPlayerControlled>k__BackingField: 1
-  <Altitude>k__BackingField: 2
+  <Altitude>k__BackingField: 4

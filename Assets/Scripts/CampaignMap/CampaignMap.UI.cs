@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 namespace CampaignMap
 {
+    [AddComponentMenu("Campaign Map UI")]
     public class UI : MonoBehaviour
     {
 
@@ -16,7 +17,6 @@ namespace CampaignMap
         [SerializeField] [DontCreateProperty] private string _worldName = "";
         [SerializeField] [DontCreateProperty] private string _hexCords = "";
         [SerializeField] [DontCreateProperty] private bool _isInvadeButtonInConfirmState = false;
-        public Button ConfirmInvadeButton;
         public Label HexCordsLabel;
         public Button InvadeButton;
         public Label WorldNameLabel;
@@ -28,7 +28,7 @@ namespace CampaignMap
         public string InvadeButtonText => _isInvadeButtonInConfirmState ? "Confirm" : "Invade";
 
         public void OnEnable() {
-// Attach listeners to Unity Events (separate from UI binding)
+            // Attach listeners to Unity Events (separate from UI binding)
             CampaignMapManager.GridItemSelected.AddListener(OnGridItemSelect);
 
             // Bind labels
@@ -79,8 +79,6 @@ namespace CampaignMap
                     }
                 );
 
-            // Bind Invade Button + Confirm Invade Button
-
             if (InvadeButton != null)
             {
                 InvadeButton.clicked += OnInvadeButtonClick;
@@ -107,7 +105,7 @@ namespace CampaignMap
         private void OnGridItemSelect(World.World worldItem) {
             if (!worldItem.gameObject.TryGetComponent<World.World>(out var world)) return;
 
-            WorldName = world.WorldSO.Name;
+            WorldName = world.DataSO.Name;
             HexCords = world.DataSO.Cell.ToString();
 
             UIDocument.rootVisualElement.style.display

@@ -7,9 +7,7 @@ namespace Core.Combat
     {
 
         public List<Unit.Unit> Units = new();
-
         public static Manager Instance { get; private set; }
-
         public Stack<ICombatEvent> History { get; } = new();
 
         public void OnEnable() {

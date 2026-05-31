@@ -9,9 +9,7 @@ namespace Core.Tests
     {
 
         public Combat.Manager CombatManager;
-
         public Unit.Unit SourceUnit;
-
         public Unit.Unit TargetUnit;
 
         [UnitySetUp]

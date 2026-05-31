@@ -11,22 +11,10 @@ namespace CampaignMap
 
         public Tile SimpleColorHex;
         public GameObject WorldPrefab;
-
-        // public GameObject PlaceWorld(GameObject objectPrefab, WorldData worldData) {
-        //     var placedObject = base.PlaceObject(worldData.Cell, SimpleColorHex, objectPrefab);
-        //     // placedObject.gameObject.transform.Translate(0, 0.125f, 0);
-        //
-        //     if (placedObject.gameObject.TryGetComponent(out World.World world))
-        //     {
-        //         world.AssignData(worldData);
-        //     }
-        //
-        //     return placedObject;
-        // }
         public Vector2Int DefaultMapSize = new(40, 40);
 
-        public void Start() {
-            GetExistingGridItems();
+        public override void Start() {
+            base.Start();
             GenerateAdjacentWorlds();
         }
 
