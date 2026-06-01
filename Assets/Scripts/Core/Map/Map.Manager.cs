@@ -9,7 +9,7 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map
 {
-    [AddComponentMenu("Map Manager")]
+    [AddComponentMenu("Core/Map/Manager")]
     public abstract class ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData> : MonoBehaviour
         where TManager : MonoBehaviour
         where TDataInterface : IGridItemData
@@ -19,10 +19,10 @@ namespace Core.Map
     {
 
         public UnityEvent<TItem> GridItemSelected = new();
-        public GridItemOptions DefaultGridItemOptions = new();
         [SerializeField] public SerializedDictionary<Vector2Int, TItem> OccupiedCells = new();
         public TItem ActiveSelection;
         public Tilemap Tilemap;
+        public GridItemOptions DefaultGridItemOptions = new();
         [UsedImplicitly]
         public static ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData> Instance
         {

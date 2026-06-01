@@ -18,7 +18,9 @@ namespace CampaignMap
             _cameraControls?.MouseRaycasted.AddListener(OnMouseRaycasted);
         }
 
-        public void OnMouseRaycasted(RaycastHit hit) {
+        public void OnMouseRaycasted(Ray ray) {
+            if (!Physics.Raycast(ray, out var hit)) return;
+
             if (hit.collider.gameObject.TryGetComponent(out World.World gridItem))
             {
                 Manager.Instance.GridItemSelected.Invoke(gridItem);

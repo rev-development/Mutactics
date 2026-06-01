@@ -72,11 +72,7 @@ namespace Core.Map
         public void MouseRaycast(InputAction.CallbackContext _) {
             var ray = _mainCamera.ScreenPointToRay(_actions.MousePosition.ReadValue<Vector2>());
 
-            if (Physics.Raycast(ray, out var hit))
-            {
-                LastRaycastTarget = hit.collider.gameObject;
-                MouseRaycasted.Invoke(hit);
-            }
+            MouseRaycasted.Invoke(ray);
         }
 
         #region Lifecycle
@@ -158,8 +154,7 @@ namespace Core.Map
         public float ZoomInput;
         public bool IsRotating;
         public Vector2 RotateInput;
-        public GameObject LastRaycastTarget;
-        public UnityEvent<RaycastHit> MouseRaycasted = new();
+        public UnityEvent<Ray> MouseRaycasted = new();
 
         #endregion
 

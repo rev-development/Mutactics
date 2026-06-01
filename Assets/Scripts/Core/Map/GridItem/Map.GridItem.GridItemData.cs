@@ -4,6 +4,9 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map.GridItem
 {
+    /// <summary>
+    ///     Used primarily for passing data to the GridItemSO when instantiating it.
+    /// </summary>
     [Serializable]
     public class GridItemData : IGridItemData
     {

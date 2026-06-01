@@ -10,7 +10,6 @@ namespace Core.Map.GridItem
         [field: SerializeField] public bool PlaceObjectBelowGrid { get; set; } = false;
         [field: SerializeField] public bool ClearTilemapOnReset { get; set; } = false;
         [field: SerializeField] public bool OnPlaceStretchObjectY { get; set; } = false;
-        [field: SerializeField] public bool OffsetProBuilderMesh { get; set; } = false;
         [field: SerializeField] public bool DeselectOnDoubleClick { get; set; } = false;
 
     }

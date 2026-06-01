@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CampaignMap.World
 {
-    [CreateAssetMenu(fileName = "World", menuName = "Mutactics/World")]
+    [CreateAssetMenu(fileName = "World", menuName = "Mutactics/CampaignMap/World")]
     [Serializable]
     public class WorldSO : GridItemSO<IWorldData>, IWorldData
     {
@@ -12,7 +12,7 @@ namespace CampaignMap.World
         [field: SerializeField] public string Name { get; set; } = "";
         [field: SerializeField] public Vector2Int MapSize { get; set; } = new();
         [field: SerializeField] public bool IsPlayerControlled { get; set; } = false;
-        [field: SerializeField] [field: Range(1, 6)] public int Altitude { get; set; } = 1;
+        [field: SerializeField] [field: Range(0, 6)] public int AltitudeMax { get; set; } = 1;
 
         public override void AssignData(IWorldData worldData, GameObject correspondingGameObject) {
             base.AssignData(worldData, correspondingGameObject);
@@ -20,7 +20,7 @@ namespace CampaignMap.World
             MapSize = worldData.MapSize;
             Cell = worldData.Cell;
             IsPlayerControlled = worldData.IsPlayerControlled;
-            Altitude = worldData.Altitude;
+            AltitudeMax = worldData.AltitudeMax;
         }
 
     }

@@ -58,6 +58,8 @@ namespace Editor.BattleMap.Hex
                 } while (property.NextVisible(false));
             }
 
+            root.Bind(serializedObject);
+
             return root;
         }
 

@@ -9,7 +9,7 @@ namespace CampaignMap.World
         public string Name { get; set; }
         public Vector2Int MapSize { get; set; }
         public bool IsPlayerControlled { get; set; }
-        public int Altitude { get; set; }
+        public int AltitudeMax { get; set; }
 
     }
 }

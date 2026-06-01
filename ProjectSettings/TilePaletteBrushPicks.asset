@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcb7dc175a14a4eb2348f2d5e002dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Tilemap.Editor::UnityEditor.Tilemaps.GridBrushPickStoreSettings
-  m_UserPickStore: {fileID: 11400000, guid: b071c46635dc4c04d847dc0e76dcda7b, type: 2}
+  m_UserPickStore: {fileID: 11400000, guid: ca68f5c5332060e448abb93385bd7510, type: 2}

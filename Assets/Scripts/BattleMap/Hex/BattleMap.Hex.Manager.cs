@@ -1,22 +1,14 @@
 using CampaignMap.World;
 using Core.Map;
-using Core.Map.GridItem;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace BattleMap.Hex
 {
-    [AddComponentMenu("Battle Map Hex Manager")]
+    [AddComponentMenu("BattleMap/Hex/HexManager")]
     public class Manager : ManagerBase<Manager, IHexData, HexSO, Hex, HexData>
     {
 
-        public GridItemOptions GridItemOptions = new()
-        {
-            ClearTilemapOnReset = true,
-            OnPlaceStretchObjectY = true,
-            PlaceObjectBelowGrid = true,
-            OffsetProBuilderMesh = true
-        };
         public CampaignMap.Manager CampaignMapManager;
         public GameObject HexSpacer;
         public Tile SimpleColorHex;

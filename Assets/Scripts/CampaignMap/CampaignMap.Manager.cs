@@ -40,7 +40,7 @@ namespace CampaignMap
                             Name = worldNames[index],
                             MapSize = DefaultMapSize,
                             IsPlayerControlled = false,
-                            Altitude = 0
+                            AltitudeMax = 0
                         },
                         WorldPrefab
                     );

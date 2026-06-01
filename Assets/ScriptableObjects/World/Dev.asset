@@ -18,4 +18,4 @@ MonoBehaviour:
   <Name>k__BackingField: Dev
   <MapSize>k__BackingField: {x: 10, y: 10}
   <IsPlayerControlled>k__BackingField: 1
-  <Altitude>k__BackingField: 4
+  <AltitudeMax>k__BackingField: 4

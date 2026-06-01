@@ -63,7 +63,10 @@ namespace BattleMap.Hex
             var altitudeRangeMin = Mathf.Min(adjacentCells.Select(cell => cell.Value.Cell.z).ToArray()) - 1f;
             var altitudeRangeMax = Mathf.Max(adjacentCells.Select(cell => cell.Value.Cell.z).ToArray()) + 1f;
             var randomAltitude = Random.Range(altitudeRangeMin, altitudeRangeMax);
-            var generatedAltitude = Mathf.CeilToInt(Mathf.Clamp(randomAltitude, 1, worldSO.Altitude));
+
+            // Min is 1 because of object scaling
+            var generatedAltitude = Mathf.CeilToInt(Mathf.Clamp(randomAltitude, 1, worldSO.AltitudeMax));
+
             hexData.Cell = new Vector3Int(hexData.Cell.x, hexData.Cell.y, generatedAltitude);
         }
 

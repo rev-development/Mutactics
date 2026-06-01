@@ -8,20 +8,23 @@ namespace Core.Map.GridItem
         where TScriptableObject : GridItemSO<TDataInterface> where TDataInterface : IGridItemData
     {
 
-        [field: SerializeField] private Vector3Int _inspectorHex;
-        public TScriptableObject DataSO;
+        [Helpers.InlineSOAttribute] public TScriptableObject DataSO;
+        public IGridItemData CachedData;
         public UnityEvent<bool> Select = new();
-        public Outline Outline;
+        private Outline _outline;
         public bool IsSelected { get; protected set; } = false;
-        public GameObject CorrespondingGameObject { get; set; }
+
+        public virtual void Awake() {
+            _outline = GetComponent<Outline>();
+        }
 
         public virtual void OnEnable() {
-            if (!Outline)
+            if (!_outline)
             {
-                Outline = gameObject.GetComponent<Outline>();
+                _outline = gameObject.GetComponent<Outline>();
             }
 
-            Outline.enabled = IsSelected;
+            _outline.enabled = IsSelected;
 
             Select.AddListener(OnSelect);
         }
@@ -35,17 +38,18 @@ namespace Core.Map.GridItem
             DataSO = null;
         }
 
+        public void OnApplicationQuit() {
+        }
+
         protected virtual void OnSelect(bool isSelected) {
             IsSelected = isSelected;
-            Outline.enabled = IsSelected;
+            _outline.enabled = IsSelected;
         }
 
         public virtual void Init(TDataInterface gridItemData, GridItemOptions options) {
             DataSO = ScriptableObject.CreateInstance<TScriptableObject>();
 
             DataSO.AssignData(gridItemData, gameObject);
-
-            _inspectorHex = DataSO.Cell;
 
             InitTransform(options);
             // TODO: Set Material
@@ -63,18 +67,26 @@ namespace Core.Map.GridItem
         }
 
         protected virtual void InitTransformPosition(GridItemOptions options) {
-            var adjustedPosition = gameObject.transform.position;
+            var adjustedLocalPosition = gameObject.transform.localPosition;
 
-            if (options.OffsetProBuilderMesh
-                && gameObject.TryGetComponent<MeshFilter>(out var proBuilderMesh))
+            if (gameObject.TryGetComponent<MeshCollider>(out var meshCollider))
             {
-                adjustedPosition.y += proBuilderMesh.sharedMesh.bounds.size.y
-                                      * gameObject.transform.localScale.y
-                                      / 2
-                                      * (options.PlaceObjectBelowGrid ? -1 : 1);
+                adjustedLocalPosition.y += meshCollider.bounds.size.y
+                                           * gameObject.transform.localScale.y
+                                           / 2
+                                           * (options.PlaceObjectBelowGrid ? -1 : 1);
             }
+            //
+            // if (options.OffsetProBuilderMesh
+            //     && gameObject.TryGetComponent<MeshFilter>(out var proBuilderMesh))
+            // {
+            //     adjustedPosition.y += proBuilderMesh.sharedMesh.bounds.size.y
+            //                           * gameObject.transform.localScale.y
+            //                           / 2
+            //                           * (options.PlaceObjectBelowGrid ? -1 : 1);
+            // }
 
-            gameObject.transform.position = adjustedPosition;
+            gameObject.transform.localPosition = adjustedLocalPosition;
         }
 
         protected virtual void InitTransform(GridItemOptions options) {

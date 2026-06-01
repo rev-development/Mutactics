@@ -172,17 +172,41 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: 1e-45
+      e01: 0
+      e02: -5582.6914
+      e03: -5582.8516
+      e10: 0
+      e11: 0
+      e12: 2.9e-43
+      e13: 2.9e-43
+      e20: 1.13076e-13
+      e21: 1e-45
+      e22: 3.40639e-40
+      e23: -7.5898472e-28
+      e30: 4.5915e-41
+      e31: 0
+      e32: 7.45e-43
+      e33: 7.41e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 475, g: 475, b: 475, a: 475}
   m_TileObjectToInstantiateArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 1
   m_TileOrientationMatrix:
@@ -269,8 +293,10 @@ GameObject:
   - component: {fileID: 4886953430091284219}
   - component: {fileID: 5236753495229352794}
   - component: {fileID: 6493604439539395410}
+  - component: {fileID: 7168541862854501056}
   - component: {fileID: 6615186412714469438}
   - component: {fileID: 2670354914687983274}
+  - component: {fileID: 2380898062474695982}
   m_Layer: 0
   m_Name: BattleMap.Grid
   m_TagString: Untagged
@@ -310,213 +336,15 @@ MonoBehaviour:
   GridItemSelected:
     m_PersistentCalls:
       m_Calls: []
+  OccupiedCells:
+    _serializedList: []
+  ActiveSelection: {fileID: 0}
+  Tilemap: {fileID: 7990000952367490529}
   DefaultGridItemOptions:
     <PlaceObjectBelowGrid>k__BackingField: 1
     <ClearTilemapOnReset>k__BackingField: 1
-  OccupiedCells:
-    _serializedList:
-    - Key: {x: 0, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 0, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 1, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 2, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 3, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 4, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 5, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 6, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 7, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 8, y: 9}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 0}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 1}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 2}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 3}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 4}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 5}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 6}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 7}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 8}
-      Value: {fileID: 0}
-    - Key: {x: 9, y: 9}
-      Value: {fileID: 0}
-  ActiveSelection: {fileID: 0}
-  Tilemap: {fileID: 7990000952367490529}
+    <OnPlaceStretchObjectY>k__BackingField: 1
+    <DeselectOnDoubleClick>k__BackingField: 1
   CampaignMapManager: {fileID: 0}
   HexSpacer: {fileID: 5802018790808144106, guid: cf69de5af67ac0549ac1ca36cf88064d, type: 3}
   SimpleColorHex: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
@@ -536,15 +364,30 @@ MonoBehaviour:
   GridItemSelected:
     m_PersistentCalls:
       m_Calls: []
-  DefaultGridItemOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 0
-    <ClearTilemapOnReset>k__BackingField: 0
   OccupiedCells:
     _serializedList: []
   ActiveSelection: {fileID: 0}
-  Tilemap: {fileID: 7990000952367490529}
-  PawnPrefab: {fileID: 5802018790808144106, guid: f44f80f77738d13498f2b94cd294a38b, type: 3}
+  Tilemap: {fileID: 479344383192417251}
+  DefaultGridItemOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
+    <DeselectOnDoubleClick>k__BackingField: 1
+  PawnPrefab: {fileID: 4461522766512141386, guid: 2349743813ef8814786426da309661f0, type: 3}
+--- !u!114 &7168541862854501056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d73b0652884631ab9aa84e293dd957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BattleMap::BattleMap.UnifiedManager
   HexManager: {fileID: 5236753495229352794}
+  PawnManager: {fileID: 6493604439539395410}
 --- !u!156049354 &6615186412714469438
 Grid:
   m_ObjectHideFlags: 0
@@ -571,7 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
   m_PanelSettings: {fileID: 11400000, guid: f4c1ffa26ba791442a6df37a22ca0558, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: aa42f6209b2df354e8612f489a8c259c, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: cf470c48f45a63e43a87f5c60aff3861, type: 3}
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
@@ -580,3 +423,20 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &2380898062474695982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435794001680589982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56dd6a50eeb415d848b11deecf573b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BattleMap::BattleMap.UI
+  HexManager: {fileID: 5236753495229352794}
+  PawnManager: {fileID: 6493604439539395410}
+  UIDocument: {fileID: 2670354914687983274}
+  _hexCell: 
+  _pawnCell: 

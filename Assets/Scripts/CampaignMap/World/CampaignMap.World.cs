@@ -10,8 +10,7 @@ namespace CampaignMap.World
         public GridItemOptions GridItemOptions = new()
         {
             ClearTilemapOnReset = true,
-            PlaceObjectBelowGrid = true,
-            OffsetProBuilderMesh = true
+            PlaceObjectBelowGrid = true
         };
         public UnityEvent<bool> PlayerControlChanged;
 

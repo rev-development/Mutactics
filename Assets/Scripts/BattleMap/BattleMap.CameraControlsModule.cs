@@ -18,14 +18,17 @@ namespace BattleMap
             _cameraControls?.MouseRaycasted.AddListener(OnMouseRaycasted);
         }
 
-        public void OnMouseRaycasted(RaycastHit hit) {
-            if (hit.collider.gameObject.TryGetComponent(out BattleMap.Hex.Hex hex))
+        public void OnMouseRaycasted(Ray ray) {
+            if (Physics.Raycast(ray, out var hit))
             {
-                Hex.Manager.Instance.GridItemSelected.Invoke(hex);
-            }
-            else if (hit.collider.gameObject.TryGetComponent(out BattleMap.Pawn.Pawn pawn))
-            {
-                Pawn.Manager.Instance.GridItemSelected.Invoke(pawn);
+                if (hit.collider.gameObject.TryGetComponent(out BattleMap.Hex.Hex hex))
+                {
+                    Hex.Manager.Instance.GridItemSelected.Invoke(hex);
+                }
+                else if (hit.collider.gameObject.TryGetComponent(out BattleMap.Pawn.Pawn pawn))
+                {
+                    Pawn.Manager.Instance.GridItemSelected.Invoke(pawn);
+                }
             }
         }
 

@@ -49,11 +49,20 @@ MonoBehaviour:
       m_Calls: []
   DefaultGridItemOptions:
     <PlaceObjectBelowGrid>k__BackingField: 1
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
+    <DeselectOnDoubleClick>k__BackingField: 0
   OccupiedCells:
     _serializedList: []
   ActiveSelection: {fileID: 0}
   Tilemap: {fileID: 0}
+  Grid: {fileID: 0}
+  GridItemOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 1
+    <ClearTilemapOnReset>k__BackingField: 1
+    <OnPlaceStretchObjectY>k__BackingField: 1
+    <DeselectOnDoubleClick>k__BackingField: 0
   CampaignMapManager: {fileID: 0}
-  HexSpacer: {fileID: 5802018790808144106, guid: cf69de5af67ac0549ac1ca36cf88064d, type: 3}
+  HexSpacer: {fileID: 4461522766512141386, guid: e5458763f0817ea46968e0a809c429f3, type: 3}
   SimpleColorHex: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
   WorldData: {fileID: 11400000, guid: 592dbbafcba4ccb40a9ab38b39b8c0f6, type: 2}
