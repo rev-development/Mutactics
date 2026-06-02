@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.Properties;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 #if UNITY_EDITOR
@@ -12,12 +13,19 @@ namespace BattleMap
     {
 
         public Hex.Manager HexManager;
+
         public Pawn.Manager PawnManager;
+
         public UIDocument UIDocument;
+
         [SerializeField] [DontCreateProperty] private string _hexCell = "";
+
         [SerializeField] [DontCreateProperty] private string _pawnCell = "";
+
         public Label HexCellLabel;
+
         public Label PawnCellLabel;
+
         [CreateProperty]
         public string HexCell { get => _hexCell; set => _hexCell = value; }
         [CreateProperty]
@@ -64,6 +72,11 @@ namespace BattleMap
                         bindingMode = BindingMode.ToTarget
                     }
                 );
+        }
+
+        public void OnDisable() {
+            HexCellLabel.Unbind();
+            PawnCellLabel.Unbind();
         }
 
         private void OnHexSelect(BattleMap.Hex.Hex hex) {

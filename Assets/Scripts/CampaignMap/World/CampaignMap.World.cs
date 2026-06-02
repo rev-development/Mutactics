@@ -12,20 +12,18 @@ namespace CampaignMap.World
             ClearTilemapOnReset = true,
             PlaceObjectBelowGrid = true
         };
+
         public UnityEvent<bool> PlayerControlChanged;
 
         public void Start() {
             PlayerControlChanged.Invoke(DataSO.IsPlayerControlled);
         }
 
-        public override void OnEnable() {
-            base.OnEnable();
-
+        public void OnEnable() {
             PlayerControlChanged.AddListener(OnPlayerControlChanged);
         }
 
-        public override void OnDisable() {
-            base.OnDisable();
+        public void OnDisable() {
             PlayerControlChanged.RemoveAllListeners();
         }
 

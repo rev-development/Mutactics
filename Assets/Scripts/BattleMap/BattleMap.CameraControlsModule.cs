@@ -19,7 +19,16 @@ namespace BattleMap
         }
 
         public void OnMouseRaycasted(Ray ray) {
-            if (Physics.Raycast(ray, out var hit))
+            var layerMask = Pawn.Manager.Instance.ActiveSelection != null
+                ? LayerMask.GetMask("Hex")
+                : LayerMask.GetMask("Pawn");
+
+            if (Physics.Raycast(
+                        ray,
+                        out var hit,
+                        Mathf.Infinity,
+                        layerMask
+                    ))
             {
                 if (hit.collider.gameObject.TryGetComponent(out BattleMap.Hex.Hex hex))
                 {

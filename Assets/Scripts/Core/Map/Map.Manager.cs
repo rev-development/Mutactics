@@ -9,8 +9,7 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map
 {
-    [AddComponentMenu("Core/Map/Manager")]
-    public abstract class ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData> : MonoBehaviour
+    public class ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData> : MonoBehaviour
         where TManager : MonoBehaviour
         where TDataInterface : IGridItemData
         where TScriptableObject : GridItemSO<TDataInterface>
@@ -19,16 +18,17 @@ namespace Core.Map
     {
 
         public UnityEvent<TItem> GridItemSelected = new();
+
         [SerializeField] public SerializedDictionary<Vector2Int, TItem> OccupiedCells = new();
+
         public TItem ActiveSelection;
+
         public Tilemap Tilemap;
+
         public GridItemOptions DefaultGridItemOptions = new();
+
         [UsedImplicitly]
-        public static ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData> Instance
-        {
-            get;
-            private set;
-        }
+        public static TManager Instance { get; private set; }
 
         public virtual void Awake() {
             if (Instance != null
@@ -39,7 +39,7 @@ namespace Core.Map
                 return;
             }
 
-            Instance = this;
+            Instance = this as TManager;
             DontDestroyOnLoad(gameObject);
         }
 
@@ -58,18 +58,26 @@ namespace Core.Map
         public void OnGridItemSelected(TItem gridItem) {
             if (ActiveSelection)
             {
-                ActiveSelection.Select.Invoke(false);
+                Selectable.TrySelect(ActiveSelection.gameObject, false);
             }
+
 
             if (DefaultGridItemOptions.DeselectOnDoubleClick
                 && ActiveSelection == gridItem)
             {
                 ActiveSelection = null;
             }
-            else
+
+
+            if (gridItem)
             {
                 ActiveSelection = gridItem;
-                ActiveSelection.Select.Invoke(true);
+
+                Selectable.TrySelect(ActiveSelection.gameObject, false);
+            }
+            else
+            {
+                ActiveSelection = null;
             }
         }
 

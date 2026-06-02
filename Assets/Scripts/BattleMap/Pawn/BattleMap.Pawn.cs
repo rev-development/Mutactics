@@ -1,16 +1,12 @@
 using Core.Map.GridItem;
+using UnityEngine;
 
 namespace BattleMap.Pawn
 {
+    [SelectionBase]
+    [RequireComponent(typeof(Selectable))]
     public class Pawn : GridItem<IPawnData, PawnSO>
     {
-
-        protected override void InitTransformPosition(GridItemOptions options) {
-            base.InitTransformPosition(options);
-            var adjustedPosition = gameObject.transform.position;
-            adjustedPosition.y += 0;
-            gameObject.transform.position = adjustedPosition;
-        }
 
     }
 }
