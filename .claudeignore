@@ -95,7 +95,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Tt]ilemap/
 /[Aa]ssets/[Uu]I Toolkit/
 Install-Package
-.gitignore
-.config/
-.idea/
+/.gitignore
+/.config/
+/.idea/
 /UIElementsSchema/*
