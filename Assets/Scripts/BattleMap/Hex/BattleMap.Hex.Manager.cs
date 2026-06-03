@@ -1,12 +1,12 @@
 using CampaignMap.World;
-using Core.Map;
+using Core.Map.Manager;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace BattleMap.Hex
 {
     [AddComponentMenu("BattleMap/Hex/HexManager")]
-    public class Manager : ManagerBase<Manager, Hex, HexSO, HexData, IHexData>
+    public class Manager : ManagerBase<Manager, Hex>
     {
 
         public CampaignMap.Manager CampaignMapManager;
@@ -27,12 +27,9 @@ namespace BattleMap.Hex
                     CampaignMapManager ??= CampaignMap.Manager.Instance;
                 }
 
-                if (CampaignMapManager)
+                if (CampaignMapManager && CampaignMapManager.ActiveSelection)
                 {
-                    if (CampaignMapManager.ActiveSelection)
-                    {
-                        WorldData ??= CampaignMapManager.ActiveSelection.DataSO;
-                    }
+                    WorldData ??= CampaignMapManager.ActiveSelection.DataSO;
                 }
             }
 
@@ -40,7 +37,7 @@ namespace BattleMap.Hex
 
             foreach (var cellData in mapData)
             {
-                var hex = PlaceObject(cellData.Value, HexSpacer);
+                PlaceObject(cellData.Value, HexSpacer);
             }
         }
 

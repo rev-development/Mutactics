@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 namespace Editor.BattleMapEditor.Hex
 {
     [CustomEditor(typeof(BattleMap.Hex.Manager), true)]
-    public class ManagerEditor : Core.Map.ManagerEditor<BattleMap.Hex.Manager, BattleMap.Hex.Hex, BattleMap.Hex.HexSO,
-        BattleMap.Hex.HexData, BattleMap.Hex.IHexData>
+    public class ManagerEditor : Core.Map.Manager.ManagerEditor<BattleMap.Hex.Manager, BattleMap.Hex.Hex>
     {
 
         protected override List<(string, EventCallback<ClickEvent>)> GenerateAdditionalButtons() {

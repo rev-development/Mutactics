@@ -1,10 +1,9 @@
-using Core.Map;
 using UnityEngine;
 
 namespace BattleMap.Pawn
 {
     [AddComponentMenu("BattleMap/Pawn/PawnManager")] [RequireComponent(typeof(Hex.Manager))]
-    public class Manager : ManagerBase<Manager, Pawn, PawnSO, PawnData, IPawnData>
+    public class Manager : Core.Map.Manager.ManagerBase<Manager, Pawn>
     {
 
         public GameObject PawnPrefab;
@@ -15,7 +14,7 @@ namespace BattleMap.Pawn
             var nextKey = Helpers.HexMap.GetNextAvailableKey(OccupiedCells);
             var nextCell = new Vector3Int(nextKey.x, nextKey.y, 0);
 
-            _hexManager ??= BattleMap.Hex.Manager.Instance;
+            _hexManager ??= Hex.Manager.Instance;
 
             if (gameObject.TryGetComponent<BattleMap.Hex.Manager>(out var hexManager))
             {

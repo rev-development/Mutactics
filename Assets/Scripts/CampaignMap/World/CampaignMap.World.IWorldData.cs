@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace CampaignMap.World
 {
-    public interface IWorldData : IGridItemData
+    public interface IWorldData : IDto
     {
 
         public string Name { get; set; }
+
         public Vector2Int MapSize { get; set; }
+
         public bool IsPlayerControlled { get; set; }
+
         public int AltitudeMax { get; set; }
 
     }

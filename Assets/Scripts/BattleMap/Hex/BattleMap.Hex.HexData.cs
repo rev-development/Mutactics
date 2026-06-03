@@ -4,7 +4,7 @@ using Core.Map.GridItem;
 namespace BattleMap.Hex
 {
     [Serializable]
-    public class HexData : GridItemData, IHexData
+    public class HexData : Dto, IHexData
     {
 
     }

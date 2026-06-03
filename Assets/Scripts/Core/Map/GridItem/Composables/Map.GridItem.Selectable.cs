@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Core.Map.GridItem
+namespace Core.Map.GridItem.Composables
 {
     [AddComponentMenu("Mutactics/Core/Map/GridItem/Selectable")]
     public class Selectable : MonoBehaviour

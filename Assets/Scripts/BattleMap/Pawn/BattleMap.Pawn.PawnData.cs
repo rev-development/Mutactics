@@ -4,7 +4,7 @@ using Core.Map.GridItem;
 namespace BattleMap.Pawn
 {
     [Serializable]
-    public class PawnData : GridItemData, IPawnData
+    public class PawnData : Dto, IPawnData
     {
 
     }

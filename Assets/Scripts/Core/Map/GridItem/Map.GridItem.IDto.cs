@@ -3,7 +3,7 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map.GridItem
 {
-    public interface IGridItemData
+    public interface IDto
     {
 
         public Vector3Int Cell { get; set; }

@@ -4,14 +4,11 @@ using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
-namespace Core.Map
+namespace Core.Map.Manager
 {
-    public abstract class ManagerEditor<TManager, TItem, TScriptableObject, TData, TDataInterface> : Editor
-        where TManager : ManagerBase<TManager, TItem, TScriptableObject, TData, TDataInterface>
-        where TItem : GridItem<TScriptableObject, TData, TDataInterface>
-        where TScriptableObject : GridItemSO<TData, TDataInterface>, TDataInterface
-        where TData : GridItemData, IGridItemData, TDataInterface
-        where TDataInterface : IGridItemData
+    public abstract class ManagerEditor<TManager, TItem> : Editor
+        where TManager : ManagerBase<TManager, TItem>
+        where TItem : ItemBase
     {
 
         private Button GenerateButton(string buttonText, EventCallback<ClickEvent> onClick) {

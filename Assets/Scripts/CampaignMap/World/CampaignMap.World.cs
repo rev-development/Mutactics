@@ -1,12 +1,13 @@
 using Core.Map.GridItem;
+using Core.Map.Manager;
 using UnityEngine.Events;
 
 namespace CampaignMap.World
 {
-    public class World : GridItem<WorldSO, WorldData, IWorldData>
+    public class World : Item<WorldSO, WorldData, IWorldData>
     {
 
-        public GridItemOptions GridItemOptions = new()
+        public Options Options = new()
         {
             ClearTilemapOnReset = true,
             PlaceObjectBelowGrid = true

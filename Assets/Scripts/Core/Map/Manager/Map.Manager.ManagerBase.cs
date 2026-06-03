@@ -2,19 +2,17 @@ using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
 using Core.Map.GridItem;
+using Core.Map.GridItem.Composables;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
-namespace Core.Map
+namespace Core.Map.Manager
 {
-    public class ManagerBase<TManager, TItem, TScriptableObject, TData, TDataInterface> : MonoBehaviour
+    public class ManagerBase<TManager, TItem> : MonoBehaviour
         where TManager : MonoBehaviour
-        where TItem : GridItem<TScriptableObject, TData, TDataInterface>
-        where TScriptableObject : GridItemSO<TData, TDataInterface>, TDataInterface
-        where TData : GridItemData, TDataInterface
-        where TDataInterface : IGridItemData
+        where TItem : ItemBase
     {
 
         public UnityEvent<TItem> GridItemSelected = new();
@@ -25,7 +23,7 @@ namespace Core.Map
 
         public Tilemap Tilemap;
 
-        public GridItemOptions DefaultGridItemOptions = new();
+        public Options DefaultOptions = new();
 
         [UsedImplicitly]
         public static TManager Instance { get; private set; }
@@ -62,7 +60,7 @@ namespace Core.Map
             }
 
 
-            if (DefaultGridItemOptions.DeselectOnDoubleClick
+            if (DefaultOptions.DeselectOnDoubleClick
                 && ActiveSelection == gridItem)
             {
                 ActiveSelection = null;
@@ -85,9 +83,7 @@ namespace Core.Map
             foreach (var gridItem in gameObject.GetComponentsInChildren<TItem>())
             {
             #if UNITY_EDITOR
-                DestroyImmediate(gridItem.DataSO);
-                gridItem.DataSO = null;
-                DestroyImmediate(gridItem.gameObject);
+                gridItem.InspectorDestroy();
             #else
                 Destroy(gridItem.DataSO);
                 gridItem.DataSO = null;
@@ -95,7 +91,7 @@ namespace Core.Map
             #endif
             }
 
-            if (DefaultGridItemOptions.ClearTilemapOnReset)
+            if (DefaultOptions.ClearTilemapOnReset)
             {
                 Tilemap.ClearAllTiles();
             }
@@ -108,16 +104,16 @@ namespace Core.Map
 
             foreach (var gridItem in Tilemap.GetComponentsInChildren<TItem>())
             {
-                if (OccupiedCells.ContainsKey(gridItem.DataSO.GetKey()))
+                if (OccupiedCells.ContainsKey(gridItem.DataSOBase.GetKey()))
                 {
-                    if (OccupiedCells[gridItem.DataSO.GetKey()] == null)
+                    if (OccupiedCells[gridItem.DataSOBase.GetKey()] == null)
                     {
-                        OccupiedCells[gridItem.DataSO.GetKey()] = gridItem;
+                        OccupiedCells[gridItem.DataSOBase.GetKey()] = gridItem;
                     }
                 }
                 else
                 {
-                    OccupiedCells.Add(gridItem.DataSO.GetKey(), gridItem);
+                    OccupiedCells.Add(gridItem.DataSOBase.GetKey(), gridItem);
                 }
             }
         }
@@ -126,7 +122,7 @@ namespace Core.Map
             return Tilemap && !OccupiedCells.ContainsKey(cell);
         }
 
-        public virtual GameObject PlaceObject(TData itemData, GameObject objectPrefab) {
+        public virtual GameObject PlaceObject(Dto itemData, GameObject objectPrefab) {
             if (!IsCellAvailable(itemData.GetKey())) return null;
 
 
@@ -139,9 +135,9 @@ namespace Core.Map
 
             if (objectToPlace.TryGetComponent(out TItem item))
             {
-                item.Init(itemData, DefaultGridItemOptions);
-                OccupiedCells.Add(item.DataSO.GetKey(), item);
-                Tilemap.SetTile(item.DataSO.Cell, item.DataSO.Tile);
+                item.Init(itemData, DefaultOptions);
+                OccupiedCells.Add(item.DataSOBase.GetKey(), item);
+                Tilemap.SetTile(item.DataSOBase.Cell, item.DataSOBase.Tile);
             }
 
             else
@@ -162,7 +158,7 @@ namespace Core.Map
 
             foreach (var gridItem in OccupiedCells.Values)
             {
-                emptyNeighbors.AddRange(Helpers.HexMap.GetAdjacentCells(gridItem.DataSO.Cell));
+                emptyNeighbors.AddRange(Helpers.HexMap.GetAdjacentCells(gridItem.DataSOBase.Cell));
             }
 
             emptyNeighbors = emptyNeighbors.Distinct()

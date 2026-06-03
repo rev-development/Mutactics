@@ -1,12 +1,12 @@
 using CampaignMap.World;
-using Core.Map;
+using Core.Map.Manager;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace CampaignMap
 {
     [AddComponentMenu("Campaign Map Manager")]
-    public class Manager : ManagerBase<Manager, World.World, WorldSO, WorldData, IWorldData>
+    public class Manager : ManagerBase<Manager, World.World>
     {
 
         public Tile SimpleColorHex;

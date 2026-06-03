@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 namespace Editor.BattleMapEditor.Pawn
 {
     [CustomEditor(typeof(BattleMap.Pawn.Manager), true)]
-    public class ManagerEditor : Core.Map.ManagerEditor<BattleMap.Pawn.Manager, BattleMap.Pawn.Pawn,
-        BattleMap.Pawn.PawnSO, BattleMap.Pawn.PawnData, BattleMap.Pawn.IPawnData>
+    public class ManagerEditor : Core.Map.Manager.ManagerEditor<BattleMap.Pawn.Manager, BattleMap.Pawn.Pawn>
     {
 
         protected override List<(string, EventCallback<ClickEvent>)> GenerateAdditionalButtons() {

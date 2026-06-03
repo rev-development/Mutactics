@@ -5,7 +5,7 @@ using UnityEngine;
 namespace CampaignMap.World
 {
     [Serializable]
-    public class WorldData : GridItemData, IWorldData
+    public class WorldData : Dto, IWorldData
     {
 
         [field: SerializeField] public string Name { get; set; }

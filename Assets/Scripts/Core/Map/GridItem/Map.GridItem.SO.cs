@@ -6,9 +6,9 @@ using UnityEngine.Tilemaps;
 namespace Core.Map.GridItem
 {
     [Serializable]
-    public abstract class GridItemSO<TData, TDataInterface> : ScriptableObject, IGridItemData
-        where TData : GridItemData, IGridItemData, TDataInterface
-        where TDataInterface : IGridItemData
+    public abstract class SO<TDto, TIDto> : SOBase
+        where TDto : Dto, IDto, TIDto
+        where TIDto : IDto
     {
 
         [field: SerializeField] public GameObject CorrespondingGameObject;
@@ -21,7 +21,7 @@ namespace Core.Map.GridItem
             return default;
         }
 
-        public virtual void AssignData(TData data, GameObject correspondingGameObject) {
+        public virtual void AssignData(TDto data, GameObject correspondingGameObject) {
             data.Adapt(this);
             CorrespondingGameObject = correspondingGameObject;
         }

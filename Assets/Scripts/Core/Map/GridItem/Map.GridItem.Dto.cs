@@ -8,7 +8,7 @@ namespace Core.Map.GridItem
     ///     Used primarily for passing data to the GridItemSO when instantiating it.
     /// </summary>
     [Serializable]
-    public class GridItemData : IGridItemData
+    public class Dto : IDto
     {
 
         [field: SerializeField] public GameObject CorrespondingGameObject;
