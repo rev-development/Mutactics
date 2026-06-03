@@ -76,26 +76,25 @@ crashlytics-build.properties
 
 # Claudes Specific Ignores
 *.meta
-/.config/
-/.idea/
-/Packages/
-/ProjectSettings/
-*.gitattributes
-*.gitignore
-/Install-Package
+.config/
+.idea/
+Packages/
+ProjectSettings/
+.gitattributes
+.gitignore
+Install-Package
 *.sln
 *.sln.DotSettings
-/[Aa]ssets/[Pp]refabs/
-/[Aa]ssets/[Pp]resets/
-/[Aa]ssets/[Ss]cenes/
-/[Aa]ssets/[Ss]criptableObjects/
-/[Aa]ssets/[Ss]ettings/
-/[Aa]ssets/[Ss]haders/
-/[Aa]ssets/[Tt]hirdParty/
-/[Aa]ssets/[Tt]ilemap/
-/[Aa]ssets/[Uu]I Toolkit/
-Install-Package
+[Aa]ssets/[Pp]refabs/
+[Aa]ssets/[Pp]resets/
+[Aa]ssets/[Ss]cenes/
+[Aa]ssets/[Ss]criptableObjects/
+[Aa]ssets/[Ss]ettings/
+[Aa]ssets/[Ss]haders/
+[Aa]ssets/[Tt]hirdParty/
+[Aa]ssets/[Tt]ilemap/
+[Aa]ssets/[Uu]I Toolkit/
 /.gitignore
 /.config/
 /.idea/
-/UIElementsSchema/*
+UIElementsSchema/*
