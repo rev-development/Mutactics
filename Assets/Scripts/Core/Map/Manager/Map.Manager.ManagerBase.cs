@@ -3,7 +3,6 @@ using System.Linq;
 using AYellowpaper.SerializedCollections;
 using Core.Map.GridItem;
 using Core.Map.GridItem.Composables;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
@@ -25,10 +24,9 @@ namespace Core.Map.Manager
 
         public Options DefaultOptions = new();
 
-        [UsedImplicitly]
         public static TManager Instance { get; private set; }
 
-        public virtual void Awake() {
+        protected virtual void Awake() {
             if (Instance != null
                 && Instance != this)
             {
@@ -41,19 +39,19 @@ namespace Core.Map.Manager
             DontDestroyOnLoad(gameObject);
         }
 
-        public virtual void Start() {
+        protected virtual void Start() {
             GetExistingGridItems();
         }
 
-        public virtual void OnEnable() {
+        protected virtual void OnEnable() {
             GridItemSelected.AddListener(OnGridItemSelected);
         }
 
-        public virtual void OnDisable() {
+        protected virtual void OnDisable() {
             GridItemSelected.RemoveAllListeners();
         }
 
-        public void OnGridItemSelected(TItem gridItem) {
+        protected void OnGridItemSelected(TItem gridItem) {
             if (ActiveSelection)
             {
                 Selectable.TrySelect(ActiveSelection.gameObject, false);
@@ -118,7 +116,7 @@ namespace Core.Map.Manager
             }
         }
 
-        public bool IsCellAvailable(Vector2Int cell) {
+        protected bool IsCellAvailable(Vector2Int cell) {
             return Tilemap && !OccupiedCells.ContainsKey(cell);
         }
 
@@ -153,7 +151,18 @@ namespace Core.Map.Manager
             return objectToPlace;
         }
 
-        public List<Vector3Int> GetEmptyNeighbors() {
+        public void MoveObject(TItem item, Vector3Int from, Vector3Int to) {
+            if (!OccupiedCells.ContainsKey(Helpers.HexMap.GetXY(from))) return;
+            if (!IsCellAvailable(Helpers.HexMap.GetXY(to))) return;
+
+            OccupiedCells.Remove(Helpers.HexMap.GetXY(from));
+            OccupiedCells.Add(Helpers.HexMap.GetXY(to), item);
+
+            item.transform.position = Tilemap.GetCellCenterWorld(item.DataSOBase.Cell);
+            item.PositionChange.Invoke(to);
+        }
+
+        protected List<Vector3Int> GetEmptyNeighbors() {
             List<Vector3Int> emptyNeighbors = new();
 
             foreach (var gridItem in OccupiedCells.Values)

@@ -19,9 +19,8 @@ namespace BattleMap
         }
 
         public void OnMouseRaycasted(Ray ray) {
-            var layerMask = Pawn.Manager.Instance.ActiveSelection != null
-                ? LayerMask.GetMask("Hex")
-                : LayerMask.GetMask("Pawn");
+            // TODO: This should maybe just be the UnifiedManager
+            var layerMask = UnifiedManager.GetSelectionLayerMask();
 
             if (Physics.Raycast(
                         ray,

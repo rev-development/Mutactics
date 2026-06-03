@@ -3,7 +3,14 @@ namespace Core
     public interface ICommand
     {
 
-        void Execute();
+        public void Execute();
+
+    }
+
+    public interface IReversibleCommand : ICommand
+    {
+
+        void Undo();
 
     }
 }

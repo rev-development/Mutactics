@@ -1,12 +1,25 @@
 using Core.Map.Manager;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Core.Map.GridItem
 {
     public abstract class ItemBase : MonoBehaviour
     {
 
+        public Options CachedOptions = null;
+
+        public UnityEvent<Vector3Int> PositionChange = new();
+
         public abstract SOBase DataSOBase { get; }
+
+        protected void OnEnable() {
+            PositionChange.AddListener(OnPositionChange);
+        }
+
+        protected void OnDisable() {
+            PositionChange.RemoveAllListeners();
+        }
 
         public abstract void Init(Dto dto, Options options);
 
@@ -21,7 +34,7 @@ namespace Core.Map.GridItem
             gameObject.transform.localScale = adjustedScale;
         }
 
-        protected virtual void SetPositionOffsetY(Options options) {
+        protected virtual void SetPositionOffsetY(Options options = null) {
             var adjustedLocalPosition = gameObject.transform.localPosition;
 
             if (gameObject.TryGetComponent<MeshCollider>(out var meshCollider))
@@ -29,13 +42,26 @@ namespace Core.Map.GridItem
                 adjustedLocalPosition.y += meshCollider.bounds.size.y
                                            * gameObject.transform.localScale.y
                                            / 2
-                                           * (options.PlaceObjectBelowGrid ? -1 : 1);
+                                           * (GetOptions(options).PlaceObjectBelowGrid ? -1 : 1);
             }
 
             gameObject.transform.localPosition = adjustedLocalPosition;
         }
 
-        protected virtual void InitTransform(Vector3Int destinationCell, Options options) {
+        protected virtual void OnPositionChange(Vector3Int to) {
+            DataSOBase.Cell = to;
+            SetPositionOffsetY();
+        }
+
+        protected Options GetOptions(Options options = null) {
+            if (options == null) return CachedOptions;
+
+            CachedOptions = options;
+
+            return options;
+        }
+
+        protected virtual void InitTransform(Options options) {
             InitTransformScale(options);
             SetPositionOffsetY(options);
         }

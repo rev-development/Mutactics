@@ -53,5 +53,9 @@ namespace Helpers
             return nextKey;
         }
 
+        public static Vector2Int GetXY(Vector3Int vector3Int) {
+            return new Vector2Int(vector3Int.x, vector3Int.y);
+        }
+
     }
 }

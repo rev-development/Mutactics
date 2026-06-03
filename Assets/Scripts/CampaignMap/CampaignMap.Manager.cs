@@ -15,7 +15,7 @@ namespace CampaignMap
 
         public Vector2Int DefaultMapSize = new(40, 40);
 
-        public override void Start() {
+        protected override void Start() {
             base.Start();
             GenerateAdjacentWorlds();
         }
