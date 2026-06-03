@@ -11,11 +11,14 @@ namespace Core.Map.GridItem
     public class GridItemData : IGridItemData
     {
 
+        [field: SerializeField] public GameObject CorrespondingGameObject;
+
         [field: SerializeField] public Vector3Int Cell { get; set; }
+
         [field: SerializeField] public TileBase Tile { get; set; }
 
         public Vector2Int GetKey() {
-            return new Vector2Int(Cell.x, Cell.y);
+            return default;
         }
 
     }

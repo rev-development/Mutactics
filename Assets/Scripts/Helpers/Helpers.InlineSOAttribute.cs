@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Helpers
 {
-    [AttributeUsage(AttributeTargets.Field)]
+    [AttributeUsage(AttributeTargets.Property)]
     public class InlineSOAttribute : PropertyAttribute
     {
 

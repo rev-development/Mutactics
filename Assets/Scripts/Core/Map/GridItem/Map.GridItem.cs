@@ -2,18 +2,20 @@ using UnityEngine;
 
 namespace Core.Map.GridItem
 {
-    public abstract class GridItem<TDataInterface, TScriptableObject> : MonoBehaviour
-        where TScriptableObject : GridItemSO<TDataInterface> where TDataInterface : IGridItemData
+    public abstract class GridItem<TScriptableObject, TData, TDataInterface> : MonoBehaviour
+        where TScriptableObject : GridItemSO<TData, TDataInterface>, TDataInterface
+        where TData : GridItemData, IGridItemData, TDataInterface
+        where TDataInterface : IGridItemData
     {
 
-        [Helpers.InlineSOAttribute] public TScriptableObject DataSO;
+        public TScriptableObject DataSO;
 
         public void OnDestroy() {
             Destroy(DataSO);
             DataSO = null;
         }
 
-        public virtual void Init(TDataInterface gridItemData, GridItemOptions options) {
+        public virtual void Init(TData gridItemData, GridItemOptions options) {
             DataSO = ScriptableObject.CreateInstance<TScriptableObject>();
 
             DataSO.AssignData(gridItemData, gameObject);

@@ -5,7 +5,7 @@ namespace BattleMap.Pawn
 {
     [SelectionBase]
     [RequireComponent(typeof(Selectable))]
-    public class Pawn : GridItem<IPawnData, PawnSO>
+    public class Pawn : GridItem<PawnSO, PawnData, IPawnData>
     {
 
     }

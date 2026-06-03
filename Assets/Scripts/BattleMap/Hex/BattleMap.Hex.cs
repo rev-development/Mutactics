@@ -5,7 +5,7 @@ namespace BattleMap.Hex
 {
     [SelectionBase]
     [RequireComponent(typeof(Selectable))]
-    public class Hex : GridItem<IHexData, HexSO>
+    public class Hex : GridItem<HexSO, HexData, IHexData>
     {
 
     }

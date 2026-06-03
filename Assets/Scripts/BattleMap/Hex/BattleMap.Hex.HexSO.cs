@@ -4,7 +4,7 @@ using UnityEngine;
 namespace BattleMap.Hex
 {
     [CreateAssetMenu(fileName = "Hex", menuName = "Mutactics/BattleMap/Hex")]
-    public class HexSO : GridItemSO<IHexData>, IHexData
+    public class HexSO : GridItemSO<HexData, IHexData>, IHexData
     {
 
     }

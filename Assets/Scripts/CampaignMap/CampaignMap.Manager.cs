@@ -6,11 +6,13 @@ using UnityEngine.Tilemaps;
 namespace CampaignMap
 {
     [AddComponentMenu("Campaign Map Manager")]
-    public class Manager : ManagerBase<Manager, IWorldData, WorldSO, World.World, WorldData>
+    public class Manager : ManagerBase<Manager, World.World, WorldSO, WorldData, IWorldData>
     {
 
         public Tile SimpleColorHex;
+
         public GameObject WorldPrefab;
+
         public Vector2Int DefaultMapSize = new(40, 40);
 
         public override void Start() {

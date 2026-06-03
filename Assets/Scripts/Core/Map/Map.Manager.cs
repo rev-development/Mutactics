@@ -9,12 +9,12 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map
 {
-    public class ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData> : MonoBehaviour
+    public class ManagerBase<TManager, TItem, TScriptableObject, TData, TDataInterface> : MonoBehaviour
         where TManager : MonoBehaviour
+        where TItem : GridItem<TScriptableObject, TData, TDataInterface>
+        where TScriptableObject : GridItemSO<TData, TDataInterface>, TDataInterface
+        where TData : GridItemData, TDataInterface
         where TDataInterface : IGridItemData
-        where TScriptableObject : GridItemSO<TDataInterface>
-        where TItem : GridItem<TDataInterface, TScriptableObject>
-        where TItemData : GridItemData, TDataInterface
     {
 
         public UnityEvent<TItem> GridItemSelected = new();
@@ -126,7 +126,7 @@ namespace Core.Map
             return Tilemap && !OccupiedCells.ContainsKey(cell);
         }
 
-        public virtual GameObject PlaceObject(TItemData itemData, GameObject objectPrefab) {
+        public virtual GameObject PlaceObject(TData itemData, GameObject objectPrefab) {
             if (!IsCellAvailable(itemData.GetKey())) return null;
 
 
@@ -170,24 +170,6 @@ namespace Core.Map
                                            .ToList();
 
             return emptyNeighbors;
-        }
-
-        public Vector2Int GetNextAvailableKey() {
-            var nextKey = new Vector2Int();
-
-            while (OccupiedCells.ContainsKey(nextKey))
-            {
-                if (nextKey.x > nextKey.y)
-                {
-                    nextKey.y += 1;
-                }
-                else
-                {
-                    nextKey.x += 1;
-                }
-            }
-
-            return nextKey;
         }
 
     }

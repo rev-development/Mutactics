@@ -35,5 +35,23 @@ namespace Helpers
                         .ToList();
         }
 
+        public static Vector2Int GetNextAvailableKey<TValue>(Dictionary<Vector2Int, TValue> dictionary) {
+            var nextKey = new Vector2Int();
+
+            while (dictionary.ContainsKey(nextKey))
+            {
+                if (nextKey.x > nextKey.y)
+                {
+                    nextKey.y += 1;
+                }
+                else
+                {
+                    nextKey.x += 1;
+                }
+            }
+
+            return nextKey;
+        }
+
     }
 }

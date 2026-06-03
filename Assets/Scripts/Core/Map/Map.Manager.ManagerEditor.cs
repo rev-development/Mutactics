@@ -6,12 +6,12 @@ using UnityEngine.UIElements;
 
 namespace Core.Map
 {
-    public abstract class ManagerEditor<TManager, TDataInterface, TScriptableObject, TItem, TItemData> : Editor
-        where TManager : ManagerBase<TManager, TDataInterface, TScriptableObject, TItem, TItemData>
+    public abstract class ManagerEditor<TManager, TItem, TScriptableObject, TData, TDataInterface> : Editor
+        where TManager : ManagerBase<TManager, TItem, TScriptableObject, TData, TDataInterface>
+        where TItem : GridItem<TScriptableObject, TData, TDataInterface>
+        where TScriptableObject : GridItemSO<TData, TDataInterface>, TDataInterface
+        where TData : GridItemData, IGridItemData, TDataInterface
         where TDataInterface : IGridItemData
-        where TScriptableObject : GridItemSO<TDataInterface>
-        where TItem : GridItem<TDataInterface, TScriptableObject>
-        where TItemData : GridItemData, TDataInterface
     {
 
         private Button GenerateButton(string buttonText, EventCallback<ClickEvent> onClick) {
@@ -53,8 +53,8 @@ namespace Core.Map
                         };
 
 
-                        row.Add(GenerateButton("Reset Map", evt => manager.ResetMap()));
-                        row.Add(GenerateButton("Get Existing", evt => manager.GetExistingGridItems()));
+                        row.Add(GenerateButton("Reset Map", _ => manager.ResetMap()));
+                        row.Add(GenerateButton("Get Existing", _ => manager.GetExistingGridItems()));
 
                         GenerateAdditionalButtons()
                            .ForEach(button => row.Add(GenerateButton(button.Item1, button.Item2)));

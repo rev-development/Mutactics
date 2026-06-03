@@ -1,10 +1,9 @@
 using Core.Map.GridItem;
-using UnityEngine;
 using UnityEngine.Events;
 
 namespace CampaignMap.World
 {
-    public class World : GridItem<IWorldData, WorldSO>
+    public class World : GridItem<WorldSO, WorldData, IWorldData>
     {
 
         public GridItemOptions GridItemOptions = new()
@@ -15,22 +14,25 @@ namespace CampaignMap.World
 
         public UnityEvent<bool> PlayerControlChanged;
 
-        public void Start() {
-            PlayerControlChanged.Invoke(DataSO.IsPlayerControlled);
-        }
+        // BUG:
+        // public void Start() {
+        //     PlayerControlChanged.Invoke(DataSO.IsPlayerControlled);
+        // }
 
-        public void OnEnable() {
-            PlayerControlChanged.AddListener(OnPlayerControlChanged);
-        }
+        // BUG:
+        // public void OnEnable() {
+        //     PlayerControlChanged.AddListener(OnPlayerControlChanged);
+        // }
 
         public void OnDisable() {
             PlayerControlChanged.RemoveAllListeners();
         }
 
-        private void OnPlayerControlChanged(bool isPlayerControlled) {
-            DataSO.IsPlayerControlled = isPlayerControlled;
-            Helpers.Shaders.ChangeSimpleColor(DataSO.IsPlayerControlled ? Color.blue : Color.red, gameObject);
-        }
+        // BUG:
+        // private void OnPlayerControlChanged(bool isPlayerControlled) {
+        //     DataSO.IsPlayerControlled = isPlayerControlled;
+        //     Helpers.Shaders.ChangeSimpleColor(DataSO.IsPlayerControlled ? Color.blue : Color.red, gameObject);
+        // }
 
     }
 }

@@ -6,12 +6,15 @@ using UnityEngine.Tilemaps;
 namespace BattleMap.Hex
 {
     [AddComponentMenu("BattleMap/Hex/HexManager")]
-    public class Manager : ManagerBase<Manager, IHexData, HexSO, Hex, HexData>
+    public class Manager : ManagerBase<Manager, Hex, HexSO, HexData, IHexData>
     {
 
         public CampaignMap.Manager CampaignMapManager;
+
         public GameObject HexSpacer;
+
         public Tile SimpleColorHex;
+
         public WorldSO WorldData;
 
         public void GenerateMap() {
@@ -21,7 +24,7 @@ namespace BattleMap.Hex
             {
                 if (!CampaignMapManager)
                 {
-                    CampaignMapManager ??= CampaignMap.Manager.Instance as CampaignMap.Manager;
+                    CampaignMapManager ??= CampaignMap.Manager.Instance;
                 }
 
                 if (CampaignMapManager)

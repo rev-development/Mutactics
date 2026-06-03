@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine.UIElements;
 
-namespace Editor.BattleMap.Pawn
+namespace Editor.BattleMapEditor.Pawn
 {
-    [CustomEditor(typeof(global::BattleMap.Pawn.Manager), true)]
-    public class ManagerEditor : Core.Map.ManagerEditor<global::BattleMap.Pawn.Manager, global::BattleMap.Pawn.IPawnData
-        , global::BattleMap.Pawn.PawnSO, global::BattleMap.Pawn.Pawn, global::BattleMap.Pawn.PawnData>
+    [CustomEditor(typeof(BattleMap.Pawn.Manager), true)]
+    public class ManagerEditor : Core.Map.ManagerEditor<BattleMap.Pawn.Manager, BattleMap.Pawn.Pawn,
+        BattleMap.Pawn.PawnSO, BattleMap.Pawn.PawnData, BattleMap.Pawn.IPawnData>
     {
 
         protected override List<(string, EventCallback<ClickEvent>)> GenerateAdditionalButtons() {

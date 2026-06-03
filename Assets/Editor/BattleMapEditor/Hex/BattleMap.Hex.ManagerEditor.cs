@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine.UIElements;
 
-namespace Editor.BattleMap.Hex
+namespace Editor.BattleMapEditor.Hex
 {
-    [CustomEditor(typeof(global::BattleMap.Hex.Manager), true)]
-    public class ManagerEditor : Core.Map.ManagerEditor<global::BattleMap.Hex.Manager, global::BattleMap.Hex.IHexData,
-        global::BattleMap.Hex.HexSO, global::BattleMap.Hex.Hex, global::BattleMap.Hex.HexData>
+    [CustomEditor(typeof(BattleMap.Hex.Manager), true)]
+    public class ManagerEditor : Core.Map.ManagerEditor<BattleMap.Hex.Manager, BattleMap.Hex.Hex, BattleMap.Hex.HexSO,
+        BattleMap.Hex.HexData, BattleMap.Hex.IHexData>
     {
 
         protected override List<(string, EventCallback<ClickEvent>)> GenerateAdditionalButtons() {
