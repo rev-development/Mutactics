@@ -80,9 +80,9 @@ crashlytics-build.properties
 /.idea/
 /Packages/
 /ProjectSettings/
-.gitattributes
-.gitignore
-Install-Package
+*.gitattributes
+*.gitignore
+/Install-Package
 *.sln
 *.sln.DotSettings
 /[Aa]ssets/[Pp]refabs/
