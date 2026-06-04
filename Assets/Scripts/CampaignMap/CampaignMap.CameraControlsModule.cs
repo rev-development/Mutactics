@@ -1,21 +1,21 @@
-using Core.Map;
+using Core.Map.Camera;
 using UnityEngine;
 
 namespace CampaignMap
 {
     [AddComponentMenu("Camera Controls - CampaignMap Module")]
-    [RequireComponent(typeof(CameraControls))]
+    [RequireComponent(typeof(Controls))]
     public class CameraControlsModule : MonoBehaviour
     {
 
-        private CameraControls _cameraControls;
+        private Controls _controls;
 
         public void Awake() {
-            _cameraControls = gameObject.GetComponent<CameraControls>();
+            _controls = gameObject.GetComponent<Controls>();
         }
 
         public void OnEnable() {
-            _cameraControls?.MouseRaycasted.AddListener(OnMouseRaycasted);
+            _controls?.MouseRaycasted.AddListener(OnMouseRaycasted);
         }
 
         public void OnMouseRaycasted(Ray ray) {
@@ -23,7 +23,7 @@ namespace CampaignMap
 
             if (hit.collider.gameObject.TryGetComponent(out World.World gridItem))
             {
-                Manager.Instance.GridItemSelected.Invoke(gridItem);
+                Manager.Instance.SelectGridItem(gridItem);
             }
         }
 

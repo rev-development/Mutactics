@@ -36,7 +36,7 @@ namespace BattleMap
         }
 
         public void OnEnable() {
-            HexManager.GridItemSelected.AddListener(_ => OnHexSelected());
+            HexManager.GridItemSelected.AddListener(_ => QueuePawnMove());
         }
 
         public static int GetSelectionLayerMask() {
@@ -47,7 +47,7 @@ namespace BattleMap
             return layerMask;
         }
 
-        public void OnHexSelected() {
+        public void QueuePawnMove() {
             if (PawnManager.ActiveSelection
                 && HexManager.ActiveSelection)
             {
@@ -56,6 +56,11 @@ namespace BattleMap
                         HexManager.ActiveSelection,
                         PawnManager.ActiveSelection.DataSO.Cell,
                         HexManager.ActiveSelection.DataSO.Cell
+                    );
+
+                Debug.Log(
+                        $"Move Cmd: {PawnManager.ActiveSelection.name} at {PawnManager.ActiveSelection.DataSO.Cell}"
+                        + $" to {HexManager.ActiveSelection.name} at {HexManager.ActiveSelection.DataSO.Cell}"
                     );
 
                 // TODO: Need to add gating
@@ -72,6 +77,24 @@ namespace BattleMap
             if (History.Count == 0) return;
 
             History.Pop().Undo();
+        }
+
+        public static void Deselect(bool deselectAll = false) {
+            if (deselectAll)
+            {
+                Hex.Manager.Instance.SelectGridItem(null);
+                Pawn.Manager.Instance.SelectGridItem(null);
+            }
+
+            if (Hex.Manager.Instance.ActiveSelection)
+            {
+                Hex.Manager.Instance.SelectGridItem(null);
+            }
+
+            else if (Pawn.Manager.Instance.ActiveSelection)
+            {
+                Pawn.Manager.Instance.SelectGridItem(null);
+            }
         }
 
     }

@@ -13,13 +13,9 @@ namespace Core.Map.GridItem
 
         [field: SerializeField] public GameObject CorrespondingGameObject;
 
-        [field: SerializeField] public Vector3Int Cell { get; set; }
+        [field: SerializeField] public Vector3Int Cell { get; set; } = new();
 
-        [field: SerializeField] public TileBase Tile { get; set; }
-
-        public Vector2Int GetKey() {
-            return default;
-        }
+        [field: SerializeField] public TileBase Tile { get; set; } = null;
 
     }
 }

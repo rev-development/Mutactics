@@ -12,6 +12,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
+        "Mapster.Core.dll",
         "Mapster.dll"
     ],
     "autoReferenced": true,

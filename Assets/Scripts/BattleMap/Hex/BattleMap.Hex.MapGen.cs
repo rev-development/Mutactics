@@ -75,7 +75,7 @@ namespace BattleMap.Hex
             Vector2Int mapSize
         ) {
             var edgeHexKeys = Helpers.HexMap.GetEdgeCells(
-                    mapData.Values.Select(cell => cell.GetKey()).ToList(),
+                    mapData.Values.Select(cell => Helpers.HexMap.GetXY(cell.Cell)).ToList(),
                     mapSize
                 );
 
@@ -90,7 +90,7 @@ namespace BattleMap.Hex
             Vector2Int mapSize
         ) {
             var edgeHexKeys = Helpers.HexMap.GetEdgeCells(
-                    mapData.Values.Select(cell => cell.GetKey()).ToList(),
+                    mapData.Values.Select(cell => Helpers.HexMap.GetXY(cell.Cell)).ToList(),
                     mapSize
                 );
 

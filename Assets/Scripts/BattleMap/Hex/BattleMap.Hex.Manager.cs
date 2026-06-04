@@ -33,11 +33,12 @@ namespace BattleMap.Hex
                 }
             }
 
+
             var mapData = MapGen.GenerateMapData(WorldData, SimpleColorHex);
 
             foreach (var cellData in mapData)
             {
-                PlaceObject(cellData.Value, HexSpacer);
+                var world = PlaceObject(cellData.Value, HexSpacer);
             }
         }
 

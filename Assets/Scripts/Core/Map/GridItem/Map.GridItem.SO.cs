@@ -1,7 +1,6 @@
 using System;
 using Mapster;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Core.Map.GridItem
 {
@@ -13,16 +12,9 @@ namespace Core.Map.GridItem
 
         [field: SerializeField] public GameObject CorrespondingGameObject;
 
-        [field: SerializeField] public Vector3Int Cell { get; set; } = new();
-
-        [field: SerializeField] public TileBase Tile { get; set; } = null;
-
-        public Vector2Int GetKey() {
-            return default;
-        }
-
         public virtual void AssignData(TDto data, GameObject correspondingGameObject) {
             data.Adapt(this);
+            Tile = data.Tile;
             CorrespondingGameObject = correspondingGameObject;
         }
 

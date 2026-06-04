@@ -14,8 +14,6 @@ namespace Core.Map.Manager
         where TItem : ItemBase
     {
 
-        public UnityEvent<TItem> GridItemSelected = new();
-
         [SerializeField] public SerializedDictionary<Vector2Int, TItem> OccupiedCells = new();
 
         public TItem ActiveSelection;
@@ -23,6 +21,8 @@ namespace Core.Map.Manager
         public Tilemap Tilemap;
 
         public Options DefaultOptions = new();
+
+        public UnityEvent<TItem> GridItemSelected = new();
 
         public static TManager Instance { get; private set; }
 
@@ -43,15 +43,11 @@ namespace Core.Map.Manager
             GetExistingGridItems();
         }
 
-        protected virtual void OnEnable() {
-            GridItemSelected.AddListener(OnGridItemSelected);
-        }
-
         protected virtual void OnDisable() {
             GridItemSelected.RemoveAllListeners();
         }
 
-        protected void OnGridItemSelected(TItem gridItem) {
+        public void SelectGridItem(TItem gridItem) {
             if (ActiveSelection)
             {
                 Selectable.TrySelect(ActiveSelection.gameObject, false);
@@ -75,6 +71,8 @@ namespace Core.Map.Manager
             {
                 ActiveSelection = null;
             }
+
+            GridItemSelected.Invoke(gridItem);
         }
 
         public virtual void ResetMap() {
@@ -102,27 +100,30 @@ namespace Core.Map.Manager
 
             foreach (var gridItem in Tilemap.GetComponentsInChildren<TItem>())
             {
-                if (OccupiedCells.ContainsKey(gridItem.DataSOBase.GetKey()))
+                if (IsCellOccupied(gridItem.DataSOBase.Cell))
                 {
-                    if (OccupiedCells[gridItem.DataSOBase.GetKey()] == null)
+                    if (OccupiedCells[Helpers.HexMap.GetXY(gridItem.DataSOBase.Cell)] == null)
                     {
-                        OccupiedCells[gridItem.DataSOBase.GetKey()] = gridItem;
+                        OccupiedCells[Helpers.HexMap.GetXY(gridItem.DataSOBase.Cell)] = gridItem;
                     }
                 }
                 else
                 {
-                    OccupiedCells.Add(gridItem.DataSOBase.GetKey(), gridItem);
+                    OccupiedCells.Add(Helpers.HexMap.GetXY(gridItem.DataSOBase.Cell), gridItem);
                 }
             }
         }
 
-        protected bool IsCellAvailable(Vector2Int cell) {
-            return Tilemap && !OccupiedCells.ContainsKey(cell);
+        protected bool IsCellOccupied(Vector2Int cell) {
+            return OccupiedCells.ContainsKey(cell);
+        }
+
+        protected bool IsCellOccupied(Vector3Int cell) {
+            return OccupiedCells.ContainsKey(Helpers.HexMap.GetXY(cell));
         }
 
         public virtual GameObject PlaceObject(Dto itemData, GameObject objectPrefab) {
-            if (!IsCellAvailable(itemData.GetKey())) return null;
-
+            if (IsCellOccupied(itemData.Cell)) return null;
 
             var objectToPlace = Instantiate(
                     objectPrefab,
@@ -134,7 +135,7 @@ namespace Core.Map.Manager
             if (objectToPlace.TryGetComponent(out TItem item))
             {
                 item.Init(itemData, DefaultOptions);
-                OccupiedCells.Add(item.DataSOBase.GetKey(), item);
+                OccupiedCells.Add(Helpers.HexMap.GetXY(item.DataSOBase.Cell), item);
                 Tilemap.SetTile(item.DataSOBase.Cell, item.DataSOBase.Tile);
             }
 
@@ -152,13 +153,19 @@ namespace Core.Map.Manager
         }
 
         public void MoveObject(TItem item, Vector3Int from, Vector3Int to) {
-            if (!OccupiedCells.ContainsKey(Helpers.HexMap.GetXY(from))) return;
-            if (!IsCellAvailable(Helpers.HexMap.GetXY(to))) return;
+            Debug.Log($"{item.name} at {from} to {to}");
+
+            // If item is not where it currently is
+            if (!IsCellOccupied(from)) return;
+
+
+            // If destination is not empty
+            if (IsCellOccupied(to)) return;
 
             OccupiedCells.Remove(Helpers.HexMap.GetXY(from));
             OccupiedCells.Add(Helpers.HexMap.GetXY(to), item);
 
-            item.transform.position = Tilemap.GetCellCenterWorld(item.DataSOBase.Cell);
+            item.transform.position = Tilemap.GetCellCenterWorld(to);
             item.PositionChange.Invoke(to);
         }
 

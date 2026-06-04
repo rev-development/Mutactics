@@ -1,24 +1,34 @@
-using Core.Map;
+using Core.Map.Camera;
 using UnityEngine;
 
 namespace BattleMap
 {
     [AddComponentMenu("Camera Controls - BattleMap Module")]
-    [RequireComponent(typeof(CameraControls))]
+    [RequireComponent(typeof(Controls))]
     public class CameraControlsModule : MonoBehaviour
     {
 
-        private CameraControls _cameraControls;
+        private Controls _controls;
 
-        public void Awake() {
-            _cameraControls = gameObject.GetComponent<CameraControls>();
+        private void Awake() {
+            _controls = gameObject.GetComponent<Controls>();
         }
 
-        public void OnEnable() {
-            _cameraControls?.MouseRaycasted.AddListener(OnMouseRaycasted);
+        private void OnEnable() {
+            _controls.MouseRaycasted.AddListener(OnMouseRaycasted);
+            _controls.EscapeStarted.AddListener(OnEscapeStarted);
+            _controls.RightClickStarted.AddListener(OnRightClickStarted);
         }
 
-        public void OnMouseRaycasted(Ray ray) {
+        private void OnEscapeStarted() {
+            UnifiedManager.Deselect(true);
+        }
+
+        private void OnRightClickStarted() {
+            UnifiedManager.Deselect();
+        }
+
+        private void OnMouseRaycasted(Ray ray) {
             // TODO: This should maybe just be the UnifiedManager
             var layerMask = UnifiedManager.GetSelectionLayerMask();
 
@@ -31,12 +41,16 @@ namespace BattleMap
             {
                 if (hit.collider.gameObject.TryGetComponent(out BattleMap.Hex.Hex hex))
                 {
-                    Hex.Manager.Instance.GridItemSelected.Invoke(hex);
+                    Hex.Manager.Instance.SelectGridItem(hex);
                 }
                 else if (hit.collider.gameObject.TryGetComponent(out BattleMap.Pawn.Pawn pawn))
                 {
-                    Pawn.Manager.Instance.GridItemSelected.Invoke(pawn);
+                    Pawn.Manager.Instance.SelectGridItem(pawn);
                 }
+            }
+            else
+            {
+                UnifiedManager.Deselect();
             }
         }
 

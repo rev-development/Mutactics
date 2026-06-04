@@ -3,20 +3,24 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 // ReSharper disable MemberCanBePrivate.Global
-namespace Core.Map
+namespace Core.Map.Camera
 {
     [AddComponentMenu("Base Camera Controls")]
-    public class CameraControls : MonoBehaviour
+    public class Controls : MonoBehaviour
     {
 
+        public Config Config;
+
         private DefaultControls.MainActions _actions;
+
         private DefaultControls _defaultControls;
-        private Camera _mainCamera;
+
+        private UnityEngine.Camera _mainCamera;
 
         public void Pan() {
             var panMoveVec = _mainCamera.transform.rotation.normalized
-                             * new Vector3(PanInput.x, 0, PanInput.y)
-                             * (PanSpeed * Time.deltaTime);
+                             * new Vector3(_panInput.x, 0, _panInput.y)
+                             * (Config.PanSpeed * Time.deltaTime);
 
             panMoveVec.y = 0;
             _mainCamera.transform.Translate(panMoveVec, Space.World);
@@ -25,28 +29,29 @@ namespace Core.Map
         public void Rotate() {
             _mainCamera.transform.localEulerAngles = new Vector3(
                     Mathf.Clamp(
-                            _mainCamera.transform.localEulerAngles.x - RotateInput.y * RotateSpeed * Time.deltaTime,
-                            CameraRotateXBoundsMin,
-                            CameraRotateXBoundsMax
+                            _mainCamera.transform.localEulerAngles.x
+                            - _rotateInput.y * Config.RotateSpeed * Time.deltaTime,
+                            Config.CameraRotateXBoundsMin,
+                            Config.CameraRotateXBoundsMax
                         ),
-                    _mainCamera.transform.localEulerAngles.y + RotateInput.x * RotateSpeed * Time.deltaTime,
+                    _mainCamera.transform.localEulerAngles.y + _rotateInput.x * Config.RotateSpeed * Time.deltaTime,
                     0
                 );
 
-            RotateInput = Vector2.zero;
+            _rotateInput = Vector2.zero;
         }
 
         public void Zoom(float zoomInput) {
             // To keep the camera within bounds without stuttering, need to calculate the position it will end up in before allowing it to move there
 
             // Get the camera's forward vector as a world-space vector and scale it based on our input
-            var intendedZoomVec = _mainCamera.transform.forward * (zoomInput * ZoomSpeed);
+            var intendedZoomVec = _mainCamera.transform.forward * (zoomInput * Config.ZoomSpeed);
 
             // Predict the camera's ending position by applying the intended zoom vector to its current position
             var predictedCamPos = _mainCamera.transform.position + intendedZoomVec;
 
             // Clamp the value of the y-axis to our min/max
-            predictedCamPos.y = Mathf.Clamp(predictedCamPos.y, CameraPanYBoundsMin, CameraPanYBoundsMax);
+            predictedCamPos.y = Mathf.Clamp(predictedCamPos.y, Config.CameraPanYBoundsMin, Config.CameraPanYBoundsMax);
 
             // Calc the difference in the predicted position and the current position
             // If the intended movement does not cause the camera to hit either bounds, this should be equal to the intended zoom vector
@@ -56,7 +61,7 @@ namespace Core.Map
             var safeMoveVec = predictedCamPosDelta;
 
             // This is to prevent 'skating' when the camera is fully zoomed in or out 
-            if (safeMoveVec.y == 0)
+            if (Mathf.Approximately(safeMoveVec.y, 0))
             {
                 safeMoveVec.z = 0;
                 safeMoveVec.x = 0;
@@ -66,7 +71,7 @@ namespace Core.Map
         }
 
         public void Zoom() {
-            Zoom(ZoomInput * Time.deltaTime);
+            Zoom(_zoomInput * Time.deltaTime);
         }
 
         public void MouseRaycast(InputAction.CallbackContext _) {
@@ -77,30 +82,35 @@ namespace Core.Map
 
         #region Lifecycle
 
-        public void Awake() {
+        private void Awake() {
+            if (!Config)
+            {
+                Config = ScriptableObject.CreateInstance<Config>();
+            }
+
             _defaultControls = new DefaultControls();
             _actions = _defaultControls.Main;
-            _mainCamera = Camera.main;
+            _mainCamera = UnityEngine.Camera.main;
         }
 
-        public void Update() {
-            if (PanInput != Vector2.zero)
+        private void Update() {
+            if (_panInput != Vector2.zero)
             {
                 Pan();
             }
 
-            if (ZoomInput != 0f)
+            if (!Mathf.Approximately(_zoomInput, 0f))
             {
                 Zoom();
             }
 
-            if (IsRotating)
+            if (_isRotating)
             {
                 Rotate();
             }
         }
 
-        public void OnEnable() {
+        private void OnEnable() {
             _defaultControls.Enable();
 
             _actions.Pan.performed += OnPanPerformed;
@@ -117,9 +127,11 @@ namespace Core.Map
             _actions.MouseDelta.performed += OnMouseDeltaPerformed;
 
             _actions.LeftClick.started += MouseRaycast;
+
+            _actions.Escape.started += OnEscapeStarted;
         }
 
-        public void OnDisable() {
+        private void OnDisable() {
             _actions.Pan.performed -= OnPanPerformed;
             _actions.Pan.canceled -= OnPanCanceled;
 
@@ -135,12 +147,16 @@ namespace Core.Map
 
             _actions.LeftClick.started -= MouseRaycast;
 
+            _actions.Escape.started -= OnEscapeStarted;
+
             _defaultControls.Disable();
 
             MouseRaycasted.RemoveAllListeners();
+            EscapeStarted.RemoveAllListeners();
+            RightClickStarted.RemoveAllListeners();
         }
 
-        public void OnDestroy() {
+        private void OnDestroy() {
             OnDisable();
             _defaultControls.Dispose();
         }
@@ -150,63 +166,62 @@ namespace Core.Map
         #region Runtime Values
 
         [Header("Runtime Values")]
-        public Vector2 PanInput;
-        public float ZoomInput;
-        public bool IsRotating;
-        public Vector2 RotateInput;
+        private Vector2 _panInput;
+
+        private float _zoomInput;
+
+        private bool _isRotating;
+
+        private Vector2 _rotateInput;
+
         public UnityEvent<Ray> MouseRaycasted = new();
 
-        #endregion
+        public UnityEvent EscapeStarted = new();
 
-        #region Config Values
-
-        [Header("Config Values")]
-        public float PanSpeed = 4f;
-        public float ZoomSpeed = 4f;
-        public float RotateSpeed = 40f;
-        public float CameraPanYBoundsMin = 1f;
-        public float CameraPanYBoundsMax = 5f;
-        public float CameraRotateXBoundsMin = 0f;
-        public float CameraRotateXBoundsMax = 90f;
-        public float ScrollZoomMultiplier = 0.0625f;
+        public UnityEvent RightClickStarted = new();
 
         #endregion
 
         #region Action Listeners
 
         protected void OnMouseDeltaPerformed(InputAction.CallbackContext context) {
-            if (!IsRotating) return;
+            if (!_isRotating) return;
 
-            RotateInput = context.ReadValue<Vector2>();
+            _rotateInput = context.ReadValue<Vector2>();
         }
 
         protected void OnRightClickCanceled(InputAction.CallbackContext _) {
-            IsRotating = false;
-            RotateInput = Vector2.zero;
+            _isRotating = false;
+            _rotateInput = Vector2.zero;
         }
 
         protected void OnRightClickStarted(InputAction.CallbackContext _) {
-            IsRotating = true;
+            _isRotating = true;
+            RightClickStarted.Invoke();
         }
 
         protected void OnScrollZoomPerformed(InputAction.CallbackContext context) {
-            Zoom(context.ReadValue<float>() * ScrollZoomMultiplier);
+            Zoom(context.ReadValue<float>() * Config.ScrollZoomMultiplier);
         }
 
         protected void OnPanPerformed(InputAction.CallbackContext context) {
-            PanInput = context.ReadValue<Vector2>();
+            _panInput = context.ReadValue<Vector2>();
         }
 
         protected void OnPanCanceled(InputAction.CallbackContext context) {
-            PanInput = Vector2.zero;
+            _panInput = Vector2.zero;
         }
 
         protected void OnZoomPerformed(InputAction.CallbackContext context) {
-            ZoomInput = context.ReadValue<float>();
+            _zoomInput = context.ReadValue<float>();
         }
 
         protected void OnZoomCanceled(InputAction.CallbackContext _) {
-            ZoomInput = 0f;
+            _zoomInput = 0f;
+        }
+
+        protected void OnEscapeStarted(InputAction.CallbackContext _) {
+            EscapeStarted.Invoke();
         }
 
         #endregion

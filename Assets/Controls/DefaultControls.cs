@@ -154,6 +154,15 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""5804d1bc-aa18-4a15-b663-502692858b2c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -299,6 +308,17 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
                     ""action"": ""Left Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""abe3e09a-8351-4c90-8f5a-a5a5f968d310"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -375,6 +395,7 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
         m_Main_MouseDelta = m_Main.FindAction("Mouse Delta", throwIfNotFound: true);
         m_Main_MousePosition = m_Main.FindAction("Mouse Position", throwIfNotFound: true);
         m_Main_LeftClick = m_Main.FindAction("Left Click", throwIfNotFound: true);
+        m_Main_Escape = m_Main.FindAction("Escape", throwIfNotFound: true);
     }
 
     ~@DefaultControls()
@@ -462,6 +483,7 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Main_MouseDelta;
     private readonly InputAction m_Main_MousePosition;
     private readonly InputAction m_Main_LeftClick;
+    private readonly InputAction m_Main_Escape;
     /// <summary>
     /// Provides access to input actions defined in input action map "Main".
     /// </summary>
@@ -501,6 +523,10 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Main/LeftClick".
         /// </summary>
         public InputAction @LeftClick => m_Wrapper.m_Main_LeftClick;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/Escape".
+        /// </summary>
+        public InputAction @Escape => m_Wrapper.m_Main_Escape;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -548,6 +574,9 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
             @LeftClick.started += instance.OnLeftClick;
             @LeftClick.performed += instance.OnLeftClick;
             @LeftClick.canceled += instance.OnLeftClick;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         /// <summary>
@@ -580,6 +609,9 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
             @LeftClick.started -= instance.OnLeftClick;
             @LeftClick.performed -= instance.OnLeftClick;
             @LeftClick.canceled -= instance.OnLeftClick;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         /// <summary>
@@ -734,5 +766,12 @@ public partial class @DefaultControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLeftClick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Escape" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

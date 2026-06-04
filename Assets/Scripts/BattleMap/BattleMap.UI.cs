@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using Unity.Properties;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 #if UNITY_EDITOR
@@ -18,18 +15,11 @@ namespace BattleMap
 
         public UIDocument UIDocument;
 
-        [SerializeField] [DontCreateProperty] private string _hexCell = "";
+        public Helpers.InfoGroup HexInfoGroup;
 
-        [SerializeField] [DontCreateProperty] private string _pawnCell = "";
+        public Helpers.InfoGroup PawnInfoGroup;
 
-        public Label HexCellLabel;
-
-        public Label PawnCellLabel;
-
-        [CreateProperty]
-        public string HexCell { get => _hexCell; set => _hexCell = value; }
-        [CreateProperty]
-        public string PawnCell { get => _pawnCell; set => _pawnCell = value; }
+        private GroupBox _selectionPane;
 
         public void OnEnable() {
             // Attach listeners to Unity Events (separate from UI binding)
@@ -37,54 +27,36 @@ namespace BattleMap
             PawnManager.GridItemSelected.AddListener(OnPawnSelect);
             // Bind labels
             var root = UIDocument.rootVisualElement;
-            HexCellLabel = root.Q<Label>("Hex_CellLabel");
-            PawnCellLabel = root.Q<Label>("Pawn_CellLabel");
+            _selectionPane = root.Q<GroupBox>("SelectionPane");
 
+            HexInfoGroup = new Helpers.InfoGroup(root.Q<GroupBox>("Hex_InfoGroup"), root.Q<Label>("Hex_CellLabel"));
+            PawnInfoGroup = new Helpers.InfoGroup(root.Q<GroupBox>("Pawn_InfoGroup"), root.Q<Label>("Pawn_CellLabel"));
 
-            new List<VisualElement>
-            {
-                HexCellLabel,
-                PawnCellLabel
-            }.ForEach(visualElement =>
-                    {
-                        if (visualElement != null)
-                        {
-                            visualElement.dataSource = this;
-                        }
-                    }
-                );
-
-
-            HexCellLabel?.SetBinding(
-                    "text",
-                    new DataBinding
-                    {
-                        dataSourcePath = new PropertyPath(nameof(HexCell)),
-                        bindingMode = BindingMode.ToTarget
-                    }
-                );
-
-            PawnCellLabel?.SetBinding(
-                    "text",
-                    new DataBinding
-                    {
-                        dataSourcePath = new PropertyPath(nameof(PawnCell)),
-                        bindingMode = BindingMode.ToTarget
-                    }
-                );
+            HexInfoGroup.GroupBox.RegisterCallback<GeometryChangedEvent>(_ => UpdateSelectionPaneVisibility());
+            PawnInfoGroup.GroupBox.RegisterCallback<GeometryChangedEvent>(_ => UpdateSelectionPaneVisibility());
+            _selectionPane.style.display = DisplayStyle.None;
         }
 
         public void OnDisable() {
-            HexCellLabel.Unbind();
-            PawnCellLabel.Unbind();
+            HexInfoGroup.Unbind();
+            PawnInfoGroup.Unbind();
+        }
+
+        private void UpdateSelectionPaneVisibility() {
+            _selectionPane.style.display
+                = string.IsNullOrEmpty(HexInfoGroup.Value) && string.IsNullOrEmpty(PawnInfoGroup.Value)
+                    ? DisplayStyle.None
+                    : DisplayStyle.Flex;
         }
 
         private void OnHexSelect(BattleMap.Hex.Hex hex) {
-            HexCell = hex.DataSO.Cell.ToString();
+            HexInfoGroup.Value = hex ? hex.DataSO.Cell.ToString() : string.Empty;
+            UpdateSelectionPaneVisibility();
         }
 
         private void OnPawnSelect(BattleMap.Pawn.Pawn pawn) {
-            PawnCell = pawn.DataSO.Cell.ToString();
+            PawnInfoGroup.Value = pawn ? pawn.DataSO.Cell.ToString() : string.Empty;
+            UpdateSelectionPaneVisibility();
         }
 
     }

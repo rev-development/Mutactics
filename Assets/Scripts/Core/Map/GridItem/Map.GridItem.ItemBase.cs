@@ -13,11 +13,11 @@ namespace Core.Map.GridItem
 
         public abstract SOBase DataSOBase { get; }
 
-        protected void OnEnable() {
+        private void OnEnable() {
             PositionChange.AddListener(OnPositionChange);
         }
 
-        protected void OnDisable() {
+        private void OnDisable() {
             PositionChange.RemoveAllListeners();
         }
 
