@@ -138,7 +138,6 @@ namespace Core.Map.Manager
                 OccupiedCells.Add(Helpers.HexMap.GetXY(item.DataSOBase.Cell), item);
                 Tilemap.SetTile(item.DataSOBase.Cell, item.DataSOBase.Tile);
             }
-
             else
             {
             #if UNITY_EDITOR
@@ -153,8 +152,6 @@ namespace Core.Map.Manager
         }
 
         public void MoveObject(TItem item, Vector3Int from, Vector3Int to) {
-            Debug.Log($"{item.name} at {from} to {to}");
-
             // If item is not where it currently is
             if (!IsCellOccupied(from)) return;
 

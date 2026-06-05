@@ -29,6 +29,7 @@ namespace BattleMap.Pawn
                 }
             }
 
+
             var pawnData = new PawnData
             {
                 Cell = nextCell,
