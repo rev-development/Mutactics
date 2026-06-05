@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using BattleMap.Pawn.Command;
-using Core;
+using Core.Command;
 using UnityEngine;
 
 namespace BattleMap
@@ -51,12 +51,13 @@ namespace BattleMap
             if (PawnManager.ActiveSelection
                 && HexManager.ActiveSelection)
             {
-                var cmd = new Move(
-                        PawnManager.ActiveSelection,
-                        HexManager.ActiveSelection,
-                        PawnManager.ActiveSelection.DataSO.Cell,
-                        HexManager.ActiveSelection.DataSO.Cell
-                    );
+                var cmd = new Move
+                {
+                    Item = PawnManager.ActiveSelection,
+                    From = PawnManager.ActiveSelection.DataSO.Cell,
+                    To = HexManager.ActiveSelection.DataSO.Cell
+                };
+
 
                 Debug.Log(
                         $"Move Cmd: {PawnManager.ActiveSelection.name} at {PawnManager.ActiveSelection.DataSO.Cell}"

@@ -12,5 +12,7 @@ namespace Core.Map.GridItem
         [AdaptIgnore]
         public TileBase Tile { get; set; }
 
+        public Vector2Int Key { get; }
+
     }
 }

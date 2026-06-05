@@ -74,10 +74,7 @@ namespace BattleMap.Hex
             SerializedDictionary<Vector2Int, HexData> mapData,
             Vector2Int mapSize
         ) {
-            var edgeHexKeys = Helpers.HexMap.GetEdgeCells(
-                    mapData.Values.Select(cell => Helpers.HexMap.GetXY(cell.Cell)).ToList(),
-                    mapSize
-                );
+            var edgeHexKeys = Helpers.HexMap.GetEdgeCells(mapData.Values.Select(cell => cell.Key).ToList(), mapSize);
 
             var edgeHexes
                 = new SerializedDictionary<Vector2Int, HexData>(mapData.Where(cell => edgeHexKeys.Contains(cell.Key)));
@@ -89,10 +86,7 @@ namespace BattleMap.Hex
             SerializedDictionary<Vector2Int, HexData> mapData,
             Vector2Int mapSize
         ) {
-            var edgeHexKeys = Helpers.HexMap.GetEdgeCells(
-                    mapData.Values.Select(cell => Helpers.HexMap.GetXY(cell.Cell)).ToList(),
-                    mapSize
-                );
+            var edgeHexKeys = Helpers.HexMap.GetEdgeCells(mapData.Values.Select(cell => cell.Key).ToList(), mapSize);
 
             var interiorHexes
                 = new SerializedDictionary<Vector2Int, HexData>(mapData.Where(cell => !edgeHexKeys.Contains(cell.Key)));

@@ -1,14 +1,17 @@
+using Core.Map.Manager;
 using UnityEngine;
 
 namespace BattleMap.Pawn
 {
     [AddComponentMenu("BattleMap/Pawn/PawnManager")] [RequireComponent(typeof(Hex.Manager))]
-    public class Manager : Core.Map.Manager.ManagerBase<Manager, Pawn>
+    public class Manager : ManagerBase<Manager, Pawn>
     {
 
         public GameObject PawnPrefab;
 
         private BattleMap.Hex.Manager _hexManager;
+
+        public override Options Options { get; } = new();
 
         public void GenerateTestPawn() {
             var nextKey = Helpers.HexMap.GetNextAvailableKey(OccupiedCells);

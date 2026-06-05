@@ -310,9 +310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -539,9 +539,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -691,9 +691,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -843,9 +843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -1147,9 +1147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -1511,9 +1511,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -1768,9 +1768,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -1984,9 +1984,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -2136,14 +2136,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
       m_Calls: []
   DataSO: {fileID: 1937332194}
+--- !u!1 &166860194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166860195}
+  - component: {fileID: 166860197}
+  - component: {fileID: 166860196}
+  m_Layer: 0
+  m_Name: Pawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &166860195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166860194}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1316744838}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &166860196
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166860194}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 13643198b95305d4698f7cef8e7e50f8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &166860197
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166860194}
+  m_Mesh: {fileID: 1705324974331375986, guid: 728ed21858749b14c9645c3bf0ac19a1, type: 3}
 --- !u!1 &173481526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,46 +2532,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
       m_Calls: []
   DataSO: {fileID: 1088058397}
---- !u!1 &209881560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 209881561}
-  m_Layer: 0
-  m_Name: Pawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &209881561
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209881560}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2121494271}
-  m_Father: {fileID: 1468898698}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214344951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2630,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214344951}
   m_Mesh: {fileID: 2190622540023885545, guid: 6e9c15d5fe75421419f1d92684538840, type: 3}
+--- !u!114 &220148679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e8f6d973734be488c0841705c9c972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BattleMap::BattleMap.Pawn.PawnSO
+  <Cell>k__BackingField: {x: 0, y: 0, z: 1}
+  <Tile>k__BackingField: {fileID: 0}
+  CorrespondingGameObject: {fileID: 1566820797}
 --- !u!1 &226727823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,9 +3121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -3200,9 +3273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -3352,9 +3425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -3641,9 +3714,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -3883,9 +3956,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -4099,9 +4172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -4251,9 +4324,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -4465,9 +4538,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -4617,9 +4690,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -4929,21 +5002,6 @@ MonoBehaviour:
   <Cell>k__BackingField: {x: 3, y: 2, z: 4}
   <Tile>k__BackingField: {fileID: 11400000, guid: 611d9c6c57c832d48b4fd58366e676a9, type: 2}
   CorrespondingGameObject: {fileID: 637686494}
---- !u!114 &358119873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e8f6d973734be488c0841705c9c972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: BattleMap::BattleMap.Pawn.PawnSO
-  <Cell>k__BackingField: {x: 0, y: 0, z: 0}
-  <Tile>k__BackingField: {fileID: 0}
-  CorrespondingGameObject: {fileID: 1468898697}
 --- !u!1 &360350776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,9 +5146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -5272,9 +5330,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -5593,9 +5651,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -5994,9 +6052,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -6146,9 +6204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -6570,9 +6628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -6921,9 +6979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -7152,9 +7210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -7319,9 +7377,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -7561,9 +7619,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -7803,9 +7861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -7985,9 +8043,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -8137,9 +8195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -8321,9 +8379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -8473,9 +8531,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -8715,9 +8773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -8867,9 +8925,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -9214,9 +9272,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -9398,9 +9456,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -9766,9 +9824,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -9948,9 +10006,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -10569,9 +10627,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -10721,9 +10779,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -10873,9 +10931,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -11025,9 +11083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -11425,9 +11483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -12367,9 +12425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -12534,9 +12592,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -12870,9 +12928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -13116,9 +13174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -13463,9 +13521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -13645,9 +13703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -14202,9 +14260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -14354,9 +14412,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -14731,9 +14789,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -15174,9 +15232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -15416,9 +15474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -15673,9 +15731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -15825,9 +15883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -16221,9 +16279,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -16525,9 +16583,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -16709,9 +16767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -17103,9 +17161,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -17255,9 +17313,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -17407,9 +17465,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -17891,9 +17949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -18133,9 +18191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -18339,6 +18397,38 @@ Transform:
   m_Children:
   - {fileID: 629948235}
   m_Father: {fileID: 627418700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1316744837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1316744838}
+  m_Layer: 0
+  m_Name: Pawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316744838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316744837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 166860195}
+  m_Father: {fileID: 1566820798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317835270
 GameObject:
@@ -18548,9 +18638,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -19130,9 +19220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -19372,9 +19462,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -19704,9 +19794,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -20036,9 +20126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -20188,9 +20278,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -20520,9 +20610,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -20672,9 +20762,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -20961,9 +21051,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -21033,158 +21123,6 @@ Transform:
   - {fileID: 1240470544}
   m_Father: {fileID: 1768086064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1468898697
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1468898698}
-  - component: {fileID: 1468898702}
-  - component: {fileID: 1468898701}
-  - component: {fileID: 1468898700}
-  - component: {fileID: 1468898699}
-  m_Layer: 8
-  m_Name: Pawn(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1468898698
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468898697}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 209881561}
-  m_Father: {fileID: 3804541701935679306}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1468898699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468898697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048f2b0e68c64292b64164abf42374e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Core::Core.Map.GridItem.Composables.Selectable
-  Select:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!64 &1468898700
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468898697}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1705324974331375986, guid: 728ed21858749b14c9645c3bf0ac19a1, type: 3}
---- !u!114 &1468898701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468898697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: QuickOutline::Outline
-  outlineMode: 0
-  outlineColor: {r: 0.4980392, g: 1, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 1
-  bakeKeys:
-  - {fileID: 2190622540023885545, guid: 6e9c15d5fe75421419f1d92684538840, type: 3}
-  bakeValues:
-  - data:
-    - {x: 0.4472136, y: 0.4472136, z: 0.7745967}
-    - {x: 0.8944272, y: -0.4472136, z: 0}
-    - {x: 0.8944272, y: 0.4472136, z: 0}
-    - {x: 0.4472136, y: -0.4472136, z: 0.7745967}
-    - {x: -0.4472137, y: 0.4472136, z: 0.7745966}
-    - {x: 0.4472136, y: -0.4472136, z: 0.7745967}
-    - {x: 0.4472136, y: 0.4472136, z: 0.7745967}
-    - {x: -0.4472137, y: -0.4472136, z: 0.7745966}
-    - {x: -0.8944272, y: 0.4472136, z: 0}
-    - {x: -0.4472137, y: -0.4472136, z: 0.7745966}
-    - {x: -0.4472137, y: 0.4472136, z: 0.7745966}
-    - {x: -0.8944272, y: -0.4472136, z: 0}
-    - {x: -0.4472136, y: 0.4472136, z: -0.7745967}
-    - {x: -0.8944272, y: -0.4472136, z: 0}
-    - {x: -0.8944272, y: 0.4472136, z: 0}
-    - {x: -0.4472136, y: -0.4472136, z: -0.7745967}
-    - {x: 0.4472136, y: 0.4472136, z: -0.7745967}
-    - {x: -0.4472136, y: -0.4472136, z: -0.7745967}
-    - {x: -0.4472136, y: 0.4472136, z: -0.7745967}
-    - {x: 0.4472136, y: -0.4472136, z: -0.7745967}
-    - {x: 0.8944272, y: 0.4472136, z: 0}
-    - {x: 0.4472136, y: -0.4472136, z: -0.7745967}
-    - {x: 0.4472136, y: 0.4472136, z: -0.7745967}
-    - {x: 0.8944272, y: -0.4472136, z: 0}
-    - {x: 0.4472136, y: 0.4472136, z: -0.7745967}
-    - {x: -0.4472136, y: 0.4472136, z: -0.7745967}
-    - {x: 0, y: 1, z: 0}
-    - {x: 0.8944272, y: 0.4472136, z: 0}
-    - {x: -0.8944272, y: 0.4472136, z: 0}
-    - {x: 0.4472136, y: 0.4472136, z: 0.7745967}
-    - {x: -0.4472137, y: 0.4472136, z: 0.7745966}
-    - {x: -0.4472136, y: -0.4472136, z: -0.7745967}
-    - {x: 0.4472136, y: -0.4472136, z: -0.7745967}
-    - {x: 0, y: -1, z: 0}
-    - {x: -0.8944272, y: -0.4472136, z: 0}
-    - {x: 0.8944272, y: -0.4472136, z: 0}
-    - {x: -0.4472137, y: -0.4472136, z: 0.7745966}
-    - {x: 0.4472136, y: -0.4472136, z: 0.7745967}
---- !u!114 &1468898702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468898697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c8ec58cf6434d4d82cc5ab1048cbdaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: BattleMap::BattleMap.Pawn.Pawn
-  CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 0
-    <ClearTilemapOnReset>k__BackingField: 0
-    <OnPlaceStretchObjectY>k__BackingField: 0
-    <DeselectOnDoubleClick>k__BackingField: 0
-  PositionChange:
-    m_PersistentCalls:
-      m_Calls: []
-  DataSO: {fileID: 358119873}
 --- !u!1 &1470839189
 GameObject:
   m_ObjectHideFlags: 0
@@ -21571,9 +21509,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -21843,9 +21781,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -21995,9 +21933,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -22147,9 +22085,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -22434,9 +22372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -22722,6 +22660,158 @@ Transform:
   - {fileID: 1819204447}
   m_Father: {fileID: 768849087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1566820797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566820798}
+  - component: {fileID: 1566820802}
+  - component: {fileID: 1566820801}
+  - component: {fileID: 1566820800}
+  - component: {fileID: 1566820799}
+  m_Layer: 8
+  m_Name: Pawn(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566820798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566820797}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1316744838}
+  m_Father: {fileID: 3804541701935679306}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1566820799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566820797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048f2b0e68c64292b64164abf42374e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Core::Core.Map.GridItem.Composables.Selectable
+  Select:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!64 &1566820800
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566820797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1705324974331375986, guid: 728ed21858749b14c9645c3bf0ac19a1, type: 3}
+--- !u!114 &1566820801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566820797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: QuickOutline::Outline
+  outlineMode: 0
+  outlineColor: {r: 0.4980392, g: 1, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 1
+  bakeKeys:
+  - {fileID: 2190622540023885545, guid: 6e9c15d5fe75421419f1d92684538840, type: 3}
+  bakeValues:
+  - data:
+    - {x: 0.4472136, y: 0.4472136, z: 0.7745967}
+    - {x: 0.8944272, y: -0.4472136, z: 0}
+    - {x: 0.8944272, y: 0.4472136, z: 0}
+    - {x: 0.4472136, y: -0.4472136, z: 0.7745967}
+    - {x: -0.4472137, y: 0.4472136, z: 0.7745966}
+    - {x: 0.4472136, y: -0.4472136, z: 0.7745967}
+    - {x: 0.4472136, y: 0.4472136, z: 0.7745967}
+    - {x: -0.4472137, y: -0.4472136, z: 0.7745966}
+    - {x: -0.8944272, y: 0.4472136, z: 0}
+    - {x: -0.4472137, y: -0.4472136, z: 0.7745966}
+    - {x: -0.4472137, y: 0.4472136, z: 0.7745966}
+    - {x: -0.8944272, y: -0.4472136, z: 0}
+    - {x: -0.4472136, y: 0.4472136, z: -0.7745967}
+    - {x: -0.8944272, y: -0.4472136, z: 0}
+    - {x: -0.8944272, y: 0.4472136, z: 0}
+    - {x: -0.4472136, y: -0.4472136, z: -0.7745967}
+    - {x: 0.4472136, y: 0.4472136, z: -0.7745967}
+    - {x: -0.4472136, y: -0.4472136, z: -0.7745967}
+    - {x: -0.4472136, y: 0.4472136, z: -0.7745967}
+    - {x: 0.4472136, y: -0.4472136, z: -0.7745967}
+    - {x: 0.8944272, y: 0.4472136, z: 0}
+    - {x: 0.4472136, y: -0.4472136, z: -0.7745967}
+    - {x: 0.4472136, y: 0.4472136, z: -0.7745967}
+    - {x: 0.8944272, y: -0.4472136, z: 0}
+    - {x: 0.4472136, y: 0.4472136, z: -0.7745967}
+    - {x: -0.4472136, y: 0.4472136, z: -0.7745967}
+    - {x: 0, y: 1, z: 0}
+    - {x: 0.8944272, y: 0.4472136, z: 0}
+    - {x: -0.8944272, y: 0.4472136, z: 0}
+    - {x: 0.4472136, y: 0.4472136, z: 0.7745967}
+    - {x: -0.4472137, y: 0.4472136, z: 0.7745966}
+    - {x: -0.4472136, y: -0.4472136, z: -0.7745967}
+    - {x: 0.4472136, y: -0.4472136, z: -0.7745967}
+    - {x: 0, y: -1, z: 0}
+    - {x: -0.8944272, y: -0.4472136, z: 0}
+    - {x: 0.8944272, y: -0.4472136, z: 0}
+    - {x: -0.4472137, y: -0.4472136, z: 0.7745966}
+    - {x: 0.4472136, y: -0.4472136, z: 0.7745967}
+--- !u!114 &1566820802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566820797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8ec58cf6434d4d82cc5ab1048cbdaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BattleMap::BattleMap.Pawn.Pawn
+  CachedOptions:
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
+    <DeselectOnDoubleClick>k__BackingField: 0
+  PositionChange:
+    m_PersistentCalls:
+      m_Calls: []
+  DataSO: {fileID: 220148679}
 --- !u!1 &1568700801
 GameObject:
   m_ObjectHideFlags: 0
@@ -22976,9 +23066,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -23175,9 +23265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -23359,9 +23449,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -23813,9 +23903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -24010,9 +24100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -24410,9 +24500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -24742,9 +24832,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -25082,9 +25172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -25234,9 +25324,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -25386,9 +25476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -25538,9 +25628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -26405,9 +26495,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -26917,9 +27007,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -27238,9 +27328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -27812,9 +27902,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -27964,9 +28054,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -28116,9 +28206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -28268,9 +28358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -28743,9 +28833,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -29322,96 +29412,6 @@ Transform:
   - {fileID: 1558254737}
   m_Father: {fileID: 1328253967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2121494270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2121494271}
-  - component: {fileID: 2121494273}
-  - component: {fileID: 2121494272}
-  m_Layer: 0
-  m_Name: Pawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2121494271
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121494270}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 209881561}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &2121494272
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121494270}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 13643198b95305d4698f7cef8e7e50f8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2121494273
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121494270}
-  m_Mesh: {fileID: 1705324974331375986, guid: 728ed21858749b14c9645c3bf0ac19a1, type: 3}
 --- !u!114 &2124079232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29586,9 +29586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Hex.Hex
   CachedOptions:
-    <PlaceObjectBelowGrid>k__BackingField: 1
-    <ClearTilemapOnReset>k__BackingField: 1
-    <OnPlaceStretchObjectY>k__BackingField: 1
+    <PlaceObjectBelowGrid>k__BackingField: 0
+    <ClearTilemapOnReset>k__BackingField: 0
+    <OnPlaceStretchObjectY>k__BackingField: 0
     <DeselectOnDoubleClick>k__BackingField: 0
   PositionChange:
     m_PersistentCalls:
@@ -29696,7 +29696,7 @@ PrefabInstance:
     - target: {fileID: 2380898062474695982, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: HexManager
       value: 
-      objectReference: {fileID: 3804541701935679308}
+      objectReference: {fileID: 3804541701935679312}
     - target: {fileID: 2380898062474695982, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: PawnManager
       value: 
@@ -30484,7 +30484,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[0].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 360350781}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[1].Key.y
       value: 1
@@ -30492,7 +30492,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[1].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1947108752}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[2].Key.y
       value: 2
@@ -30500,7 +30500,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[2].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 524611771}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[3].Key.y
       value: 3
@@ -30508,7 +30508,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[3].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1779966429}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[4].Key.y
       value: 4
@@ -30516,7 +30516,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[4].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 592943920}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[5].Key.y
       value: 5
@@ -30524,7 +30524,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[5].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1360420655}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[6].Key.y
       value: 6
@@ -30532,7 +30532,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[6].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1167824362}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[7].Key.y
       value: 7
@@ -30540,7 +30540,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[7].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1110910038}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[8].Key.y
       value: 8
@@ -30548,7 +30548,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[8].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1483812285}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[9].Key.y
       value: 9
@@ -30556,7 +30556,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[9].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 657051019}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[10].Key.x
       value: 1
@@ -30564,7 +30564,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[10].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1768086068}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[11].Key.x
       value: 1
@@ -30576,7 +30576,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[11].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1953397712}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[12].Key.x
       value: 1
@@ -30588,7 +30588,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[12].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100076192}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[13].Key.x
       value: 1
@@ -30600,7 +30600,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[13].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1503611286}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[14].Key.x
       value: 1
@@ -30612,7 +30612,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[14].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 627418704}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[15].Key.x
       value: 1
@@ -30624,7 +30624,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[15].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1178565256}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[16].Key.x
       value: 1
@@ -30636,7 +30636,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[16].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 603460872}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[17].Key.x
       value: 1
@@ -30648,7 +30648,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[17].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1399834320}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[18].Key.x
       value: 1
@@ -30660,7 +30660,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[18].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1946424621}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[19].Key.x
       value: 1
@@ -30672,7 +30672,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[19].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 328584010}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[20].Key.x
       value: 2
@@ -30680,7 +30680,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[20].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 249788818}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[21].Key.x
       value: 2
@@ -30692,7 +30692,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[21].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1129866460}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[22].Key.x
       value: 2
@@ -30704,7 +30704,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[22].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 362789526}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[23].Key.x
       value: 2
@@ -30716,7 +30716,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[23].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 257443981}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[24].Key.x
       value: 2
@@ -30728,7 +30728,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[24].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1364420202}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[25].Key.x
       value: 2
@@ -30740,7 +30740,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[25].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 145876316}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[26].Key.x
       value: 2
@@ -30752,7 +30752,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[26].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 975123237}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[27].Key.x
       value: 2
@@ -30764,7 +30764,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[27].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1457766111}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[28].Key.x
       value: 2
@@ -30776,7 +30776,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[28].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 636248940}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[29].Key.x
       value: 2
@@ -30788,7 +30788,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[29].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 282618061}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[30].Key.x
       value: 3
@@ -30796,7 +30796,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[30].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1505248461}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[31].Key.x
       value: 3
@@ -30808,7 +30808,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[31].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1328253971}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[32].Key.x
       value: 3
@@ -30820,7 +30820,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[32].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 637686499}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[33].Key.x
       value: 3
@@ -30832,7 +30832,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[33].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1627616090}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[34].Key.x
       value: 3
@@ -30844,7 +30844,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[34].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 292110921}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[35].Key.x
       value: 3
@@ -30856,7 +30856,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[35].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1597578343}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[36].Key.x
       value: 3
@@ -30868,7 +30868,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[36].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 39196179}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[37].Key.x
       value: 3
@@ -30880,7 +30880,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[37].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 495082261}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[38].Key.x
       value: 3
@@ -30892,7 +30892,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[38].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1648393418}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[39].Key.x
       value: 3
@@ -30904,7 +30904,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[39].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1006666130}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[40].Key.x
       value: 4
@@ -30912,7 +30912,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[40].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 768849091}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[41].Key.x
       value: 4
@@ -30924,7 +30924,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[41].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1490621112}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[42].Key.x
       value: 4
@@ -30936,7 +30936,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[42].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1129249212}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[43].Key.x
       value: 4
@@ -30948,7 +30948,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[43].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1877986212}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[44].Key.x
       value: 4
@@ -30960,7 +30960,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[44].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 777969206}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[45].Key.x
       value: 4
@@ -30972,7 +30972,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[45].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1678974708}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[46].Key.x
       value: 4
@@ -30984,7 +30984,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[46].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1036435772}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[47].Key.x
       value: 4
@@ -30996,7 +30996,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[47].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1227666510}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[48].Key.x
       value: 4
@@ -31008,7 +31008,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[48].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 200457577}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[49].Key.x
       value: 4
@@ -31020,7 +31020,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[49].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1969954481}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[50].Key.x
       value: 5
@@ -31028,7 +31028,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[50].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1574802027}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[51].Key.x
       value: 5
@@ -31040,7 +31040,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[51].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1285075239}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[52].Key.x
       value: 5
@@ -31052,7 +31052,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[52].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1708038381}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[53].Key.x
       value: 5
@@ -31064,7 +31064,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[53].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1778906429}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[54].Key.x
       value: 5
@@ -31076,7 +31076,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[54].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1526982360}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[55].Key.x
       value: 5
@@ -31088,7 +31088,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[55].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1434201596}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[56].Key.x
       value: 5
@@ -31100,7 +31100,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[56].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 742894830}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[57].Key.x
       value: 5
@@ -31112,7 +31112,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[57].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1266085765}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[58].Key.x
       value: 5
@@ -31124,7 +31124,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[58].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 910265783}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[59].Key.x
       value: 5
@@ -31136,7 +31136,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[59].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1370792199}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[60].Key.x
       value: 6
@@ -31144,7 +31144,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[60].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1608903415}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[61].Key.x
       value: 6
@@ -31156,7 +31156,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[61].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1190799687}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[62].Key.x
       value: 6
@@ -31168,7 +31168,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[62].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 257099261}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[63].Key.x
       value: 6
@@ -31180,7 +31180,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[63].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 405820700}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[64].Key.x
       value: 6
@@ -31192,7 +31192,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[64].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 428900699}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[65].Key.x
       value: 6
@@ -31204,7 +31204,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[65].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1904767615}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[66].Key.x
       value: 6
@@ -31216,7 +31216,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[66].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 78895791}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[67].Key.x
       value: 6
@@ -31228,7 +31228,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[67].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 132004519}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[68].Key.x
       value: 6
@@ -31240,7 +31240,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[68].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 569880776}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[69].Key.x
       value: 6
@@ -31252,7 +31252,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[69].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 79354003}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[70].Key.x
       value: 7
@@ -31260,7 +31260,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[70].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1098947280}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[71].Key.x
       value: 7
@@ -31272,7 +31272,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[71].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 998820130}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[72].Key.x
       value: 7
@@ -31284,7 +31284,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[72].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 313460422}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[73].Key.x
       value: 7
@@ -31296,7 +31296,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[73].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2053711494}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[74].Key.x
       value: 7
@@ -31308,7 +31308,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[74].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 621278133}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[75].Key.x
       value: 7
@@ -31320,7 +31320,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[75].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1777673048}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[76].Key.x
       value: 7
@@ -31332,7 +31332,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[76].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 702502959}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[77].Key.x
       value: 7
@@ -31344,7 +31344,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[77].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 443677437}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[78].Key.x
       value: 7
@@ -31356,7 +31356,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[78].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1068631020}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[79].Key.x
       value: 7
@@ -31368,7 +31368,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[79].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 158022583}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[80].Key.x
       value: 8
@@ -31376,7 +31376,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[80].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 65763985}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[81].Key.x
       value: 8
@@ -31388,7 +31388,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[81].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 674798325}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[82].Key.x
       value: 8
@@ -31400,7 +31400,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[82].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1228544462}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[83].Key.x
       value: 8
@@ -31412,7 +31412,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[83].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1040418712}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[84].Key.x
       value: 8
@@ -31424,7 +31424,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[84].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 925708861}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[85].Key.x
       value: 8
@@ -31436,7 +31436,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[85].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 308853993}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[86].Key.x
       value: 8
@@ -31448,7 +31448,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[86].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 749747967}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[87].Key.x
       value: 8
@@ -31460,7 +31460,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[87].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 557982109}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[88].Key.x
       value: 8
@@ -31472,7 +31472,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[88].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 653028664}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[89].Key.x
       value: 8
@@ -31484,7 +31484,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[89].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547583360}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[90].Key.x
       value: 9
@@ -31492,7 +31492,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[90].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 321118786}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[91].Key.x
       value: 9
@@ -31504,7 +31504,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[91].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 816516380}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[92].Key.x
       value: 9
@@ -31516,7 +31516,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[92].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1387931406}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[93].Key.x
       value: 9
@@ -31528,7 +31528,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[93].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 556396339}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[94].Key.x
       value: 9
@@ -31540,7 +31540,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[94].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2138192938}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[95].Key.x
       value: 9
@@ -31552,7 +31552,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[95].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1217043070}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[96].Key.x
       value: 9
@@ -31564,7 +31564,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[96].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1865205166}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[97].Key.x
       value: 9
@@ -31576,7 +31576,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[97].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 955212640}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[98].Key.x
       value: 9
@@ -31588,7 +31588,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[98].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 118327240}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[99].Key.x
       value: 9
@@ -31600,7 +31600,7 @@ PrefabInstance:
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: OccupiedCells._serializedList.Array.data[99].Value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1436825856}
     - target: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: DefaultOptions.<ClearTilemapOnReset>k__BackingField
       value: 1
@@ -33133,6 +33133,14 @@ PrefabInstance:
       propertyPath: MapData._serializedList.Array.data[99].Value.<Cell>k__BackingField.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6493604439539395410, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
+      propertyPath: OccupiedCells._serializedList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493604439539395410, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
+      propertyPath: OccupiedCells._serializedList.Array.data[0].Value
+      value: 
+      objectReference: {fileID: 1566820802}
     - target: {fileID: 6493604439539395410, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       propertyPath: DefaultOptions.<PlaceObjectBelowGrid>k__BackingField
       value: 0
@@ -35534,7 +35542,7 @@ PrefabInstance:
       addedObject: {fileID: 1436825852}
     - targetCorrespondingSourceObject: {fileID: 1273546437020016468, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1468898698}
+      addedObject: {fileID: 1566820798}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
 --- !u!4 &3804541701935679305 stripped
@@ -35558,7 +35566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bbeecb186c496d84d85b1561794601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BattleMap::BattleMap.Pawn.Manager
---- !u!114 &3804541701935679308 stripped
+--- !u!114 &3804541701935679312 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5236753495229352794, guid: a382a7b0acf133b4e832516bea0d1468, type: 3}
   m_PrefabInstance: {fileID: 3804541701935679304}

@@ -15,6 +15,11 @@ namespace CampaignMap
 
         public Vector2Int DefaultMapSize = new(40, 40);
 
+        public override Options Options { get; } = new()
+        {
+            ClearTilemapOnReset = true
+        };
+
         protected override void Start() {
             base.Start();
             GenerateAdjacentWorlds();

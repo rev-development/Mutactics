@@ -17,5 +17,7 @@ namespace Core.Map.GridItem
 
         [field: SerializeField] public TileBase Tile { get; set; } = null;
 
+        public Vector2Int Key => Helpers.HexMap.GetXY(Cell);
+
     }
 }

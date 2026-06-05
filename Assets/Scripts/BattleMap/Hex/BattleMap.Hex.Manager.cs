@@ -17,6 +17,13 @@ namespace BattleMap.Hex
 
         public WorldSO WorldData;
 
+        public override Options Options { get; } = new()
+        {
+            ClearTilemapOnReset = true,
+            OnPlaceStretchObjectY = true,
+            PlaceObjectBelowGrid = true
+        };
+
         public void GenerateMap() {
             ResetMap();
 

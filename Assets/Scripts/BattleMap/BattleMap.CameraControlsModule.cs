@@ -1,17 +1,16 @@
-using Core.Map.Camera;
 using UnityEngine;
 
 namespace BattleMap
 {
     [AddComponentMenu("Camera Controls - BattleMap Module")]
-    [RequireComponent(typeof(Controls))]
+    [RequireComponent(typeof(Core.Map.Camera.Controls))]
     public class CameraControlsModule : MonoBehaviour
     {
 
-        private Controls _controls;
+        private Core.Map.Camera.Controls _controls;
 
         private void Awake() {
-            _controls = gameObject.GetComponent<Controls>();
+            _controls = gameObject.GetComponent<Core.Map.Camera.Controls>();
         }
 
         private void OnEnable() {
@@ -29,7 +28,6 @@ namespace BattleMap
         }
 
         private void OnMouseRaycasted(Ray ray) {
-            // TODO: This should maybe just be the UnifiedManager
             var layerMask = UnifiedManager.GetSelectionLayerMask();
 
             if (Physics.Raycast(

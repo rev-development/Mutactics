@@ -13,6 +13,8 @@ namespace Core.Map.GridItem
 
         public abstract SOBase DataSOBase { get; }
 
+        public Vector2Int Key => DataSOBase.Key;
+
         private void OnEnable() {
             PositionChange.AddListener(OnPositionChange);
         }

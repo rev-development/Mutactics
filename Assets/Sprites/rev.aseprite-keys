@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keyboard version="1">
+    <commands>
+        <key command="SwitchColors" shortcut="X"/>
+        <key command="SwitchColors" shortcut="Ctrl+Shift+["/>
+        <key command="ChangeColor" shortcut="9">
+            <param name="change" value="decrement-index"/>
+            <param name="target" value="foreground"/>
+        </key>
+        <key command="ChangeColor" shortcut="[">
+            <param name="change" value="decrement-index"/>
+            <param name="target" value="foreground"/>
+        </key>
+        <key command="ChangeColor" shortcut="A">
+            <param name="change" value="decrement-index"/>
+            <param name="target" value="foreground"/>
+        </key>
+        <key command="ChangeColor" shortcut="0">
+            <param name="change" value="increment-index"/>
+            <param name="target" value="foreground"/>
+        </key>
+        <key command="ChangeColor" shortcut="]">
+            <param name="change" value="increment-index"/>
+            <param name="target" value="foreground"/>
+        </key>
+        <key command="ChangeColor" shortcut="D">
+            <param name="change" value="increment-index"/>
+            <param name="target" value="foreground"/>
+        </key>
+        <key command="ChangeBrush" shortcut="+">
+            <param name="change" value="increment-size"/>
+        </key>
+        <key command="ChangeBrush" shortcut="=">
+            <param name="change" value="increment-size"/>
+        </key>
+        <key command="ChangeBrush" shortcut="+ Pad">
+            <param name="change" value="increment-size"/>
+        </key>
+        <key command="ChangeBrush" shortcut="W">
+            <param name="change" value="increment-size"/>
+        </key>
+        <key command="ChangeBrush" shortcut="-">
+            <param name="change" value="decrement-size"/>
+        </key>
+        <key command="ChangeBrush" shortcut="- Pad">
+            <param name="change" value="decrement-size"/>
+        </key>
+        <key command="ChangeBrush" shortcut="S">
+            <param name="change" value="decrement-size"/>
+        </key>
+    </commands>
+    <tools>
+        <key tool="lasso" shortcut="Q" removed="true"/>
+        <key tool="magic_wand" shortcut="W" removed="true"/>
+        <key tool="pencil" shortcut="B" removed="true"/>
+        <key tool="pencil" shortcut="Q"/>
+        <key tool="contour" shortcut="D" removed="true"/>
+    </tools>
+    <quicktools/>
+    <actions/>
+</keyboard>

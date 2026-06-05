@@ -9,7 +9,7 @@ using UnityEngine.Tilemaps;
 
 namespace Core.Map.Manager
 {
-    public class ManagerBase<TManager, TItem> : MonoBehaviour
+    public abstract class ManagerBase<TManager, TItem> : MonoBehaviour
         where TManager : MonoBehaviour
         where TItem : ItemBase
     {
@@ -20,9 +20,9 @@ namespace Core.Map.Manager
 
         public Tilemap Tilemap;
 
-        public Options DefaultOptions = new();
-
         public UnityEvent<TItem> GridItemSelected = new();
+
+        public abstract Options Options { get; }
 
         public static TManager Instance { get; private set; }
 
@@ -54,7 +54,7 @@ namespace Core.Map.Manager
             }
 
 
-            if (DefaultOptions.DeselectOnDoubleClick
+            if (Options.DeselectOnDoubleClick
                 && ActiveSelection == gridItem)
             {
                 ActiveSelection = null;
@@ -87,7 +87,7 @@ namespace Core.Map.Manager
             #endif
             }
 
-            if (DefaultOptions.ClearTilemapOnReset)
+            if (Options.ClearTilemapOnReset)
             {
                 Tilemap.ClearAllTiles();
             }
@@ -102,14 +102,14 @@ namespace Core.Map.Manager
             {
                 if (IsCellOccupied(gridItem.DataSOBase.Cell))
                 {
-                    if (OccupiedCells[Helpers.HexMap.GetXY(gridItem.DataSOBase.Cell)] == null)
+                    if (OccupiedCells[gridItem.Key] == null)
                     {
-                        OccupiedCells[Helpers.HexMap.GetXY(gridItem.DataSOBase.Cell)] = gridItem;
+                        OccupiedCells[gridItem.Key] = gridItem;
                     }
                 }
                 else
                 {
-                    OccupiedCells.Add(Helpers.HexMap.GetXY(gridItem.DataSOBase.Cell), gridItem);
+                    OccupiedCells.Add(gridItem.Key, gridItem);
                 }
             }
         }
@@ -134,8 +134,8 @@ namespace Core.Map.Manager
 
             if (objectToPlace.TryGetComponent(out TItem item))
             {
-                item.Init(itemData, DefaultOptions);
-                OccupiedCells.Add(Helpers.HexMap.GetXY(item.DataSOBase.Cell), item);
+                item.Init(itemData, Options);
+                OccupiedCells.Add(item.Key, item);
                 Tilemap.SetTile(item.DataSOBase.Cell, item.DataSOBase.Tile);
             }
             else
@@ -152,18 +152,16 @@ namespace Core.Map.Manager
         }
 
         public void MoveObject(TItem item, Vector3Int from, Vector3Int to) {
-            // If item is not where it currently is
-            if (!IsCellOccupied(from)) return;
+            // If item is at 'from' and 'to' is empty
+            if (IsCellOccupied(from)
+                && !IsCellOccupied(to))
+            {
+                OccupiedCells.Remove(Helpers.HexMap.GetXY(from));
+                OccupiedCells.Add(Helpers.HexMap.GetXY(to), item);
 
-
-            // If destination is not empty
-            if (IsCellOccupied(to)) return;
-
-            OccupiedCells.Remove(Helpers.HexMap.GetXY(from));
-            OccupiedCells.Add(Helpers.HexMap.GetXY(to), item);
-
-            item.transform.position = Tilemap.GetCellCenterWorld(to);
-            item.PositionChange.Invoke(to);
+                item.transform.position = Tilemap.GetCellCenterWorld(to);
+                item.PositionChange.Invoke(to);
+            }
         }
 
         protected List<Vector3Int> GetEmptyNeighbors() {
