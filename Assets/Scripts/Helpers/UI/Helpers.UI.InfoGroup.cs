@@ -4,7 +4,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Helpers
+namespace Helpers.UI
 {
     [Serializable]
     public class InfoGroup

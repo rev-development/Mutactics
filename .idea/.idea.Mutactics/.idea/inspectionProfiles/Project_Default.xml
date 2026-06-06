@@ -1,7 +1,15 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="932aa353-18bc-3db0-83a8-a8764f532fcc" enabled="true" level="SUGGESTION" enabled_by_default="true" editorAttributes="SUGGESTION" />
     <inspection_tool class="GrazieStyle" enabled="false" level="STYLE_SUGGESTION" enabled_by_default="false" />
+    <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <replaceConfiguration name="AddComponentMenu Name Mismatch" description="The string provided for [AddComponentMenu(string)] does not match the file name." text="[AddComponentMenu(&quot;$MenuName$&quot;)]" recursive="false" caseInsensitive="true" type="JavaScript" reformatAccordingToStyle="false" shortenFQN="false" replacement="[AddComponentMenu(&quot;$FileName$&quot;)]">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="MenuName" script="&quot;MenuName.Value != System.IO.Path.GetFileNameWithoutExtension(node.GetContainingFile().Name) &quot;" within="" contains="" />
+        <variableDefinition name="FileName" script="&quot;System.IO.Path.GetFileNameWithoutExtension(node.GetContainingFile().Name) &quot;" />
+      </replaceConfiguration>
+    </inspection_tool>
     <inspection_tool class="TodoComment" enabled="true" level="WEAK WARNING" enabled_by_default="true" editorAttributes="INFO_ATTRIBUTES">
       <option name="onlyWarnOnEmpty" value="false" />
     </inspection_tool>

@@ -34,8 +34,6 @@ namespace Core.Map.GridItem
             DataSO.AssignData(gridItemData, gameObject);
 
             InitTransform(options);
-
-            // TODO: Set Material
         }
 
     }

@@ -1,15 +1,16 @@
 using Core.Map.Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace BattleMap.Pawn
 {
-    [AddComponentMenu("BattleMap/Pawn/PawnManager")] [RequireComponent(typeof(Hex.Manager))]
+    [AddComponentMenu("BattleMap.Pawn.Manager")] [RequireComponent(typeof(Hex.Manager))]
     public class Manager : ManagerBase<Manager, Pawn>
     {
 
         public GameObject PawnPrefab;
 
-        private BattleMap.Hex.Manager _hexManager;
+        [FormerlySerializedAs("_hexManager")] public BattleMap.Hex.Manager HexManager;
 
         public override Options Options { get; } = new();
 
@@ -17,14 +18,14 @@ namespace BattleMap.Pawn
             var nextKey = Helpers.HexMap.GetNextAvailableKey(OccupiedCells);
             var nextCell = new Vector3Int(nextKey.x, nextKey.y, 0);
 
-            _hexManager ??= Hex.Manager.Instance;
+            HexManager ??= Hex.Manager.Instance;
 
             if (gameObject.TryGetComponent<BattleMap.Hex.Manager>(out var hexManager))
             {
-                _hexManager ??= hexManager;
+                HexManager ??= hexManager;
             }
 
-            if (_hexManager.OccupiedCells.TryGetValue(nextKey, out var hex))
+            if (HexManager.OccupiedCells.TryGetValue(nextKey, out var hex))
             {
                 if (hex.DataSO)
                 {

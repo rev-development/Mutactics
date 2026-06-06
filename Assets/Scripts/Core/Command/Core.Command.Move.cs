@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core.Command
@@ -36,6 +37,8 @@ namespace Core.Command
                 Manager.MoveObject(Item, (Vector3Int)To, (Vector3Int)From);
             }
         }
+
+        public Dictionary<string, float> TagBonuses { get; }
 
     }
 }

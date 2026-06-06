@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 namespace BattleMap
 {
-    [AddComponentMenu("Battle Map UI")]
+    [AddComponentMenu("BattleMap.UI")]
     public class UI : MonoBehaviour
     {
 
@@ -15,9 +15,9 @@ namespace BattleMap
 
         public UIDocument UIDocument;
 
-        public Helpers.InfoGroup HexInfoGroup;
+        public Helpers.UI.InfoGroup HexInfoGroup;
 
-        public Helpers.InfoGroup PawnInfoGroup;
+        public Helpers.UI.InfoGroup PawnInfoGroup;
 
         private GroupBox _selectionPane;
 
@@ -29,8 +29,12 @@ namespace BattleMap
             var root = UIDocument.rootVisualElement;
             _selectionPane = root.Q<GroupBox>("SelectionPane");
 
-            HexInfoGroup = new Helpers.InfoGroup(root.Q<GroupBox>("Hex_InfoGroup"), root.Q<Label>("Hex_CellLabel"));
-            PawnInfoGroup = new Helpers.InfoGroup(root.Q<GroupBox>("Pawn_InfoGroup"), root.Q<Label>("Pawn_CellLabel"));
+            HexInfoGroup = new Helpers.UI.InfoGroup(root.Q<GroupBox>("Hex_InfoGroup"), root.Q<Label>("Hex_CellLabel"));
+
+            PawnInfoGroup = new Helpers.UI.InfoGroup(
+                    root.Q<GroupBox>("Pawn_InfoGroup"),
+                    root.Q<Label>("Pawn_CellLabel")
+                );
 
             HexInfoGroup.GroupBox.RegisterCallback<GeometryChangedEvent>(_ => UpdateSelectionPaneVisibility());
             PawnInfoGroup.GroupBox.RegisterCallback<GeometryChangedEvent>(_ => UpdateSelectionPaneVisibility());

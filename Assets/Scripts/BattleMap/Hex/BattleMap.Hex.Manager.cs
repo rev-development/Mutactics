@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 namespace BattleMap.Hex
 {
-    [AddComponentMenu("BattleMap/Hex/HexManager")]
+    [DisallowMultipleComponent]
+    [AddComponentMenu("BattleMap.Hex.Manager")]
     public class Manager : ManagerBase<Manager, Hex>
     {
 

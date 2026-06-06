@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 // ReSharper disable MemberCanBePrivate.Global
 namespace Core.Map.Camera
 {
-    [AddComponentMenu("Base Camera Controls")]
+    [AddComponentMenu("Map.Camera.Controls")]
     public class Controls : MonoBehaviour
     {
 

@@ -6,8 +6,9 @@ namespace Core.Command
     public class SelectionState
     {
 
-        public Type TargetType;
         public LayerMask TargetMask;
+
+        public Type TargetType;
 
         public Component OnMouseRaycasted(Ray ray) {
             if (Physics.Raycast(
@@ -22,10 +23,9 @@ namespace Core.Command
                     return component;
                 }
             }
+
+            return null;
         }
-
-
-
 
     }
 }

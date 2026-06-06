@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace BattleMap
 {
-    [AddComponentMenu("Camera Controls - BattleMap Module")]
+    [AddComponentMenu("BattleMap.CameraControlsModule")]
     [RequireComponent(typeof(Core.Map.Camera.Controls))]
     public class CameraControlsModule : MonoBehaviour
     {

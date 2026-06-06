@@ -1,0 +1,79 @@
+sequenceDiagram
+    autonumber
+
+    participant CC  as Controls<br/>(Map.Camera)
+    participant CCM as CameraControlsModule<br/>(BattleMap)
+    participant UM  as UnifiedManager<br/>(BattleMap)
+    participant HM  as Hex.Manager<br/>(ManagerBase)
+    participant PM  as Pawn.Manager<br/>(ManagerBase)
+    participant UI  as BattleMap.UI
+
+    rect rgb(230, 230, 240)
+        Note over CC,UI: OnEnable
+        CCM ->> CC  : MouseRaycasted.AddListener(OnMouseRaycasted)
+        CCM ->> CC  : EscapeStarted.AddListener(OnEscapeStarted)
+        CCM ->> CC  : RightClickStarted.AddListener(OnRightClickStarted)
+        UM  ->> HM  : GridItemSelected.AddListener(QueuePawnMove)
+        UI  ->> HM  : GridItemSelected.AddListener(OnHexSelect)
+        UI  ->> PM  : GridItemSelected.AddListener(OnPawnSelect)
+    end
+
+    rect rgb(230, 240, 230)
+        Note over CC,UI: Runtime — LeftClick (no active Pawn selection)
+        Note over UM: GetSelectionLayerMask()<br/>ActiveSelection == null → Layer: "Pawn"
+        CC  ->> CC  : MouseRaycast(ctx)
+        CC  -->> CCM: «MouseRaycasted» Invoke(ray)
+        CCM ->> CCM : Physics.Raycast(ray, LayerMask["Pawn"])
+        CCM ->> PM  : SelectGridItem(pawn)
+        PM  -->> UM : «GridItemSelected» QueuePawnMove()
+        Note over UM: Pawn selected, Hex not selected<br/>No move command issued
+        PM  -->> UI : «GridItemSelected» OnPawnSelect(pawn)
+        UI  ->> UI  : UpdateSelectionPaneVisibility()
+    end
+
+    rect rgb(240, 235, 220)
+        Note over CC,UI: Runtime — LeftClick (Pawn already selected)
+        Note over UM: GetSelectionLayerMask()<br/>ActiveSelection != null → Layer: "Hex"
+        CC  ->> CC  : MouseRaycast(ctx)
+        CC  -->> CCM: «MouseRaycasted» Invoke(ray)
+        CCM ->> CCM : Physics.Raycast(ray, LayerMask["Hex"])
+        CCM ->> HM  : SelectGridItem(hex)
+        HM  -->> UM : «GridItemSelected» QueuePawnMove()
+        Note over UM: Pawn AND Hex both selected<br/>Builds Move command
+        UM  ->> PM  : Manager.MoveObject(pawn, from, to)
+        UM  ->> UM  : History.Push(cmd)
+        HM  -->> UI : «GridItemSelected» OnHexSelect(hex)
+        UI  ->> UI  : UpdateSelectionPaneVisibility()
+    end
+
+    rect rgb(240, 225, 225)
+        Note over CC,UI: Runtime — Escape pressed
+        CC  -->> CCM: «EscapeStarted» Invoke()
+        CCM ->> UM  : Deselect(deselectAll: true)
+        UM  ->> HM  : SelectGridItem(null)
+        HM  -->> UI : «GridItemSelected» OnHexSelect(null)
+        UM  ->> PM  : SelectGridItem(null)
+        PM  -->> UI : «GridItemSelected» OnPawnSelect(null)
+        UI  ->> UI  : UpdateSelectionPaneVisibility()
+    end
+
+    rect rgb(240, 225, 225)
+        Note over CC,UI: Runtime — RightClick pressed
+        CC  -->> CCM: «RightClickStarted» Invoke()
+        CCM ->> UM  : Deselect(deselectAll: false)
+        Note over UM: Deselects outermost active selection only<br/>Hex first, then Pawn if Hex was null
+        UM  ->> HM  : SelectGridItem(null)
+        HM  -->> UI : «GridItemSelected» OnHexSelect(null)
+        UI  ->> UI  : UpdateSelectionPaneVisibility()
+    end
+
+    rect rgb(230, 230, 240)
+        Note over CC,UI: OnDisable
+        CCM ->> CC  : MouseRaycasted.RemoveListener(OnMouseRaycasted)
+        CCM ->> CC  : EscapeStarted.RemoveListener(OnEscapeStarted)
+        CCM ->> CC  : RightClickStarted.RemoveListener(OnRightClickStarted)
+        HM  ->> HM  : GridItemSelected.RemoveAllListeners()
+        PM  ->> PM  : GridItemSelected.RemoveAllListeners()
+        UI  ->> UI  : HexInfoGroup.Unbind()
+        UI  ->> UI  : PawnInfoGroup.Unbind()
+    end

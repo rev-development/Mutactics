@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CampaignMap
 {
-    [AddComponentMenu("Camera Controls - CampaignMap Module")]
+    [AddComponentMenu("CampaignMap.CameraControlsModule")]
     [RequireComponent(typeof(Controls))]
     public class CameraControlsModule : MonoBehaviour
     {

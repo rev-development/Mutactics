@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 namespace CampaignMap
 {
-    [AddComponentMenu("Campaign Map Manager")]
+    [AddComponentMenu("CampaignMap.Manager")]
     public class Manager : ManagerBase<Manager, World.World>
     {
 

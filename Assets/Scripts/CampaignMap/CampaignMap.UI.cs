@@ -8,18 +8,26 @@ using UnityEngine.UIElements;
 
 namespace CampaignMap
 {
-    [AddComponentMenu("Campaign Map UI")]
+    [AddComponentMenu("CampaignMap.UI")]
     public class UI : MonoBehaviour
     {
 
         public Manager CampaignMapManager;
+
         public UIDocument UIDocument;
+
         [SerializeField] [DontCreateProperty] private string _worldName = "";
+
         [SerializeField] [DontCreateProperty] private string _hexCords = "";
+
         [SerializeField] [DontCreateProperty] private bool _isInvadeButtonInConfirmState = false;
+
         public Label HexCordsLabel;
+
         public Button InvadeButton;
+
         public Label WorldNameLabel;
+
         [CreateProperty]
         public string WorldName { get => _worldName; set => _worldName = value; }
         [CreateProperty]
