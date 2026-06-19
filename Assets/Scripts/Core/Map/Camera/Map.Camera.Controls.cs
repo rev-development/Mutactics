@@ -11,76 +11,25 @@ namespace Core.Map.Camera
 
         public Config Config;
 
+        public UnityEvent<Ray> MouseRaycasted = new();
+
+        public UnityEvent EscapeStarted = new();
+
+        public UnityEvent RightClickStarted = new();
+
         private DefaultControls.MainActions _actions;
 
         private DefaultControls _defaultControls;
 
+        private bool _isRotating;
+
         private UnityEngine.Camera _mainCamera;
 
-        public void Pan() {
-            var panMoveVec = _mainCamera.transform.rotation.normalized
-                             * new Vector3(_panInput.x, 0, _panInput.y)
-                             * (Config.PanSpeed * Time.deltaTime);
+        private Vector2 _panInput;
 
-            panMoveVec.y = 0;
-            _mainCamera.transform.Translate(panMoveVec, Space.World);
-        }
+        private Vector2 _rotateInput;
 
-        public void Rotate() {
-            _mainCamera.transform.localEulerAngles = new Vector3(
-                    Mathf.Clamp(
-                            _mainCamera.transform.localEulerAngles.x
-                            - _rotateInput.y * Config.RotateSpeed * Time.deltaTime,
-                            Config.CameraRotateXBoundsMin,
-                            Config.CameraRotateXBoundsMax
-                        ),
-                    _mainCamera.transform.localEulerAngles.y + _rotateInput.x * Config.RotateSpeed * Time.deltaTime,
-                    0
-                );
-
-            _rotateInput = Vector2.zero;
-        }
-
-        public void Zoom(float zoomInput) {
-            // To keep the camera within bounds without stuttering, need to calculate the position it will end up in before allowing it to move there
-
-            // Get the camera's forward vector as a world-space vector and scale it based on our input
-            var intendedZoomVec = _mainCamera.transform.forward * (zoomInput * Config.ZoomSpeed);
-
-            // Predict the camera's ending position by applying the intended zoom vector to its current position
-            var predictedCamPos = _mainCamera.transform.position + intendedZoomVec;
-
-            // Clamp the value of the y-axis to our min/max
-            predictedCamPos.y = Mathf.Clamp(predictedCamPos.y, Config.CameraPanYBoundsMin, Config.CameraPanYBoundsMax);
-
-            // Calc the difference in the predicted position and the current position
-            // If the intended movement does not cause the camera to hit either bounds, this should be equal to the intended zoom vector
-            var predictedCamPosDelta = predictedCamPos - _mainCamera.transform.position;
-
-            // This vector can be applied to the camera's position without violating intended bounds
-            var safeMoveVec = predictedCamPosDelta;
-
-            // This is to prevent 'skating' when the camera is fully zoomed in or out 
-            if (Mathf.Approximately(safeMoveVec.y, 0))
-            {
-                safeMoveVec.z = 0;
-                safeMoveVec.x = 0;
-            }
-
-            _mainCamera.transform.Translate(safeMoveVec, Space.World);
-        }
-
-        public void Zoom() {
-            Zoom(_zoomInput * Time.deltaTime);
-        }
-
-        public void MouseRaycast(InputAction.CallbackContext _) {
-            var ray = _mainCamera.ScreenPointToRay(_actions.MousePosition.ReadValue<Vector2>());
-
-            MouseRaycasted.Invoke(ray);
-        }
-
-        #region Lifecycle
+        private float _zoomInput;
 
         private void Awake() {
             if (!Config)
@@ -161,28 +110,68 @@ namespace Core.Map.Camera
             _defaultControls.Dispose();
         }
 
-        #endregion
+        public void Pan() {
+            var panMoveVec = _mainCamera.transform.rotation.normalized
+                             * new Vector3(_panInput.x, 0, _panInput.y)
+                             * (Config.PanSpeed * Time.deltaTime);
 
-        #region Runtime Values
+            panMoveVec.y = 0;
+            _mainCamera.transform.Translate(panMoveVec, Space.World);
+        }
 
-        [Header("Runtime Values")]
-        private Vector2 _panInput;
+        public void Rotate() {
+            _mainCamera.transform.localEulerAngles = new Vector3(
+                    Mathf.Clamp(
+                            _mainCamera.transform.localEulerAngles.x
+                            - _rotateInput.y * Config.RotateSpeed * Time.deltaTime,
+                            Config.CameraRotateXBoundsMin,
+                            Config.CameraRotateXBoundsMax
+                        ),
+                    _mainCamera.transform.localEulerAngles.y + _rotateInput.x * Config.RotateSpeed * Time.deltaTime,
+                    0
+                );
 
-        private float _zoomInput;
+            _rotateInput = Vector2.zero;
+        }
 
-        private bool _isRotating;
+        public void Zoom(float zoomInput) {
+            // To keep the camera within bounds without stuttering, need to calculate the position it will end up in before allowing it to move there
 
-        private Vector2 _rotateInput;
+            // Get the camera's forward vector as a world-space vector and scale it based on our input
+            var intendedZoomVec = _mainCamera.transform.forward * (zoomInput * Config.ZoomSpeed);
 
-        public UnityEvent<Ray> MouseRaycasted = new();
+            // Predict the camera's ending position by applying the intended zoom vector to its current position
+            var predictedCamPos = _mainCamera.transform.position + intendedZoomVec;
 
-        public UnityEvent EscapeStarted = new();
+            // Clamp the value of the y-axis to our min/max
+            predictedCamPos.y = Mathf.Clamp(predictedCamPos.y, Config.CameraPanYBoundsMin, Config.CameraPanYBoundsMax);
 
-        public UnityEvent RightClickStarted = new();
+            // Calc the difference in the predicted position and the current position
+            // If the intended movement does not cause the camera to hit either bounds, this should be equal to the intended zoom vector
+            var predictedCamPosDelta = predictedCamPos - _mainCamera.transform.position;
 
-        #endregion
+            // This vector can be applied to the camera's position without violating intended bounds
+            var safeMoveVec = predictedCamPosDelta;
 
-        #region Action Listeners
+            // This is to prevent 'skating' when the camera is fully zoomed in or out 
+            if (Mathf.Approximately(safeMoveVec.y, 0))
+            {
+                safeMoveVec.z = 0;
+                safeMoveVec.x = 0;
+            }
+
+            _mainCamera.transform.Translate(safeMoveVec, Space.World);
+        }
+
+        public void Zoom() {
+            Zoom(_zoomInput * Time.deltaTime);
+        }
+
+        public void MouseRaycast(InputAction.CallbackContext _) {
+            var ray = _mainCamera.ScreenPointToRay(_actions.MousePosition.ReadValue<Vector2>());
+
+            MouseRaycasted.Invoke(ray);
+        }
 
         protected void OnMouseDeltaPerformed(InputAction.CallbackContext context) {
             if (!_isRotating) return;
@@ -223,8 +212,6 @@ namespace Core.Map.Camera
         protected void OnEscapeStarted(InputAction.CallbackContext _) {
             EscapeStarted.Invoke();
         }
-
-        #endregion
 
     }
 }

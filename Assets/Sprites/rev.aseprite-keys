@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keyboard version="1">
     <commands>
+        <key command="Timeline" shortcut="Tab" removed="true">
+            <param name="switch" value="true"/>
+        </key>
         <key command="SwitchColors" shortcut="X"/>
         <key command="SwitchColors" shortcut="Ctrl+Shift+["/>
         <key command="ChangeColor" shortcut="9">
@@ -48,13 +51,20 @@
         <key command="ChangeBrush" shortcut="S">
             <param name="change" value="decrement-size"/>
         </key>
+        <key command="AlternateTimeline" shortcut="Tab" label="TIME"/>
     </commands>
     <tools>
+        <key tool="rectangular_marquee" shortcut="M" removed="true"/>
+        <key tool="rectangular_marquee" shortcut="R"/>
         <key tool="lasso" shortcut="Q" removed="true"/>
         <key tool="magic_wand" shortcut="W" removed="true"/>
         <key tool="pencil" shortcut="B" removed="true"/>
         <key tool="pencil" shortcut="Q"/>
+        <key tool="paint_bucket" shortcut="G" removed="true"/>
+        <key tool="paint_bucket" shortcut="F"/>
         <key tool="contour" shortcut="D" removed="true"/>
+        <key tool="blur" shortcut="R" removed="true"/>
+        <key tool="jumble" shortcut="R" removed="true"/>
     </tools>
     <quicktools/>
     <actions/>

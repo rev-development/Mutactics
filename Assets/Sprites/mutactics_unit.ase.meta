@@ -24,7 +24,7 @@ ScriptedImporter:
     normalMapFilter: 0
     flipGreenChannel: 0
     swizzle: 50462976
-    isReadable: 0
+    isReadable: 1
     streamingMipmaps: 0
     streamingMipmapsPriority: 0
     vTOnly: 0
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639162589940137301
+  platformSettingsDirtyTick: 639167700601683346
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -149,28 +149,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: mutactics_glyphs_move
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 64
-      width: 64
-      height: 64
-    spriteID: fa33f69545f0b414584150c21b6b6bd9
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: mutactics_glyphs_blank
+  - name: mutactics_unit_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -182,28 +161,7 @@ ScriptedImporter:
       y: 0
       width: 64
       height: 64
-    spriteID: c311c88de23ef2d4788fb60b9f0102e6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: mutactics_glyphs_attack
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 64
-      y: 0
-      width: 64
-      height: 64
-    spriteID: 65ae9cc35ac54f6499df9ec1f117ec13
+    spriteID: f5e43fa8c5d169c4483d5c9f04bad305
     spriteBone: []
     spriteOutline: []
     vertices: []
