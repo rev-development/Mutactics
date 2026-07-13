@@ -1,102 +1,86 @@
 using System.Collections.Generic;
 using BattleMap.Pawn.Command;
 using Core.Command;
+using Rev.Helpers;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace BattleMap
 {
-    [RequireComponent(typeof(Hex.Manager))] [RequireComponent(typeof(Pawn.Manager))]
-    public class UnifiedManager : MonoBehaviour
-    {
+	[RequireComponent(typeof(Hex.Manager))] [RequireComponent(typeof(Pawn.Manager))]
+	public class UnifiedManager : SingletonMonoBehaviour<UnifiedManager>
+	{
 
-        public Hex.Manager HexManager;
+		public Hex.Manager HexManager;
 
-        public Pawn.Manager PawnManager;
+		public Pawn.Manager PawnManager;
 
-        public readonly Stack<IReversibleCommand> History = new();
+		public readonly Stack<IReversibleCommand> History = new();
 
-        public static UnifiedManager Instance { get; private set; }
+		public void OnEnable() => HexManager.GridItemSelected.AddListener(_ => QueuePawnMove());
 
-        public void Awake() {
-            if (Instance != null
-                && Instance != this)
-            {
-                Destroy(gameObject);
+		public void Start() {
+			HexManager = Hex.Manager.Instance;
+			PawnManager = Pawn.Manager.Instance;
+		}
 
-                return;
-            }
+		public static int GetSelectionLayerMask() {
+			var layerMask = Pawn.Manager.Instance.ActiveSelection != null
+				? LayerMask.GetMask("Hex")
+				: LayerMask.GetMask("Pawn");
 
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+			return layerMask;
+		}
 
-        public void Start() {
-            HexManager = Hex.Manager.Instance;
-            PawnManager = Pawn.Manager.Instance;
-        }
+		public void QueuePawnMove() {
+			if (PawnManager.ActiveSelection
+				&& HexManager.ActiveSelection)
+			{
+				var cmd = new Move(
+						PawnManager,
+						PawnManager.ActiveSelection,
+						PawnManager.ActiveSelection.DataSO.Cell,
+						HexManager.ActiveSelection.DataSO.Cell
+					);
 
-        public void OnEnable() {
-            HexManager.GridItemSelected.AddListener(_ => QueuePawnMove());
-        }
+				Debug.Log(
+						$"Move Cmd: {PawnManager.ActiveSelection.name} at {PawnManager.ActiveSelection.DataSO.Cell}"
+						+ $" to {HexManager.ActiveSelection.name} at {HexManager.ActiveSelection.DataSO.Cell}"
+					);
 
-        public static int GetSelectionLayerMask() {
-            var layerMask = Pawn.Manager.Instance.ActiveSelection != null
-                ? LayerMask.GetMask("Hex")
-                : LayerMask.GetMask("Pawn");
+				// TODO: Need to add gating
+				ExecuteCommand(cmd);
+			}
+		}
 
-            return layerMask;
-        }
+		public void ExecuteCommand(IReversibleCommand cmd) {
+			cmd.Execute();
+			History.Push(cmd);
+		}
 
-        public void QueuePawnMove() {
-            if (PawnManager.ActiveSelection
-                && HexManager.ActiveSelection)
-            {
-                var cmd = new Move
-                {
-                    Item = PawnManager.ActiveSelection,
-                    From = PawnManager.ActiveSelection.DataSO.Cell,
-                    To = HexManager.ActiveSelection.DataSO.Cell
-                };
+		public void UndoLastCommand() {
+			if (History.Count == 0) return;
 
+			History.Pop().Undo();
+		}
 
-                Debug.Log(
-                        $"Move Cmd: {PawnManager.ActiveSelection.name} at {PawnManager.ActiveSelection.DataSO.Cell}"
-                        + $" to {HexManager.ActiveSelection.name} at {HexManager.ActiveSelection.DataSO.Cell}"
-                    );
+		public static void Deselect(bool deselectAll = false) {
+			if (deselectAll)
+			{
+				Hex.Manager.Instance.SelectGridItem(null);
+				Pawn.Manager.Instance.SelectGridItem(null);
+			}
 
-                // TODO: Need to add gating
-                ExecuteCommand(cmd);
-            }
-        }
+			if (Hex.Manager.Instance.ActiveSelection)
+			{
+				Hex.Manager.Instance.SelectGridItem(null);
+			}
 
-        public void ExecuteCommand(IReversibleCommand cmd) {
-            cmd.Execute();
-            History.Push(cmd);
-        }
+			else if (Pawn.Manager.Instance.ActiveSelection)
+			{
+				Pawn.Manager.Instance.SelectGridItem(null);
+			}
+		}
 
-        public void UndoLastCommand() {
-            if (History.Count == 0) return;
-
-            History.Pop().Undo();
-        }
-
-        public static void Deselect(bool deselectAll = false) {
-            if (deselectAll)
-            {
-                Hex.Manager.Instance.SelectGridItem(null);
-                Pawn.Manager.Instance.SelectGridItem(null);
-            }
-
-            if (Hex.Manager.Instance.ActiveSelection)
-            {
-                Hex.Manager.Instance.SelectGridItem(null);
-            }
-
-            else if (Pawn.Manager.Instance.ActiveSelection)
-            {
-                Pawn.Manager.Instance.SelectGridItem(null);
-            }
-        }
-
-    }
+	}
 }

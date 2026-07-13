@@ -1,0 +1,19 @@
+{
+  "name": "Rev.Helpers.Editor",
+  "rootNamespace": "Rev.Helpers.Editor",
+  "references": [
+    "GUID:343deaaf83e0cee4ca978e7df0b80d21",
+    "GUID:f041c0157e9a90c478cf77d4ff2ebd0b"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

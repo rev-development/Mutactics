@@ -5,65 +5,64 @@ using UnityEngine.Tilemaps;
 
 namespace CampaignMap
 {
-    [AddComponentMenu("CampaignMap.Manager")]
-    public class Manager : ManagerBase<Manager, World.World>
-    {
+	[AddComponentMenu("CampaignMap.Manager")]
+	public class Manager : ManagerBase<Manager, World.World>
+	{
 
-        public Tile SimpleColorHex;
+		public Tile SimpleColorHex;
 
-        public GameObject WorldPrefab;
+		public GameObject WorldPrefab;
 
-        public Vector2Int DefaultMapSize = new(40, 40);
+		public Vector2Int DefaultMapSize = new(40, 40);
 
-        public override Options Options { get; } = new()
-        {
-            ClearTilemapOnReset = true
-        };
+		public override Options Options { get; } = new()
+												   {
+													   ClearTilemapOnReset = true,
+												   };
 
-        protected override void Start() {
-            base.Start();
-            GenerateAdjacentWorlds();
-        }
+		protected override void Start() {
+			base.Start();
+			GenerateAdjacentWorlds();
+		}
 
-        public void GenerateAdjacentWorlds() {
-            var adjacentWorlds = GetEmptyNeighbors();
-            var worldNames = Helpers.PlanetNameGen.GenerateNames(adjacentWorlds.Count);
+		public void GenerateAdjacentWorlds() {
+			var adjacentWorlds = GetEmptyNeighbors();
+			var worldNames = Rev.Helpers.PlanetNameGen.GenerateNames(adjacentWorlds.Count);
 
-            for (var index = 0; index < adjacentWorlds.Count; index++)
-            {
-                var worldDataStruct = new WorldData
-                {
-                    Name = worldNames[index],
-                    Cell = adjacentWorlds[index]
-                };
+			for (var index = 0; index < adjacentWorlds.Count; index++)
+			{
+				var worldDataStruct = new WorldData
+									  {
+										  Name = worldNames[index],
+										  Cell = adjacentWorlds[index],
+									  };
 
-                // TODO: Randomize Map Size
+				// TODO: Randomize Map Size
 
-                var world = PlaceObject(
-                        new WorldData
-                        {
-                            Cell = adjacentWorlds[index],
-                            Tile = SimpleColorHex,
-                            Name = worldNames[index],
-                            MapSize = DefaultMapSize,
-                            IsPlayerControlled = false,
-                            AltitudeMax = 0
-                        },
-                        WorldPrefab
-                    );
+				var world = PlaceObject(
+						new WorldData
+						{
+							Cell = adjacentWorlds[index],
+							Tile = SimpleColorHex,
+							Name = worldNames[index],
+							MapSize = DefaultMapSize,
+							IsPlayerControlled = false,
+							AltitudeMax = 0,
+						},
+						WorldPrefab
+					);
 
+				Tilemap.SetColor(
+						worldDataStruct.Cell,
+						new Color(
+								1f,
+								0f,
+								0f,
+								0.25f
+							)
+					);
+			}
+		}
 
-                Tilemap.SetColor(
-                        worldDataStruct.Cell,
-                        new Color(
-                                1f,
-                                0f,
-                                0f,
-                                0.25f
-                            )
-                    );
-            }
-        }
-
-    }
+	}
 }

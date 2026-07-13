@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: mutactics_unit2
     originalName: 
-    pivot: {x: 0.5, y: -0.018181818}
+    pivot: {x: 0.5185185, y: -0.018181818}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,7 +137,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 26
+      width: 27
       height: 55
     spriteID: f09255715f83ca44b940d60a5e45fc00
     spriteBone: []
@@ -167,9 +167,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 19
+        x: 18
         y: 1
-        width: 26
+        width: 27
         height: 55
       spriteId: f09255715f83ca44b940d60a5e45fc00
     linkedCells: []

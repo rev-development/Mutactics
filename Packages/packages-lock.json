@@ -7,6 +7,12 @@
       "dependencies": {},
       "hash": "acc1c7bc9ea34c33b830e40316fca52553878d29"
     },
+    "com.rev.helpers": {
+      "version": "file:com.reverendcode.helpers",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.2d.aseprite": {
       "version": "3.0.2",
       "depth": 0,

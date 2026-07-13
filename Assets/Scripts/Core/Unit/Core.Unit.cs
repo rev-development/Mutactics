@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Core.UnitProgression;
+using Rev.Helpers;
 
 namespace Core.Unit
 {
@@ -25,7 +26,7 @@ namespace Core.Unit
             {
                 return Mutations.Aggregate(
                         new Dictionary<string, IAbility>(),
-                        (prev, next) => Helpers.Dict.Collate(prev, next.Abilities)
+                        (prev, next) => Dict.Collate(prev, next.Abilities)
                     );
             }
         }
@@ -35,7 +36,7 @@ namespace Core.Unit
             {
                 return Mutations.Aggregate(
                         new Dictionary<string, float>(),
-                        (prev, next) => Helpers.Dict.Collate(prev, next.Stats)
+                        (prev, next) => Dict.Collate(prev, next.Stats)
                     );
             }
         }
@@ -45,7 +46,7 @@ namespace Core.Unit
             {
                 return EvolPressures.Aggregate(
                         new Dictionary<string, float>(),
-                        (prev, next) => Helpers.Dict.Collate(prev, next.TagBonuses)
+                        (prev, next) => Dict.Collate(prev, next.TagBonuses)
                     );
             }
         }

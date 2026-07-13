@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: mutactics_unit3
     originalName: 
-    pivot: {x: 0.5, y: -0.018181818}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,8 +137,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 52
-      height: 110
+      width: 64
+      height: 64
     spriteID: 300a4522d07d9904eb7db50aeaa5362c
     spriteBone: []
     spriteOutline: []
@@ -167,10 +167,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 38
-        y: 2
-        width: 52
-        height: 110
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       spriteId: 300a4522d07d9904eb7db50aeaa5362c
     linkedCells: []
     tileCells: []
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
-  previousTextureSize: {x: 64, y: 128}
+  canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 128}
